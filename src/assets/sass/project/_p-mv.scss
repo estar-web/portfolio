@@ -1,0 +1,60 @@
+@use "../global/" as *;
+@use "sass:math";
+
+.p-mv {
+  margin-top: 80px;
+
+  @include mq(m) {
+
+  }
+}
+
+.p-mv__inner {
+  width: min(100%,calc(960px + 40px * 2));
+  padding-inline: 40px;
+  position: relative;
+  @include mq(xl){
+    padding-inline: 0;
+  }
+}
+
+.p-mv__image {
+  background: transparent url(../img/mv.jpg) no-repeat center center / cover; //親要素に対する画像の割合
+  padding-top: math.div(325, 375) * 100%;
+  margin-top: 50px;
+
+  @include mq(m) {
+    background-size: calc(math.div(575, 960) * 100%);
+    background-position: top right;
+    padding-top: math.div(431.25, 960) * 100%; //画像のアスペクト比を維持（画像高さ / 画角を維持したい全体幅）
+    max-height: 100vh;
+
+  }
+
+  @include mq(s) {}
+
+  img {
+    width: 100%;
+  }
+}
+
+.p-mv__ttl {
+  @include font(24);
+  line-height: lh(36, 24);
+  font-weight: 700;
+  background-color: #fff;
+
+  @include mq(m) {
+    position: absolute;
+    //左側中央寄せ
+    margin-block: 72px auto;
+    height: fit-content;
+    @include font(42);
+  }
+
+  @include mq(l) {
+    @include font(48);
+    line-height: lh(72, 48);
+  }
+
+}

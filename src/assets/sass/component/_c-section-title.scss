@@ -1,0 +1,14 @@
+@use "../global/" as *;
+@use "sass:math";
+
+.c-section-title{
+  @include font(24);
+  line-height: math.div(48,24);
+  letter-spacing: -0.04em;
+  text-align: center;
+  font-weight: 900;
+  
+  @include mq(l){
+    @include font(64);
+  }
+}

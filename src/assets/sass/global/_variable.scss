@@ -1,0 +1,47 @@
+// color
+$color: (
+  main: #F9FCFF,
+  text1st: #337AB7,
+  text2nd: #1e1e1e,
+  accent: #FF739E,
+);
+
+// size
+$m-canvas: 1440px;
+$m-inner: 1040px;
+// padding
+$padding: 200px;
+$padding-tab: 100px;
+$padding-sp: 20px;
+
+// font-family
+$EnglishFont: 'Comfortaa',sans-serif;
+// $defaultFont: "Mplus 1p","游ゴシック", YuGothic, 'Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
+$defaultFont: "Comfortaa","游ゴシック", YuGothic, 'Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
+
+// breakpoint
+$breakpoints : (
+  "s":"screen and (min-width:576px)",
+  "m":"screen and (min-width:768px)",
+  "l":"screen and (min-width:992px)",
+  "xl":"screen and (min-width:#{$m-inner})",
+  "xxl":"screen and (min-width:1400px)",
+  // "xl":"screen and (min-width:#{$m-inner})",
+  // "l":"screen and (min-width:900px)",
+  // "m":"screen and (min-width:768px)",
+  // "s":"screen and (min-width:600px)",
+);
+
+// transition time
+$ts-time: 0.3s;
+
+// z-index
+$z-map : (
+  modal: 100,   // モダール
+	drawer: 40,   // ドロワー
+	floating: 30, // フローティングアイテム
+  header: 20,
+	footer: 10,   // フッター
+  base: 1,
+  under: -1,
+);

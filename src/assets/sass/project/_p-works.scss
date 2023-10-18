@@ -1,0 +1,264 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-works {}
+
+.p-works__inner {
+  padding-inline: 13px;
+}
+
+.p-works__title {}
+
+.p-works__wrapper {
+  margin-top: 30px;
+  background: #CCA365;
+  border-radius: 0 10px 10px 0;
+  padding: 20px;
+  position: relative;
+  width: min(100%,1000px);
+  margin-inline: auto;
+
+  &::after{
+     content: "";
+     position: absolute;
+     top: 50%;
+     left: 0;
+     width: 3%;
+     height: 95%;
+     background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
+     transform: translateY(-50%);
+
+     @include mq(l){
+      top: 50%;
+      left: 50%;
+      width: 3%;
+      height: 88%;
+      background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
+      transform: translate(-50%,-50%);
+     }
+  }
+
+  @include mq(l){
+    border-radius: 10px;
+  }
+}
+
+.p-works__item {
+  background-color: #FDFDFD;
+  padding-inline: 15px 14px;
+  padding-block: 15px 30px;
+  color: map.get($color, text2nd);
+  display: grid;
+  row-gap: 20px;
+  border-radius: 10px;
+  justify-items: center;
+  align-items: center;
+
+  @include mq(l){
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    column-gap: 40px;
+    padding-block: 48px 64px;
+    row-gap: 0;
+  }
+
+  @include mq(xl){
+    padding-inline: 0;
+  }
+
+}
+
+.p-works__img {
+  text-align: center;
+  aspect-ratio: math.div(200,160);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  width: max(40%,200px);
+  
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include mq(m){
+    width: 70%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  @include mq(l){
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: min(100%,440px);
+    aspect-ratio: math.div(440,352);
+  }
+}
+
+.p-works__text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include mq(m){
+    padding-inline: 30px;
+  }
+
+  @include mq(xl){
+    padding-inline: 78px calc(77px - 15px);
+    
+  }
+}
+
+.p-works__item-title {
+  text-align: center;
+  line-height: math.div(23.76, 16);
+  position: relative;
+  width: 100%;
+
+  @include mq(m){
+    @include font(18);
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: #464646;
+
+    @include mq(l){
+      width: 100%;
+    }
+  }
+}
+
+.p-works__item-category-wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 72%;
+  justify-content: start;
+  gap: math.div(8, 14) * 1em 0.94em;
+
+  @include mq(m){
+    width: 100%;
+  }
+
+  @include mq(l){
+    gap: (math.div(16, 16) * 1em) (math.div(24,16) * 1em);
+  }
+
+  @include mq(xl){
+    gap: (math.div(20, 16) * 1em) (math.div(32,16) * 1em);
+  }
+}
+
+.p-works__item-category {
+  color: #464646;
+  background-color: #FBFBFB;
+  @include font(14);
+  line-height: math.div(20.79, 14);
+  padding: 0.142857em 0.33em 0.142857em 0.82em;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #464646;
+
+  
+  @include mq(l){
+    @include font(16);
+    padding: 0.25em 0.75em 0.25em calc(0.75em + math.div(9,16) * 1em);
+  }
+
+  @include mq(xl){
+    padding: 0.25em 1.3em 0.25em calc(1.2em + math.div(9,16) * 1em);
+
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:nth-child(5n+1) {
+    &::before {
+      background-color: #A7D2ED;
+    }
+  }
+
+  &:nth-child(5n+2) {
+    &::before {
+      background-color: #7FBDE4;
+    }
+  }
+
+  &:nth-child(5n+3) {
+    &::before {
+      background-color: #57A5D4;
+    }
+  }
+
+  &:nth-child(5n+4) {
+    &::before {
+      background-color: #5093C1;
+    }
+  }
+
+  &:nth-child(5n+5) {
+    &::before {
+      background-color: #5179A5;
+    }
+  }
+
+}
+
+.p-works__item-comment {
+  @include font(14);
+  line-height: math.div(20.79, 14);
+  
+  @include mq(l){
+    @include font(16);
+  }
+}
+
+.p-works__button {
+  margin-top: 40px;
+}
+
+.p-works__link {
+  display: block;
+  width: 14.375em;
+  margin-inline: auto;
+  text-align: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 23.44px 12px 0px;
+    border-color: transparent transparent #337ab7 transparent;
+    right: 0;
+    bottom: 0;
+    transition: right 0.3s linear 0s;
+  }
+
+  &:hover{
+    &::before{
+      right: -10px;
+    }
+  }
+}

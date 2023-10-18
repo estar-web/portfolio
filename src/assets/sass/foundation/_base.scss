@@ -1,0 +1,12 @@
+@use "../global/" as *;
+@use "sass:map";
+
+body{
+  font-family: $defaultFont;
+  color: map.get($color, text1st);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}

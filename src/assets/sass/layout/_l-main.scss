@@ -1,0 +1,27 @@
+@use "../global/" as *;
+
+.l-inner{
+  width: min(100%,$m-inner);
+  padding-inline: $padding-sp;
+
+  @include mq(m){
+    padding-inline: $padding-tab;
+  }
+  
+  @include mq(xl){
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+}
+
+.l-profile{
+  margin-top: 50px;
+}
+
+.l-skills {
+
+}
+
+.l-works{
+  margin-top: 95px;
+}

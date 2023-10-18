@@ -1,0 +1,61 @@
+@use "../global/" as *;
+@use "sass:map";
+
+.p-header-burger {
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 21px;
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  transition: right 0.3s linear;
+  width: 32px;
+  z-index: map.get($z-map,drawer) + 1;
+  background: rgba(255,255,255,0.7);
+  
+  @include mq(m){
+    right: 13.88889%;
+  }
+}
+
+.p-header-burger__line {
+  background-color: #33C0FF;
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  transition: top 0.3s linear 0s,left 0.3s linear 0s,transform 0.3s linear 0s,opacity 0.3s linear 0s;
+  width: 100%;
+  z-index: 1;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 50%;
+  }
+
+  &:nth-child(3) {
+    top: 100%;
+  }
+
+  .add-active & {
+
+    &:nth-child(1) {
+      top: 10px;
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+  }
+}

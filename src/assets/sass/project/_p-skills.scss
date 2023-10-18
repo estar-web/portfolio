@@ -1,0 +1,67 @@
+@use "../global/" as *;
+
+.p-skills {
+  background-color: #F9FCFF;
+}
+
+.p-skills__inner{
+
+}
+
+.p-skills__title {
+
+}
+
+.c-section-title {
+
+}
+
+.p-skills__wrapper {
+  display: grid;
+  gap: 30px 35px;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  margin-top: 30px;
+  
+  @include mq(s){
+    column-gap: 45px;
+  }
+
+  @include mq(l){
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
+
+  @include mq(xl){
+    margin-top: 50px;
+    gap: 50px 40px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+}
+
+.p-skills__item {
+  text-align: center;
+}
+
+.p-skills__icon {
+}
+
+.p-skills__label {
+  margin-top: 8px;
+  @include mq(l){
+    margin-top: 16px;
+    @include font(20);
+  }
+
+}
+
+.p-skills__text {
+  margin-top: 8px;
+  @include font(14);
+  letter-spacing: -0.08em;
+
+  @include mq(l){
+    @include font(16);
+    letter-spacing: 0.003em;
+    margin-top: 16px;
+  }
+}
+

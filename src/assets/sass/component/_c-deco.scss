@@ -1,0 +1,47 @@
+@use "../global/" as *;
+@use "sass:math";
+
+.c-deco__top {
+  height: math.div(52, 375) * 100vw;
+  margin-top: 112px;
+  position: relative;
+
+  @include mq(m) {
+    height: math.div(149, 1440) * 100vw;
+  }
+
+  &::before {
+    background: url(../img/deco-section-top.png) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    height: inherit;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0%;
+    width: 100%;
+  }
+}
+
+.c-deco__bottom {
+  height: math.div(149, 1440) * 100vw;
+  position: relative;
+
+  @include mq(m) {
+    height: math.div(149, 1440) * 100vw;
+  }
+
+  &::before {
+    background: url(../img/deco-section-bottom.png) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    height: inherit;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0%;
+    width: 100%;
+  }
+}
