@@ -1,0 +1,128 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-contact {}
+
+.p-contact__decoTop {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../img/picture-jelly-fish-sp.png) no-repeat center center /contain;
+    // top: -23vw;
+    top: -90px;
+    // top: math.div(40, 375) * 100vw * (-1);
+    left: 0;
+    // left: -1.6vw;
+    // left: -5.5px;
+    // width: math.div(74, 375) * 100vw;
+    width: 74px;
+    // width: fit-content;
+    // height: math.div(381,454)*100%;
+    height: auto;
+    aspect-ratio: math.div(74, 381);
+
+    @include mq(s) {
+      width: 85px;
+    }
+
+    @include mq(m) {
+      background-image: url(../img/picture-jelly-fish1.png);
+      width: math.div(376.2, 1440) * 100%;
+      // width: 376.2px;
+      aspect-ratio: math.div(376.2, 510);
+      height: auto;
+      // height: 510px;
+      top: 0;
+    }
+
+    @include mq(l) {
+      top: -70px;
+    }
+  }
+}
+
+.p-contact__inner {
+  width: 100%;
+  background: skyblue;
+  background: map.get($color, main);
+  padding-bottom: 72px;
+
+  @include mq(m) {
+    padding-bottom: 100px;
+  }
+}
+
+.p-contact__title {}
+
+.p-contact__textArea {
+  max-width: 100%;
+  // width: math.div(224, 375) * 100%;
+  line-height: math.div(23.76, 16);
+  margin-top: 40px;
+  margin-inline: auto;
+  text-align: center;
+
+  @include mq(m) {
+    margin-top: 50px;
+  }
+}
+
+.p-contact__lead {}
+
+.p-contact__text {
+  margin-top: 30px;
+}
+
+.p-contact__button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.p-contact__link {
+  padding: 0.625em 3em;
+  border: 2px solid #337ab7;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
+  display: inline-block;
+
+  &:hover {
+    background-color: #337ab7;
+    color: #fff;
+    box-shadow: 0 0 0;
+    transform: translateY(0.25em);
+  }
+}
+
+.p-contact__decoBottom {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../img/deco-bubble.png) no-repeat center center /contain;
+    bottom: 24px;
+    //  right: 0;
+    right: calc(50% - 130px);
+    transform: translateX(50%);
+    width: 116px;
+    height: 147px;
+
+    @include mq(m) {
+      background-image: url(../img/picture-jelly-fish2.png);
+      width: math.div(417.26, 1440) * 100%;
+      aspect-ratio: math.div(376.2, 510);
+      height: auto;
+      bottom: -50px;
+      right: 0;
+      transform: translateX(0);
+    }
+
+    @include mq(l) {
+      bottom: -100px;
+    }
+  }
+}

@@ -3,7 +3,7 @@
 
 .c-deco__top {
   height: math.div(52, 375) * 100vw;
-  margin-top: 112px;
+
   position: relative;
 
   @include mq(m) {

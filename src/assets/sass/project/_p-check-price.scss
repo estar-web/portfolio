@@ -1,0 +1,124 @@
+@use "../global/" as *;
+@use "sass:math";
+
+.p-check-price{
+  @include mq(xl){
+    padding: 5rem 8rem 9.375rem;
+  }
+}
+
+.p-check-price__text {
+
+}
+
+.p-check-price__textList {
+}
+
+.p-check-price__textItem {
+
+  position: relative;
+  padding-inline-start: 1em;
+  @include font(14);
+
+  &+.p-check-price__textItem{
+    margin-top: 5px;
+  }
+
+  @include mq(m){
+    @include font(16);
+  }
+
+  &::before{
+    content: "・";
+    position: absolute;
+    left: 0;
+  }
+}
+
+.p-check-price__detailList {
+
+}
+
+.p-check-price__detailItem {
+  position: relative;
+  padding-inline-start: 1em;
+
+  &::before{
+    content: "・";
+    position: absolute;
+    color: #33C0ff;
+    left: 0;
+  }
+}
+
+.p-check-price__wrapper {
+  margin-top: 40px;
+  width: min(600px,100%);
+  margin-inline: auto;
+
+  @include mq(xl){
+    margin-top: 88px;
+
+    &+.p-check-price__wrapper{
+      margin-top: 80px;
+    }
+  }
+}
+
+.p-check-price__label {
+  line-height: math.div(23.76,16);
+  background-color: #A7D2ED;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin-inline: auto;
+  width: fit-content;
+  margin-block-end: 30px;
+
+  @include mq(m){
+    margin-inline: 0 auto;
+  }
+
+  @include mq(l){
+    margin-block-end: 32px;
+  }
+}
+
+.p-check-price__item {
+  padding: 0 1.5em 0.75em;
+  @include font(14);
+  line-height: math.div(20.79, 14);
+  border-bottom: 1px solid #5093C1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &+.p-check-price__item{
+    margin-top: 10px;
+  }
+  
+  @include mq(m){
+    @include font(16);
+  }
+  
+  @include mq(l){
+    padding: 0 5.0625em 0.625em 1.9375em;
+  }
+
+  @include mq(xl){
+    &+.p-check-price__item{
+      margin-top: 32px;
+    }
+  }
+
+
+}
+
+.p-check-price__head {
+  
+}
+
+.p-check-price__price {
+
+}
+

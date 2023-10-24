@@ -1,27 +1,49 @@
 @use "../global/" as *;
 
-.l-inner{
-  width: min(100%,$m-inner);
+.l-inner {
+  width: min(100%, $m-inner);
   padding-inline: $padding-sp;
 
-  @include mq(m){
+  @include mq(m) {
     padding-inline: $padding-tab;
   }
-  
-  @include mq(xl){
+
+  @include mq(xl) {
     margin-inline: auto;
     padding-inline: 0;
   }
 }
 
-.l-profile{
+.l-profile {
   margin-top: 50px;
+
+  @include mq(xl){
+    margin-top: 100px;
+  }
 }
 
-.l-skills {
+.l-skills {}
 
-}
-
-.l-works{
+.l-works {
   margin-top: 95px;
+
+  @include mq(xl){
+    margin-top: 100px;
+  }
+}
+
+.l-check {
+  margin-top: 92px;
+
+  @include mq(xl){
+    margin-top: 194px;
+  }
+}
+
+.l-contact {
+  margin-top: 90px;
+
+  @include mq(xl) {
+    margin-top: 150px;
+  }
 }

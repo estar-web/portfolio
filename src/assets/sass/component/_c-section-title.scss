@@ -7,6 +7,10 @@
   letter-spacing: -0.04em;
   text-align: center;
   font-weight: 900;
+
+  @include mq(m){
+    @include font(48);
+  }
   
   @include mq(l){
     @include font(64);

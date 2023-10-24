@@ -49,8 +49,8 @@
     </div><!-- /.p-profile__inner -->
   </section><!-- /.l-profile -->
 
-  <div class="c-deco__top"></div>
   <section id="skills" class="l-skills p-skills">
+    <div class="c-deco__top"></div>
     <div class="p-skills__inner l-inner">
       <h2 class="p-skills__title c-section-title">Skills</h2><!-- /.p-skills__title -->
       <div class="p-skills__wrapper">
@@ -104,8 +104,8 @@
 
       </div><!-- /.p-skills__wrapper -->
     </div><!-- /.p-skills__inner -->
+    <div class="c-deco__bottom"></div>
   </section><!-- /.l-skills -->
-  <div class="c-deco__bottom"></div>
 
   <section id="works" class="l-works p-works">
     <div class="p-works__inner l-inner">
@@ -128,7 +128,6 @@
             </ul><!-- /.p-works__item-category-wrapper -->
             <p class="p-works__item-comment">
               コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
-
           </div><!-- /.p-works__text -->
         </a><!-- /.p-works__item -->
       </div><!-- /.p-works__wrapper -->
@@ -138,6 +137,209 @@
     </div><!-- /.p-works__inner l-inner -->
   </section><!-- /.l-works p-works -->
 
+  <section id="check" class="l-check p-check">
+    <div class="p-check__inner l-inner">
+      <div class="p-check__title c-section-title">Check</div><!-- /.p-check__title -->
+      <ul class="p-check__nav">
+        <li class="p-check__nav-item is-active" data-target="#tab-item01">ご依頼の流れ</li>
+        <li class="p-check__nav-item" data-target="#tab-item02">料金の目安</>
+        </li>
+        <li class="p-check__nav-item" data-target="#tab-item03">注意事項</>
+        </li>
+      </ul>
+      <div class="p-check__content">
+        <div id="tab-item01" class="p-check__body p-check-flow is-active">
+          <div class="p-check-flow__item">
+            <figure class="p-check-flow__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow1.svg" width="100" height="100" alt="アイコン：ヒアリングしている画像" loading="lazy" decoding="async">
+            </figure><!-- /.p-check-flow__img -->
+            <div class="p-check-flow__num">STEP 1</div><!-- /.p-check-flow__num -->
+            <div class="p-check-flow__title">ご依頼、ご相談</div><!-- /.p-check-flow__title -->
+            <div class="p-check-flow__text">
+              <a href="#contact" class="p-check-flow__link">メールフォーム</a>、または<a href="#contact" class="p-check-flow__link">X(旧Twitter)</a>のDMよりお問い合わせ下さい。<br>
+            </div><!-- /.p-check-flow__text -->
+          </div><!-- /.p-check-flow__item -->
+          <div class="p-check-flow__item">
+            <figure class="p-check-flow__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow2.svg" width="100" height="100" alt="アイコン：資料アイコン" loading="lazy" decoding="async">
+            </figure><!-- /.p-check-flow__img -->
+            <div class="p-check-flow__num">STEP 2</div><!-- /.p-check-flow__num -->
+            <div class="p-check-flow__title">内容の確認<br class="u-hide--m"><span class="u-show--m">/</span>見積もり</div><!-- /.p-check-flow__title -->
+            <div class="p-check-flow__text">
+              ご依頼内容を確認後、お見積り、作業完了予定日をご連絡いたします。
+              お見積りに合意頂けましたら、作業に着手いたします。
+            </div><!-- /.p-check-flow__text -->
+          </div><!-- /.p-check-flow__item -->
+          <div class="p-check-flow__item">
+            <figure class="p-check-flow__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow3.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
+            </figure><!-- /.p-check-flow__img -->
+            <div class="p-check-flow__num">STEP 3</div><!-- /.p-check-flow__num -->
+            <div class="p-check-flow__title">制作</div><!-- /.p-check-flow__title -->
+            <div class="p-check-flow__text">
+              頂いたデータをもとに制作を開始します。<br>
+              作業の進捗度合いについては、notionの進捗管理シートにより共有いたします。
+            </div><!-- /.p-check-flow__text -->
+          </div><!-- /.p-check-flow__item -->
+          <div class="p-check-flow__item">
+            <figure class="p-check-flow__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow4.svg" width="100" height="100" alt="アイコン：チェックマークアイコン" loading="lazy" decoding="async">
+            </figure><!-- /.p-check-flow__img -->
+            <div class="p-check-flow__num">STEP 4</div><!-- /.p-check-flow__num -->
+            <div class="p-check-flow__title">チェック</div><!-- /.p-check-flow__title -->
+            <div class="p-check-flow__text">
+              作業が完了しましたら、制作物に問題が無いか確認をお願い致します。<br>
+              修正が必要な場合は、即日または数日以内に対応いたします。<br>
+            </div><!-- /.p-check-flow__text -->
+          </div><!-- /.p-check-flow__item -->
+          <div class="p-check-flow__item">
+            <figure class="p-check-flow__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow5.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
+            </figure><!-- /.p-check-flow__img -->
+            <div class="p-check-flow__num">STEP 5</div><!-- /.p-check-flow__num -->
+            <div class="p-check-flow__title">納品、サイト公開</div><!-- /.p-check-flow__title -->
+            <div class="p-check-flow__text">
+              お客様サーバーへのアップロード、またはzipファイルをお渡して納品となります。
+              サーバーアップロードの場合、お客様にもご確認頂き、問題がなければ納品完了となります。
+              <!-- （サーバーアップロードの場合でも一定期間ご返信頂けない場合、納品完了とさせて頂きます） -->
+            </div><!-- /.p-check-flow__text -->
+          </div><!-- /.p-check-flow__item -->
+        </div><!-- /.p-check__body -->
+
+        <div id="tab-item02" class="p-check__body p-check-price">
+          <div class="p-check-price__text">
+            <ul class="p-check-price__textList">
+              <li class="p-check-price__textItem">料金はすべて、税抜き価格となります。</li><!-- /.p-check-price__textItem -->
+              <li class="p-check-price__textItem">ご予算等に合わせてご相談に応じます。お気軽にお問い合わせ下さい(*^ ^*)</li><!-- /.p-check-price__textItem -->
+              <li class="p-check-price__textItem">ページ制作のみの料金となります。デザインの作成が必要な場合、別途お見積りが必要となります。</li><!-- /.p-check-price__textItem -->
+              <li class="p-check-price__textItem">当方の実績として当ページに公開させて頂ける場合、合計金額より10%割引させて頂きます。</li><!-- /.p-check-price__textItem -->
+              <li class="p-check-price__textItem">次の内容は基本料金に含まれます
+                <ul class="p-check-price__detailList">
+                  <li class="p-check-price__detailItem">サーバー・ドメインの取得</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">ハンバーガーメニュー</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">マップ、SNSなどのリンクの埋め込み</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">お問合せフォーム</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">タブレット・スマートフォン表示</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">簡単なアニメーション</li><!-- /.p-check-price__detailItem -->
+                </ul><!-- /.p-check-price__detailList -->
+              </li><!-- /.p-check-price__textItem -->
+              <li class="p-check-price__textItem">ご要望によっては追加料金が発生する可能性もございます。<br>ヒヤリング時にお聞かせ下さい。</li><!-- /.p-check-price__textItem -->
+            </ul><!-- /.p-check-price__textList -->
+          </div><!-- /.p-check-price__text -->
+          <div class="p-check-price__wrapper">
+            <div class="p-check-price__label">基本料金</div><!-- /.p-check-price__label -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">Topページ</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">50,000円 〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">10,000円 〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+          </div><!-- /.p-check-price__wrapper -->
+          <div class="p-check-price__wrapper">
+            <div class="p-check-price__label">各種オプション</div><!-- /.p-check-price__label -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">10,000円 〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">投稿機能<br>(ブログ・お知らせ等)</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">20,000円</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item u-hide">
+              <div class="p-check-price__head">画像のスライド機能</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item u-hide">
+              <div class="p-check-price__head">モーダルウィンドウ</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item u-hide">
+              <div class="p-check-price__head">タブ切り替え</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+          </div><!-- /.p-check-price__wrapper -->
+          <div class="p-check-price__wrapper u-hide">
+            <div class="p-check-price__label">修正</div><!-- /.p-check-price__label -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">投稿機能追加</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">10,000円</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">10,000円〜</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+          </div><!-- /.p-check-price__wrapper -->
+        </div><!-- /.p-check__body -->
+
+        <div id="tab-item03" class="p-check__body p-check-promise">
+          <div class="p-check-promise__item">
+            <div class="p-check-promise__label">ご用意頂きたいもの</div><!-- /.p-check-promise__label -->
+            <div class="p-check-promise__text">
+              <ul class="p-check-promise__list">
+                <li class="p-check-promise__listItem">デザインデータ</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">画像</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">テキスト</li><!-- /.p-check-promise__listItem -->
+              </ul><!-- /.p-check-promise__list -->
+              <div class="p-check-promise__spacer"></div><!-- /.p-check-promise__spacer -->
+              ご用意が難しい場合は、ご相談下さい！
+            </div><!-- /.p-check-promise__text -->
+          </div><!-- /.p-check-promise__item -->
+          <div class="p-check-promise__item">
+            <div class="p-check-promise__label">対応時間</div><!-- /.p-check-promise__label -->
+            <div class="p-check-promise__text">
+              <ul class="p-check-promise__list">
+                <li class="p-check-promise__listItem">平日22:00までに頂いたご連絡については30分以内にご返信いたします。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">都合により連絡が取りにい日時が予めわかっている場合は、前もってご連絡いたします。</li><!-- /.p-check-promise__listItem -->
+              </ul><!-- /.p-check-promise__list -->
+            </div><!-- /.p-check-promise__text -->
+          </div><!-- /.p-check-promise__item -->
+          <div class="p-check-promise__item">
+            <div class="p-check-promise__label">納品</div><!-- /.p-check-promise__label -->
+            <div class="p-check-promise__text">
+              <ul class="p-check-promise__list">
+                <li class="p-check-promise__listItem">当方の作業完了後、問題ないことを確認頂くか、7日間経過したことを持ちまして納品とさせて頂きます。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">納品後、１ヶ月間は修正を無料で承ります。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">上記期間を過ぎての修正、作業着手後のデザイン変更は別途追加料金を頂きます。</li><!-- /.p-check-promise__listItem -->
+              </ul><!-- /.p-check-promise__list -->
+            </div><!-- /.p-check-promise__text -->
+          </div><!-- /.p-check-promise__item -->
+        </div><!-- /.p-check__body -->
+
+      </div><!-- /.p-check__content -->
+    </div><!-- /.p-check__inner -->
+  </section><!-- /.l-check p-check -->
+
+  <section id="contact" class="l-contact p-contact">
+    <div class="c-deco__top"></div>
+    <div class="p-contact__decoTop"></div><!-- /.p-contact__decotop -->
+    <div class="p-contact__inner">
+      <div class="p-contact__title c-section-title">Contact</div><!-- /.p-contact__title -->
+      <div class="p-contact__textArea">
+        <div class="p-contact__lead">＼お問い合わせはこちらから／</div><!-- /.p-contact__lead -->
+        <div class="p-contact__text">
+          <p>ご不明点や<br class="u-show--sp">
+            お見積もり依頼など、<br class="u-hide--pc ">
+            <!-- お見積もり依頼など、<br class="u-show--sp u-show--tab"> -->
+            なんでもお気軽に<br class="u-show--sp">
+            お問い合わせください！</p>
+        </div><!-- /.p-contact__text -->
+      </div><!-- /.p-contact__textArea -->
+      <div class="p-contact__button">
+        <a href="" class="p-contact__link">今すぐお問い合わせをする</a><!-- /.p-contact__link -->
+      </div><!-- /.p-contact__button -->
+    </div><!-- /.p-contact__inner -->
+    <div class="p-contact__decoBottom"></div><!-- /.p-contact__decoBottom -->
+  </section><!-- /.l-contact p-contact -->
+
+  <footer class="l-footer">
+    <div class="p-footer l-inner">
+      <nav class="p-footer__nav">
+        
+      </nav><!-- /.p-footer__nav -->
+    </div><!-- /.p-footer -->
+  </footer><!-- /.l-footer -->
 
 </main>
 <?php get_footer(); ?>

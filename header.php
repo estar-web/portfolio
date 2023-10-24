@@ -35,7 +35,7 @@
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#profile'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Profile</span>自己紹介</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#skills'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Skills</span>できること</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#works'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Works</span>制作実績</a></li>
-          <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#flow'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Flow</span>ご依頼〜制作〜納品の流れ</a></li>
+          <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#check'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Check</span>ご確認頂きたいこと</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#contact'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Contact</span>お問い合わせはこちら</a></li>
         </ul><!-- /.p-header-nav__list -->
         <figure class="p-header-nav__img u-show--l">

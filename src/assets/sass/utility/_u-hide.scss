@@ -1,29 +1,60 @@
 @use "../global/" as *;
 
-// .u-hide{
-//   display: block;
-//   @include mq(){
-//     display: none;
-//   }
-// }
+.u-hide {
+  display: none;
+}
 
-.u-hide--sp{
-  display: block;
-  @include mq(s){
+.u-hide--pc {
+
+  @include mq(xl){
     display: none;
   }
 }
 
-.u-show--l{
+.u-show--sp {
+  display: block;
+
+  @include mq(s) {
+    display: none;
+  }
+}
+
+.u-hide--m {
+  display: block;
+
+  @include mq(m) {
+    display: none;
+  }
+}
+
+.u-show--m {
   display: none;
-  @include mq(l){
+
+  @include mq(m) {
+    display: inline;
+  }
+}
+
+.u-show--tab {
+  display: none;
+
+  @include mq(m) {
     display: block;
   }
 }
 
-.u-show--sp{
+.u-show--l {
   display: none;
-  @include mq(s){
+
+  @include mq(l) {
+    display: block;
+  }
+}
+
+.u-hide--sp {
+  display: none;
+
+  @include mq(s) {
     display: block;
   }
 }

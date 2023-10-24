@@ -1,0 +1,78 @@
+@use "../global/" as *;
+@use "sass:math";
+
+.p-check-promise {
+
+@include mq(xl){
+  padding: 5rem 10rem 9.375rem;
+}
+}
+
+.p-check-promise__item {
+  &+.p-check-promise__item{
+    margin-top: 50px;
+  }
+}
+
+.p-check-promise__label {
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+
+  @include mq(m){
+    margin-inline: 12px auto;
+    @include font(20);
+
+
+    &::after{
+      width: calc(100% + 30px);
+    }
+  }
+  
+  &::after{
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: calc(100% + 44px);
+     height: 3px;
+     background-color: #337AB7;
+  }
+}
+
+.p-check-promise__text {
+  margin-top: 20px;
+  @include font(14);
+  line-height: math.div(20.79,14);
+  
+  @include mq(m){
+    @include font(16);
+  }
+}
+
+.p-check-promise__list {
+
+}
+
+.p-check-promise__listItem {
+  position: relative;
+  padding-inline-start: 1em;
+
+  &+.p-check-promise__listItem{
+    margin-top: 5px;
+  }
+
+  &::before{
+    content: "・";
+    position: absolute;
+    left: 0;
+  }
+}
+
+.p-check-promise__spacer{
+  margin-top: 5px;
+}
+
+
+

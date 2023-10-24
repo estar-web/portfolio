@@ -34,7 +34,7 @@ function browserInit(done) {
     browserSync.init({
         proxy: "http://localhost:10048/",
         notify: false,                  // ブラウザ更新時に出てくる通知を非表示にする
-        open: "external",               // ローカルIPアドレスでサーバを立ち上げる
+        open: "external",                // ローカルIPアドレスでサーバを立ち上げる
     });
     done();
 }

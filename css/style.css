@@ -9,11 +9,11 @@
    # ================================================================= */
 
 html {
-	-webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+	-webkit-text-size-adjust: 100%;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	box-sizing: border-box;
-	tab-size: 4;
+	tab-size: 4; /* Prevent adjustments of font size after orientation changes in iOS */
 	word-break: normal;
 }
 
@@ -30,18 +30,18 @@ html {
 	vertical-align: inherit;
 }
 
-* {
+* { /* Reset `padding` and `margin` of all elements */
 	margin: 0;
-	padding: 0; /* Reset `padding` and `margin` of all elements */
+	padding: 0;
 }
 
 /* # =================================================================
-   # General elements
-   # ================================================================= */
+     # General elements
+     # ================================================================= */
 
-hr {
-	height: 0; /* Add the correct box sizing in Firefox */
-	overflow: visible; /* Show the overflow in Edge and IE */
+hr { /* Show the overflow in Edge and IE */
+	height: 0;
+	overflow: visible; /* Add the correct box sizing in Firefox */
 }
 
 details,
@@ -68,8 +68,10 @@ abbr[title] {
 	text-decoration: underline dotted;
 }
 
-a {
-	background-color: transparent; /* Remove the gray background on active links in IE 10 */
+a { /* Remove the gray background on active links in IE 10 */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-color: transparent;
+	cursor: pointer;
 }
 
 a:active,
@@ -112,8 +114,8 @@ sup {
 }
 
 /* # =================================================================
-   # Forms
-   # ================================================================= */
+     # Forms
+     # ================================================================= */
 
 input {
 	border-radius: 0;
@@ -232,8 +234,8 @@ legend {
 	color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
 	display: table; /* Correct the text wrapping in Edge and IE */
 	max-width: 100%; /* Correct the text wrapping in Edge and IE */
-	max-width: 100%; /* Correct the text wrapping in Edge 18- and IE */
-	white-space: normal; /* Correct the text wrapping in Edge and IE */
+	max-width: 100%; /* Correct the text wrapping in Edge and IE */
+	white-space: normal; /* Correct the text wrapping in Edge 18- and IE */
 }
 
 ::-webkit-file-upload-button { /* Correct the inability to style clickable types in iOS and Safari */
@@ -243,11 +245,13 @@ legend {
 }
 
 /* # =================================================================
-   # Specify media element style
-   # ================================================================= */
+     # Specify media element style
+     # ================================================================= */
 
 img {
-	border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+	border-style: none;
+	height: auto; /* Remove border when inside `a` element in IE 8/9/10 */
+	max-width: 100%;
 }
 
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
@@ -261,8 +265,8 @@ svg:not([fill]) {
 }
 
 /* # =================================================================
-   # Accessibility
-   # ================================================================= */
+     # Accessibility
+     # ================================================================= */
 
 /* Hide content from screens but not screenreaders */
 
@@ -331,6 +335,14 @@ a {
 	margin-top: 95px;
 }
 
+.l-check {
+	margin-top: 92px;
+}
+
+.l-contact {
+	margin-top: 90px;
+}
+
 .c-detail-button {
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -364,7 +376,6 @@ a {
 
 .c-deco__top {
 	height: 13.8666666667vw;
-	margin-top: 112px;
 	position: relative;
 }
 
@@ -477,7 +488,8 @@ a {
 }
 
 .p-header-nav__img {
-	width: 52.83019%;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .p-header-burger {
@@ -644,6 +656,10 @@ a {
 }
 
 .p-skills {
+	margin-top: 112px;
+}
+
+.p-skills__inner {
 	background-color: #F9FCFF;
 }
 
@@ -829,19 +845,349 @@ a {
 	right: -10px;
 }
 
+.p-check__nav {
+	align-items: flex-end;
+	border-width: 2px;
+	display: flex;
+	height: 66px;
+	justify-content: start;
+	list-style: none;
+	margin: 0;
+	margin-top: 35px;
+	overflow: auto;
+	padding: 0;
+}
+
+.p-check__nav-item {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	border-bottom: none;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	max-width: 100%;
+	padding: 0.714286em 2em 0.714286em 0.5em;
+	position: relative;
+	text-decoration: none;
+	transition: width 0.3s ease 0s;
+}
+
+.p-check__nav-item + .p-check__nav-item {
+	margin-left: 5px;
+}
+
+.p-check__nav-item::after {
+	border-color: #9BADF3;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scaleY(1.2) perspective(0.6em) rotateX(2.5deg);
+	transform-origin: bottom left; /*背景色のアニメーション*/
+	transition: background-color 0.3s linear 0s;
+	z-index: -1;
+}
+
+.p-check__nav-item.is-active {
+	color: #fff;
+}
+
+.p-check__nav-item.is-active::after {
+	background-color: #9BADF3;
+}
+
+.p-check__nav-item:hover {
+	color: #fff;
+}
+
+.p-check__nav-item:hover::after {
+	background-color: #9BADF3;
+}
+
+.p-check__content {
+	border: 3px solid #9badf3;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.p-check__body {
+	animation-duration: 2s;
+	animation-fill-mode: forwards; /*ふわっと表示させるためのアニメーション*/
+	animation-name: displayAnime;
+	display: none;
+	padding: 38px 17px 50px;
+	position: relative; /*ふわっと表示させるためのアニメーション*/
+}
+
+.p-check__body.is-active {
+	display: block;
+}
+
+.p-check-flow__item {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.p-check-flow__item + .p-check-flow__item {
+	margin-top: 50px;
+}
+
+.p-check-flow__img {
+	grid-column: 1/2;
+	grid-row: 1/5;
+}
+
+.p-check-flow__img img {
+	height: auto;
+	width: 100%;
+}
+
+.p-check-flow__num {
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	line-height: 1.485;
+	margin-inline-end: auto;
+	text-align: left;
+}
+
+.p-check-flow__title {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	line-height: 1.485;
+	margin-inline-end: auto;
+	text-align: left;
+}
+
+.p-check-flow__text {
+	font-size: 14px;
+	font-size: 0.875rem;
+	grid-column: 1/3;
+	grid-row: 5/6;
+	margin-top: 20px;
+}
+
+.p-check-flow__link {
+	color: #FF739E;
+}
+
+.p-check-price__textItem {
+	font-size: 14px;
+	font-size: 0.875rem;
+	padding-inline-start: 1em;
+	position: relative;
+}
+
+.p-check-price__textItem + .p-check-price__textItem {
+	margin-top: 5px;
+}
+
+.p-check-price__textItem::before {
+	content: "・";
+	left: 0;
+	position: absolute;
+}
+
+.p-check-price__detailItem {
+	padding-inline-start: 1em;
+	position: relative;
+}
+
+.p-check-price__detailItem::before {
+	color: #33C0ff;
+	content: "・";
+	left: 0;
+	position: absolute;
+}
+
+.p-check-price__wrapper {
+	margin-inline: auto;
+	margin-top: 40px;
+	width: min(600px, 100%);
+}
+
+.p-check-price__label {
+	background-color: #A7D2ED;
+	border-radius: 10px;
+	color: #fff;
+	line-height: 1.485;
+	margin-block-end: 30px;
+	margin-inline: auto;
+	padding: 0.5em;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-check-price__item {
+	align-items: center;
+	border-bottom: 1px solid #5093C1;
+	display: flex;
+	font-size: 14px;
+	font-size: 0.875rem;
+	justify-content: space-between;
+	line-height: 1.485;
+	padding: 0 1.5em 0.75em;
+}
+
+.p-check-price__item + .p-check-price__item {
+	margin-top: 10px;
+}
+
+.p-check-promise__item + .p-check-promise__item {
+	margin-top: 50px;
+}
+
+.p-check-promise__label {
+	margin-inline: auto;
+	position: relative;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-check-promise__label::after {
+	background-color: #337AB7;
+	bottom: 0;
+	content: "";
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: calc(100% + 44px);
+}
+
+.p-check-promise__text {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.485;
+	margin-top: 20px;
+}
+
+.p-check-promise__listItem {
+	padding-inline-start: 1em;
+	position: relative;
+}
+
+.p-check-promise__listItem + .p-check-promise__listItem {
+	margin-top: 5px;
+}
+
+.p-check-promise__listItem::before {
+	content: "・";
+	left: 0;
+	position: absolute;
+}
+
+.p-check-promise__spacer {
+	margin-top: 5px;
+}
+
+.p-contact__decoTop {
+	position: relative;
+}
+
+.p-contact__decoTop::before {
+	aspect-ratio: 0.1942257218;
+	background: url(../img/picture-jelly-fish-sp.png) no-repeat center center/contain;
+	content: "";
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: -90px;
+	width: 74px;
+}
+
+.p-contact__inner {
+	background: skyblue;
+	background: #F9FCFF;
+	padding-bottom: 72px;
+	width: 100%;
+}
+
+.p-contact__textArea {
+	line-height: 1.485;
+	margin-inline: auto;
+	margin-top: 40px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.p-contact__text {
+	margin-top: 30px;
+}
+
+.p-contact__button {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.p-contact__link {
+	border: 2px solid #337ab7;
+	border-radius: 20px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	display: inline-block;
+	padding: 0.625em 3em;
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
+}
+
+.p-contact__link:hover {
+	background-color: #337ab7;
+	box-shadow: 0 0 0;
+	color: #fff;
+	transform: translateY(0.25em);
+}
+
+.p-contact__decoBottom {
+	position: relative;
+}
+
+.p-contact__decoBottom::before {
+	background: url(../img/deco-bubble.png) no-repeat center center/contain;
+	bottom: 24px;
+	content: "";
+	height: 147px;
+	position: absolute;
+	right: calc(50% - 130px);
+	transform: translateX(50%);
+	width: 116px;
+}
+
 .p-footer {
 	padding-block-start: 60px;
 }
 
-.u-hide--sp {
+.u-hide {
+	display: none;
+}
+
+.u-show--sp {
 	display: block;
+}
+
+.u-hide--m {
+	display: block;
+}
+
+.u-show--m {
+	display: none;
+}
+
+.u-show--tab {
+	display: none;
 }
 
 .u-show--l {
 	display: none;
 }
 
-.u-show--sp {
+.u-hide--sp {
 	display: none;
 }
 
@@ -873,11 +1219,15 @@ a {
 	column-gap: 45px;
 }
 
-.u-hide--sp {
-	display: none;
+.p-contact__decoTop::before {
+	width: 85px;
 }
 
 .u-show--sp {
+	display: none;
+}
+
+.u-hide--sp {
 	display: block;
 }
 
@@ -887,6 +1237,11 @@ a {
 
 .l-inner {
 	padding-inline: 100px;
+}
+
+.c-section-title {
+	font-size: 48px;
+	font-size: 3rem;
 }
 
 .c-deco__top {
@@ -957,6 +1312,134 @@ a {
 
 .p-works__item-category-wrapper {
 	width: 100%;
+}
+
+.p-check__nav-item {
+	font-size: 20px;
+	font-size: 1.25rem;
+	padding: 0.55em 2.2em 0.55em 0.8em;
+}
+
+.p-check__nav-item + .p-check__nav-item {
+	margin-left: 16px;
+}
+
+.p-check__body {
+	padding: 35.6px 35px 50px;
+}
+
+.p-check-flow__item {
+	-moz-column-gap: 30px;
+	column-gap: 30px;
+	grid-template-columns: 1fr 6fr;
+}
+
+.p-check-flow__item + .p-check-flow__item {
+	position: relative;
+}
+
+.p-check-flow__item + .p-check-flow__item::after {
+	background: transparent url(../img/deco-line.svg) no-repeat center center/contain;
+	content: "";
+	height: 36px;
+	left: 58px;
+	position: absolute;
+	top: -52px;
+	width: 4px;
+}
+
+.p-check-flow__img {
+	grid-column: 1/2;
+	grid-row: 2/4;
+	width: 120px;
+}
+
+.p-check-flow__num {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	margin-inline: auto;
+}
+
+.p-check-flow__title {
+	font-size: 20px;
+	font-size: 1.25rem;
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.p-check-flow__text {
+	font-size: 16px;
+	font-size: 1rem;
+	grid-column: 2/3;
+	grid-row: 3/4;
+	margin-top: 0;
+}
+
+.p-check-price__textItem {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.p-check-price__label {
+	margin-inline: 0 auto;
+}
+
+.p-check-price__item {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.p-check-promise__label {
+	font-size: 20px;
+	font-size: 1.25rem;
+	margin-inline: 12px auto;
+}
+
+.p-check-promise__label::after {
+	width: calc(100% + 30px);
+}
+
+.p-check-promise__text {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.p-contact__decoTop::before {
+	aspect-ratio: 0.7376470588;
+	background-image: url(../img/picture-jelly-fish1.png);
+	height: auto;
+	top: 0;
+	width: 26.125%;
+}
+
+.p-contact__inner {
+	padding-bottom: 100px;
+}
+
+.p-contact__textArea {
+	margin-top: 50px;
+}
+
+.p-contact__decoBottom::before {
+	aspect-ratio: 0.7376470588;
+	background-image: url(../img/picture-jelly-fish2.png);
+	bottom: -50px;
+	height: auto;
+	right: 0;
+	transform: translateX(0);
+	width: 28.9763888889%;
+}
+
+.u-hide--m {
+	display: none;
+}
+
+.u-show--m {
+	display: inline;
+}
+
+.u-show--tab {
+	display: block;
 }
 
 }
@@ -1089,6 +1572,30 @@ a {
 	font-size: 1rem;
 }
 
+.p-check-flow__item {
+	justify-items: left;
+}
+
+.p-check-flow__text {
+	margin-block-end: auto;
+}
+
+.p-check-price__label {
+	margin-block-end: 32px;
+}
+
+.p-check-price__item {
+	padding: 0 5.0625em 0.625em 1.9375em;
+}
+
+.p-contact__decoTop::before {
+	top: -70px;
+}
+
+.p-contact__decoBottom::before {
+	bottom: -100px;
+}
+
 .u-show--l {
 	display: block;
 }
@@ -1102,8 +1609,20 @@ a {
 	padding-inline: 0;
 }
 
-.p-header-nav {
-	padding-inline-start: 238px;
+.l-profile {
+	margin-top: 100px;
+}
+
+.l-works {
+	margin-top: 100px;
+}
+
+.l-check {
+	margin-top: 194px;
+}
+
+.l-contact {
+	margin-top: 150px;
 }
 
 .p-mv__inner {
@@ -1130,6 +1649,50 @@ a {
 
 .p-works__item-category {
 	padding: 0.25em 1.3em 0.25em 1.7625em;
+}
+
+.p-check-flow {
+	padding: 2.225rem 3.5rem 5.6875rem;
+}
+
+.p-check-flow__item + .p-check-flow__item {
+	margin-top: 68px;
+}
+
+.p-check-price {
+	padding: 5rem 8rem 9.375rem;
+}
+
+.p-check-price__wrapper {
+	margin-top: 88px;
+}
+
+.p-check-price__wrapper + .p-check-price__wrapper {
+	margin-top: 80px;
+}
+
+.p-check-price__item + .p-check-price__item {
+	margin-top: 32px;
+}
+
+.p-check-promise {
+	padding: 5rem 10rem 9.375rem;
+}
+
+.u-hide--pc {
+	display: none;
+}
+
+}
+
+@keyframes displayAnime {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
 }
 
 }
