@@ -19,6 +19,7 @@ function watch() {
     gulp.watch("../src/assets/sass/**/*.scss", gulp.series(compileSass,browserReload));
     gulp.watch("../src/*.html", formatHTML);
     gulp.watch("../*.php",browserReload);
+    gulp.watch("../js/*.js",browserReload);
 }
 
 function formatHTML() {
