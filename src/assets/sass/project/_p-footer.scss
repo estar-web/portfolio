@@ -1,5 +1,65 @@
 @use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
 
 .p-footer{
-  padding-block-start: 60px;
+  padding-block: 60px 18px;
+  background-color: #D4EAFF;
+  font-family: Montserrat, serif;
+  color: map.get($color,text2nd);
+  max-width: 100%;
+}
+
+.p-footer__inner{
+  // padding-inline: 100px;
+  padding-inline: 0;
+
+  @include mq(xl){
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__title{
+  font-weight: 400;
+}
+
+.p-footer__nav {
+  width: fit-content;
+
+  height: fit-content;
+  margin-inline: auto;
+  @include mq(xl){
+    margin-inline: 0;
+  }
+}
+
+.p-footer__navList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em 18.66667vw;
+  // gap: 2.5em 4.375em;
+  align-items: center;
+  justify-items: center;
+  line-height: math.div(24,16);
+
+  @include mq(m){
+    grid-template-columns: repeat(6,1fr);
+    gap: 0 2.5em;
+  }
+
+}
+
+.p-footer__navItem {
+  width: fit-content;
+}
+.p-footer__navLink {
+  color: map.get($color,text2nd);
+}
+
+.p-footer__copyright {
+  margin-top: 60px;
+  text-align: center;
+
 }

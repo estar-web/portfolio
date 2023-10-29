@@ -1,0 +1,26 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.swiper-slide-shadow{
+  // transition: opacity 2s linear 0s;
+  // transition-property: opacity;
+  // overflow: hidden;
+  // border-radius: 10px;
+}
+
+.swiper-3d .swiper-slide-shadow{
+  overflow: hidden;
+  border-radius: 10px;
+  width: calc(100vw - 25px - 40px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+  background: rgba(0, 0, 0, 0.5);
+
+  @include mq(m){
+    width: calc(100vw - 200px - 40px); 
+  }
+}
+// .swiper-slide-shadow{
+//   overflow: hidden;
+//   border-radius: 10px;
+//   width: calc(100vw - 25px - 40px - 30px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+// }

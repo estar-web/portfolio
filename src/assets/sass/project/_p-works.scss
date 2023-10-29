@@ -10,43 +10,82 @@
 
 .p-works__title {}
 
-.p-works__wrapper {
+.p-works__swiper{
+
   margin-top: 30px;
   background: #CCA365;
   border-radius: 0 10px 10px 0;
-  padding: 20px;
-  position: relative;
-  width: min(100%,1000px);
-  margin-inline: auto;
+  width: min(100%, 1000px);
 
-  &::after{
-     content: "";
-     position: absolute;
-     top: 50%;
-     left: 0;
-     width: 3%;
-     height: 95%;
-     background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
-     transform: translateY(-50%);
+  @include mq(l){
+    border-radius: 10px;
+  }
 
-     @include mq(l){
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 3%;
+    height: 95%;
+    background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
+    transform: translateY(-50%);
+
+    @include mq(l) {
       top: 50%;
       left: 50%;
       width: 3%;
       height: 88%;
       background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
-      transform: translate(-50%,-50%);
-     }
+      transform: translate(-50%, -50%);
+      z-index: map.get($z-map,base);
+    }
   }
+}
 
-  @include mq(l){
+.p-works__wrapper {
+  // margin-top: 30px;
+  // background: #CCA365;
+  // border-radius: 0 10px 10px 0;
+  // padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  position: relative;
+  // margin-inline: auto;
+  width: calc(100% - 20px * 2);
+  overflow: hidden;
+  
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   width: 3%;
+  //   height: 95%;
+  //   background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
+  //   transform: translateY(-50%);
+
+  //   @include mq(l) {
+  //     top: 50%;
+  //     left: 50%;
+  //     width: 3%;
+  //     height: 88%;
+  //     background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
+  //     transform: translate(-50%, -50%);
+  //   }
+  // }
+
+  @include mq(l) {
     border-radius: 10px;
   }
 }
 
 .p-works__item {
   background-color: #FDFDFD;
-  padding-inline: 15px 14px;
+  padding-inline: 15px;
   padding-block: 15px 30px;
   color: map.get($color, text2nd);
   display: grid;
@@ -54,63 +93,75 @@
   border-radius: 10px;
   justify-items: center;
   align-items: center;
-
-  @include mq(l){
+  // width: calc(math.div(310,375) * 100vw - (math.div(15,375) * 2) * 100vw);
+  // width: calc(math.div(310,375) * 100vw - 15px * 2);
+  width: calc(100vw - 25px - 40px - 30px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+  overflow: hidden;
+  
+  @include mq(m){
+    width: calc(100vw - 200px - 40px - 30px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+    // width: calc(68.658333vw - 30px);
+    // width: calc(math.div(568,768) * 100vw - 15px * 2);
+  }
+  
+  @include mq(l) {
     grid-template-columns: repeat(2, 1fr);
     align-content: center;
     column-gap: 40px;
     padding-block: 48px 64px;
     row-gap: 0;
   }
-
-  @include mq(xl){
+  
+  @include mq(xl) {
     padding-inline: 0;
+    width: calc(100% - 40px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   }
 
 }
 
 .p-works__img {
   text-align: center;
-  aspect-ratio: math.div(200,160);
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-  width: max(40%,200px);
-  
-  img{
+  aspect-ratio: math.div(200, 160);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: max(40%, 200px);
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  @include mq(m){
+
+  @include mq(m) {
     width: 70%;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  
-  @include mq(l){
+
+  @include mq(l) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    width: min(100%,440px);
-    aspect-ratio: math.div(440,352);
+    width: min(100%, 440px);
+    aspect-ratio: math.div(440, 352);
   }
 }
 
-.p-works__text{
+.p-works__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 
-  @include mq(m){
+  @include mq(m) {
     padding-inline: 30px;
   }
 
-  @include mq(xl){
+  @include mq(xl) {
     padding-inline: 78px calc(77px - 15px);
-    
+
   }
 }
 
@@ -120,7 +171,7 @@
   position: relative;
   width: 100%;
 
-  @include mq(m){
+  @include mq(m) {
     @include font(18);
   }
 
@@ -135,7 +186,7 @@
     height: 1px;
     background: #464646;
 
-    @include mq(l){
+    @include mq(l) {
       width: 100%;
     }
   }
@@ -145,19 +196,21 @@
   display: inline-flex;
   flex-wrap: wrap;
   width: 72%;
-  justify-content: start;
+  justify-content: flex-start;
   gap: math.div(8, 14) * 1em 0.94em;
-
-  @include mq(m){
+  
+  @include mq(m) {
     width: 100%;
+    justify-content: center;
+  }
+  
+  @include mq(l) {
+    gap: (math.div(16, 16) * 1em) (math.div(24, 16) * 1em);
+    justify-content: flex-start;
   }
 
-  @include mq(l){
-    gap: (math.div(16, 16) * 1em) (math.div(24,16) * 1em);
-  }
-
-  @include mq(xl){
-    gap: (math.div(20, 16) * 1em) (math.div(32,16) * 1em);
+  @include mq(xl) {
+    gap: (math.div(20, 16) * 1em) (math.div(32, 16) * 1em);
   }
 }
 
@@ -171,14 +224,14 @@
   position: relative;
   border: 1px solid #464646;
 
-  
-  @include mq(l){
+
+  @include mq(l) {
     @include font(16);
-    padding: 0.25em 0.75em 0.25em calc(0.75em + math.div(9,16) * 1em);
+    padding: 0.25em 0.75em 0.25em calc(0.75em + math.div(9, 16) * 1em);
   }
 
-  @include mq(xl){
-    padding: 0.25em 1.3em 0.25em calc(1.2em + math.div(9,16) * 1em);
+  @include mq(xl) {
+    padding: 0.25em 1.3em 0.25em calc(1.2em + math.div(9, 16) * 1em);
 
   }
 
@@ -227,8 +280,8 @@
 .p-works__item-comment {
   @include font(14);
   line-height: math.div(20.79, 14);
-  
-  @include mq(l){
+
+  @include mq(l) {
     @include font(16);
   }
 }
@@ -242,7 +295,7 @@
   width: 14.375em;
   margin-inline: auto;
   text-align: center;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -256,8 +309,8 @@
     transition: right 0.3s linear 0s;
   }
 
-  &:hover{
-    &::before{
+  &:hover {
+    &::before {
       right: -10px;
     }
   }

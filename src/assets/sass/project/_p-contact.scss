@@ -59,7 +59,6 @@
 
 .p-contact__textArea {
   max-width: 100%;
-  // width: math.div(224, 375) * 100%;
   line-height: math.div(23.76, 16);
   margin-top: 40px;
   margin-inline: auto;
@@ -105,11 +104,14 @@
     position: absolute;
     background: url(../img/deco-bubble.png) no-repeat center center /contain;
     bottom: 24px;
-    //  right: 0;
-    right: calc(50% - 130px);
+
+    right: calc(50% - 34vw);
     transform: translateX(50%);
-    width: 116px;
+    width: math.div(116,375) * 100%;
     height: 147px;
+    @include mq(s){
+      right: calc(50% - 130px);
+    }
 
     @include mq(m) {
       background-image: url(../img/picture-jelly-fish2.png);

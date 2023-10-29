@@ -110,29 +110,45 @@
   <section id="works" class="l-works p-works">
     <div class="p-works__inner l-inner">
       <h2 class="p-works__title c-section-title">Works</h2><!-- /.p-works__title -->
-      <div class="p-works__wrapper">
-        <a href="" class="p-works__item">
-          <figure class="p-works__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="200" height="160" alt="実績画像" loading="lazy" decoding="async">
-          </figure><!-- /.p-works__img -->
-          <div class="p-works__text">
 
-            <div class="p-works__item-title">タイトル</div><!-- /.p-works__item-title -->
-            <ul class="p-works__item-category-wrapper">
-              <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-              <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-              <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-              <li class="p-works__item-category">CMS</li><!-- /.p-works__item-category -->
-              <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-              <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-            </ul><!-- /.p-works__item-category-wrapper -->
-            <p class="p-works__item-comment">
-              コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
-          </div><!-- /.p-works__text -->
-        </a><!-- /.p-works__item -->
-      </div><!-- /.p-works__wrapper -->
+      <div class="swiper p-works__swiper">
+        <div class="swiper-wrapper p-works__wrapper">
+          <a href="" class="swiper-slide">
+            <div class="p-works__item">
+              <figure class="p-works__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="200" height="160" alt="実績画像" loading="lazy" decoding="async">
+              </figure><!-- /.p-works__img -->
+              <div class="p-works__text">
+                <div class="p-works__item-title">デモサイト</div><!-- /.p-works__item-title -->
+                <ul class="p-works__item-category-wrapper">
+                  <li class="p-works__item-category">LP</li><!-- /.p-works__item-category -->
+                </ul><!-- /.p-works__item-category-wrapper -->
+                <p class="p-works__item-comment">
+                  コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
+              </div><!-- /.p-works__text -->
+            </div><!-- /.p-works__item -->
+          </a><!-- /.p-works__item -->
+
+          <a href="" class="swiper-slide">
+            <div class="p-works__item">
+              <figure class="p-works__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-minamishika.png" width="200" height="160" alt="画像：みなみ歯科" loading="lazy" decoding="async">
+              </figure><!-- /.p-works__img -->
+              <div class="p-works__text">
+                <div class="p-works__item-title">みなみ歯科クリニック</div><!-- /.p-works__item-title -->
+                <ul class="p-works__item-category-wrapper">
+                  <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
+                  <li class="p-works__item-category">ブログ</li><!-- /.p-works__item-category -->
+                </ul><!-- /.p-works__item-category-wrapper -->
+                <p class="p-works__item-comment">
+                  コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
+              </div><!-- /.p-works__text -->
+            </div><!-- /.p-works__item -->
+          </a><!-- /-->
+        </div><!-- /.p-works__wrapper -->
+      </div><!-- /.swiper p-works__swiper -->
       <div class="p-works__button">
-        <a href="" class="p-works__link c-detail-button">制作実績をもっと見る</a><!-- /.p-works__link -->
+        <a href="<?php echo home_url('/works/'); ?>" class="p-works__link c-detail-button">制作実績をもっと見る</a><!-- /.p-works__link -->
       </div><!-- /.p-works__button -->
     </div><!-- /.p-works__inner l-inner -->
   </section><!-- /.l-works p-works -->
@@ -320,7 +336,7 @@
         <div class="p-contact__lead">＼お問い合わせはこちらから／</div><!-- /.p-contact__lead -->
         <div class="p-contact__text">
           <p>ご不明点や<br class="u-show--sp">
-            お見積もり依頼など、<br class="u-hide--pc ">
+            お見積もり依頼など、<br class="u-hide--l">
             <!-- お見積もり依頼など、<br class="u-show--sp u-show--tab"> -->
             なんでもお気軽に<br class="u-show--sp">
             お問い合わせください！</p>
@@ -332,14 +348,5 @@
     </div><!-- /.p-contact__inner -->
     <div class="p-contact__decoBottom"></div><!-- /.p-contact__decoBottom -->
   </section><!-- /.l-contact p-contact -->
-
-  <footer class="l-footer">
-    <div class="p-footer l-inner">
-      <nav class="p-footer__nav">
-        
-      </nav><!-- /.p-footer__nav -->
-    </div><!-- /.p-footer -->
-  </footer><!-- /.l-footer -->
-
 </main>
 <?php get_footer(); ?>

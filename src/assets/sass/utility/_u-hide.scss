@@ -27,6 +27,14 @@
   }
 }
 
+.u-hide--l {
+  display: block;
+
+  @include mq(l) {
+    display: none;
+  }
+}
+
 .u-show--m {
   display: none;
 
@@ -55,6 +63,14 @@
   display: none;
 
   @include mq(s) {
+    display: block;
+  }
+}
+
+.u-hide--pc {
+  display: none;
+
+  @include mq(xl) {
     display: block;
   }
 }

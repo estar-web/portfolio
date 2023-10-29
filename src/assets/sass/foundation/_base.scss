@@ -4,6 +4,7 @@
 body{
   font-family: $defaultFont;
   color: map.get($color, text1st);
+  // overflow-x: hidden;
 }
 
 a{

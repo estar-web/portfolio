@@ -1,0 +1,25 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-lower-top {
+  height: 200px;
+  position: relative;
+  width: 100%;
+  background-color: #F5FAFF;
+  // background-color: map.get($color,main);
+}
+
+.p-lower-top__titleWrap {
+  color: map.get($color,text1st);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.p-lower-top__title {
+ @include font(24);
+}
+
