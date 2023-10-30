@@ -3,18 +3,41 @@
 @use "sass:map";
 
 .p-works-nav {
-  
+  margin-top: 30px;
 }
 
 .p-works-nav__list {
-
+  // display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(auto-fit,7.5rem);
+  gap: 30px 28px;
+  margin-inline: auto;
+  align-content: center;
+  justify-content: center;
 }
 
 .p-works-nav__item {
+  padding-block: math.div(6,14) * 1em;
+  color: #fff;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  background-color: #A7D2ED;
 
+  width: 7.5rem;
+  
+  &.selected{
+    background-color: #57A5D4;
+  }
 }
 
 .p-works-nav__link {
+  @include font(14);
+  font-weight: 700;
+  line-height: 1.5;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

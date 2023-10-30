@@ -17,4 +17,8 @@ wp_enqueue_script("swiper", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7
 wp_enqueue_script("my", get_template_directory_uri() . "/js/script.js", array("jquery"), filemtime(get_theme_file_path('js/script.js')), true);
 }
 add_action("wp_enqueue_scripts", "my_script_init");
+
+
+// global $wp_rewrite;
+// $wp_rewrite->flush_rules();
 ?>

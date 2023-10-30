@@ -1,0 +1,54 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-works-contents {
+
+}
+
+.p-works-contents__inner {
+  padding-inline: 28px;
+
+  @include mq(m){
+    padding-inline: 40px;
+  }
+}
+
+
+.p-works-contents__wrapper {
+  display: grid;
+  row-gap: 40px;
+  grid-template-columns: repeat(auto-fit,min(320px,100%));
+  justify-content: center;
+  // column-gap: 20px;
+  column-gap: 40px;
+
+  // @include mq(m){
+  // }
+
+  @include mq(xl){
+    row-gap: 80px;
+  }
+}
+
+.p-works-contents__card {
+
+}
+
+.p-works-contents__item {
+  // width: 100%;
+}
+
+.p-works-contents__img {
+
+}
+
+.p-works-contents__body {
+  margin-top: 8px;
+}
+
+.p-works-contents__title {
+  @include font(14);
+  font-weight: 400;
+}
+
