@@ -108,7 +108,7 @@ jQuery('.p-check__nav-item').click(function (e) {
   return false;
 });
 
-const swiper = new Swiper(".p-works__swiper", {
+const top_swiper = new Swiper(".p-works__swiper", {
   loop: true,
   // effect: "fade",
   effect: "creative",
@@ -158,6 +158,27 @@ const swiper = new Swiper(".p-works__swiper", {
       },
     },
   }
+});
+
+const lower_swiper = new Swiper(".p-works-icatch__swiper", {
+  loop: true,
+  effect: "fade",
+  
+  fadeEffect: {
+    crossFade: true
+  },
+
+  pagination: {
+    el: '.p-works-icatch__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  speed: 2000,
+  autoplay: {
+    delay: 3000, // 次のスライドに自動で切り替える時間
+    // delay: 1000, // デバッグ用
+  },
+  slidePerView: 1,
 });
 
 jQuery(window).on("scroll", function () {
