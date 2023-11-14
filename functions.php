@@ -7,9 +7,17 @@ add_theme_support('title-tag');
 add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
 }
 add_action("after_setup_theme", "my_setup");
+
+
+// function gg_gfonts_prefetch() {
+//   echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
+//   echo '<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>';
+//  }
+//  add_action( 'wp_head', 'gg_gfonts_prefetch' );
+
 function my_script_init()
 {
-wp_enqueue_style("GoogleFont", "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=Montserrat:wght@400;700&display=swap", array(), 'false', 'all');
+// wp_enqueue_style("GoogleFont", "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=Montserrat:wght@400;700&display=swap", array(), 'false', 'all');
 wp_enqueue_style("anime", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css", array(), "3.6.2", "all");
 wp_enqueue_style("swiper", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css", array(), "8.4.7", "all");
 wp_enqueue_style("my", get_template_directory_uri() . "/css/style.css", array(), filemtime(get_theme_file_path('css/style.css')), "all");

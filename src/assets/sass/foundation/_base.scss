@@ -4,10 +4,10 @@
 body{
   font-family: $defaultFont;
   color: map.get($color, text1st);
-  // overflow-x: hidden;
 }
 
 a{
   text-decoration: none;
   color: inherit;
 }
+
