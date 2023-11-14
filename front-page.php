@@ -113,38 +113,56 @@
 
       <div class="swiper p-works__swiper">
         <div class="swiper-wrapper p-works__wrapper">
-          <a href="" class="swiper-slide">
-            <div class="p-works__item">
-              <figure class="p-works__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="200" height="160" alt="実績画像" loading="lazy" decoding="async">
-              </figure><!-- /.p-works__img -->
-              <div class="p-works__text">
-                <div class="p-works__item-title">デモサイト</div><!-- /.p-works__item-title -->
-                <ul class="p-works__item-category-wrapper">
-                  <li class="p-works__item-category">LP</li><!-- /.p-works__item-category -->
-                </ul><!-- /.p-works__item-category-wrapper -->
-                <p class="p-works__item-comment">
-                  コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
-              </div><!-- /.p-works__text -->
-            </div><!-- /.p-works__item -->
-          </a><!-- /.p-works__item -->
-
-          <a href="" class="swiper-slide">
-            <div class="p-works__item">
-              <figure class="p-works__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-minamishika.png" width="200" height="160" alt="画像：みなみ歯科" loading="lazy" decoding="async">
-              </figure><!-- /.p-works__img -->
-              <div class="p-works__text">
-                <div class="p-works__item-title">みなみ歯科クリニック</div><!-- /.p-works__item-title -->
-                <ul class="p-works__item-category-wrapper">
-                  <li class="p-works__item-category">WordPress</li><!-- /.p-works__item-category -->
-                  <li class="p-works__item-category">ブログ</li><!-- /.p-works__item-category -->
-                </ul><!-- /.p-works__item-category-wrapper -->
-                <p class="p-works__item-comment">
-                  コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント </p><!-- /.p-works__item-comment -->
-              </div><!-- /.p-works__text -->
-            </div><!-- /.p-works__item -->
-          </a><!-- /-->
+          <?php
+          $current_cat = get_queried_object();
+          // echo $current_cat->slug;
+          $achieve_query = new WP_Query(
+            array(
+              'post_type' => 'works',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
+              // 'tax_query' => array(
+              //   array(
+              //     'taxonomy' => 'genre',
+              //     'field' => 'slug',
+              //   )
+              // )
+            )
+          );
+          ?>
+          <?php if ($achieve_query->have_posts()) :
+            while ($achieve_query->have_posts()) :
+              $achieve_query->the_post(); ?>
+              <a href="<?php the_permalink(); ?>" class="swiper-slide">
+                <div class="p-works__item">
+                  <figure class="p-works__img">
+                    <?php if (has_post_thumbnail()) :
+                      the_post_thumbnail();
+                    else :
+                    ?><img src="<?php echo get_template_directory_uri() ?>/img/picture-demo1.png" width="200" height="160" alt="画像：ダミー" loading="lazy" decoding="async">
+                    <?php endif; ?>
+                  </figure><!-- /.p-works__img -->
+                  <div class="p-works__text">
+                    <div class="p-works__item-title"><?php the_title(); ?></div><!-- /.p-works__item-title -->
+                    <ul class="p-works__item-category-wrapper">
+                      <?php $genre_terms = get_the_terms($achieve_query->ID, 'genre');
+                      if($genre_terms):
+                      foreach ($genre_terms as $genre_term) : ?>
+                        <li class="p-works__item-category"><?php echo $genre_term->name; ?></li><!-- /.p-works__item-category -->
+                      <?php endforeach;
+                      endif;?>
+                    </ul><!-- /.p-works__item-category-wrapper -->
+                    <p class="p-works__item-comment">
+                      <?php $comment = get_field('comment'); 
+                      echo $comment;
+                      ?>
+                  </div><!-- /.p-works__text -->
+                </div><!-- /.p-works__item -->
+              </a><!-- /.p-works__item -->
+          <?php endwhile;
+          endif;
+          ?>
         </div><!-- /.p-works__wrapper -->
       </div><!-- /.swiper p-works__swiper -->
       <div class="p-works__button">

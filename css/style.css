@@ -758,6 +758,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	height: 100%;
 }
 
 .p-works__item-title {
@@ -1588,9 +1589,9 @@ a {
 
 .p-works__img img {
 	-o-object-fit: cover;
-	height: 100%;
+	-o-object-position: center top;
 	object-fit: cover;
-	width: 100%;
+	object-position: center top;
 }
 
 .p-works__text {

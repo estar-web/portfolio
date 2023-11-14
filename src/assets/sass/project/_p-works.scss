@@ -10,14 +10,14 @@
 
 .p-works__title {}
 
-.p-works__swiper{
+.p-works__swiper {
 
   margin-top: 30px;
   background: #CCA365;
   border-radius: 0 10px 10px 0;
   width: min(100%, 1000px);
 
-  @include mq(l){
+  @include mq(l) {
     border-radius: 10px;
   }
 
@@ -38,7 +38,7 @@
       height: 88%;
       background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
       transform: translate(-50%, -50%);
-      z-index: map.get($z-map,base);
+      z-index: map.get($z-map, base);
     }
   }
 }
@@ -56,7 +56,7 @@
   // margin-inline: auto;
   width: calc(100% - 20px * 2);
   overflow: hidden;
-  
+
 
   // &::after {
   //   content: "";
@@ -95,15 +95,15 @@
   align-items: center;
   // width: calc(math.div(310,375) * 100vw - (math.div(15,375) * 2) * 100vw);
   // width: calc(math.div(310,375) * 100vw - 15px * 2);
-  width: calc(100vw - 25px - 40px - 30px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+  width: calc(100vw - 25px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   overflow: hidden;
-  
-  @include mq(m){
-    width: calc(100vw - 200px - 40px - 30px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+
+  @include mq(m) {
+    width: calc(100vw - 200px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
     // width: calc(68.658333vw - 30px);
     // width: calc(math.div(568,768) * 100vw - 15px * 2);
   }
-  
+
   @include mq(l) {
     grid-template-columns: repeat(2, 1fr);
     align-content: center;
@@ -111,10 +111,10 @@
     padding-block: 48px 64px;
     row-gap: 0;
   }
-  
+
   @include mq(xl) {
     padding-inline: 0;
-    width: calc(100% - 40px);  // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+    width: calc(100% - 40px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   }
 
 }
@@ -135,9 +135,10 @@
     width: 70%;
 
     img {
-      width: 100%;
-      height: 100%;
+
       object-fit: cover;
+      object-position: center top;
+
     }
   }
 
@@ -154,6 +155,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  height: 100%;
 
   @include mq(m) {
     padding-inline: 30px;
@@ -198,12 +200,12 @@
   width: 72%;
   justify-content: flex-start;
   gap: math.div(8, 14) * 1em 0.94em;
-  
+
   @include mq(m) {
     width: 100%;
     justify-content: center;
   }
-  
+
   @include mq(l) {
     gap: (math.div(16, 16) * 1em) (math.div(24, 16) * 1em);
     justify-content: flex-start;
