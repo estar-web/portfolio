@@ -36,11 +36,24 @@
 }
 
 .p-works-contents__item {
-  // width: 100%;
+  transition: box-shadow $ts-time linear 0s,transform $ts-time linear 0s;
+  &:hover{
+    box-shadow: 0 4px 0 rgba(0,0,0,0.16);
+    transform: translateY(-0.25em);
+  }
 }
 
 .p-works-contents__img {
+  width: 100%;
+  aspect-ratio: math.div(320,230);
 
+  display: flex;
+  justify-content: center;
+
+  img{
+    object-fit: cover;
+    object-position: center top;
+  }
 }
 
 .p-works-contents__body {

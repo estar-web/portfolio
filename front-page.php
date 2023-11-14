@@ -322,7 +322,6 @@
             </div><!-- /.p-check-promise__text -->
           </div><!-- /.p-check-promise__item -->
         </div><!-- /.p-check__body -->
-
       </div><!-- /.p-check__content -->
     </div><!-- /.p-check__inner -->
   </section><!-- /.l-check p-check -->

@@ -22,6 +22,7 @@ $defaultFont: "Comfortaa","游ゴシック", YuGothic, 'Noto Sans JP', Arial, "H
 $breakpoints : (
   "s":"screen and (min-width:576px)",
   "m":"screen and (min-width:768px)",
+  "hov":"screen and (min-width:768px)",
   "l":"screen and (min-width:992px)",
   "xl":"screen and (min-width:#{$m-inner})",
   "xxl":"screen and (min-width:1400px)",

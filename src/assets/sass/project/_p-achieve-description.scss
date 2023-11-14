@@ -1,0 +1,15 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-achieve-description {
+  margin-block-start: 40px;
+}
+
+.p-achieve-description__title {
+  text-align: center;
+
+  @include mq(xl){
+    @include font(24);
+  }
+}

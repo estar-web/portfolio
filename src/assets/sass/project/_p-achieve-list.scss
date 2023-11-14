@@ -1,0 +1,70 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-achieve-list {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+
+  @include mq(xl){
+    // gap: 20px 100px;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.p-achieve-list__wrapper {
+
+  +.p-achieve-list__wrapper {
+    // margin-top: 20px;
+  }
+}
+
+.p-achieve-list__client {
+
+}
+
+.p-achieve-list__url {
+
+}
+
+.p-achieve-list__area {
+
+}
+
+.p-achieve-list__period {
+
+}
+
+.p-achieve-list__price {
+
+}
+
+.p-achieve-list__comment {
+  @include mq(l){
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+
+    >.p-achieve-list__text{
+      margin-block-start: 1em;
+    }
+  }
+}
+
+
+
+.p-achieve-list__title {
+  @include mq(xl){
+    @include font(20);
+  }
+}
+
+.p-achieve-list__text {
+  margin-inline-start: 1em;
+  @include font(14);
+  
+  @include mq(l){
+    margin-block-start: 0.5em;
+    @include font(16);
+  }
+}

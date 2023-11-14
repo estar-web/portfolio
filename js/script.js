@@ -145,7 +145,7 @@ const top_swiper = new Swiper(".p-works__swiper", {
         prev: {
           shadow: true,
           origin: "center",
-          translate: [0, 0,0],
+          translate: [0, 0, 0],
           rotate: [0, 45, 0],
         },
         next: {
@@ -160,16 +160,16 @@ const top_swiper = new Swiper(".p-works__swiper", {
   }
 });
 
-const lower_swiper = new Swiper(".p-works-icatch__swiper", {
+const lower_swiper = new Swiper(".p-achieve-icatch__swiper", {
   loop: true,
   effect: "fade",
-  
+
   fadeEffect: {
     crossFade: true
   },
 
   pagination: {
-    el: '.p-works-icatch__pagination',
+    el: '.p-achieve-icatch__pagination',
     type: 'bullets',
     clickable: true,
   },
@@ -182,21 +182,25 @@ const lower_swiper = new Swiper(".p-works-icatch__swiper", {
 });
 
 jQuery(window).on("scroll", function () {
+
   // スライダーのコンテナ要素を取得
   const sliderContainer = jQuery(".p-works__swiper")[0]; // jQueryオブジェクトからDOM要素を取得
 
-  // スライダーのコンテナの位置情報を取得
-  const rect = sliderContainer.getBoundingClientRect();
+  // スライダーのコンテナが存在する場合のみ処理を続行
+  if (sliderContainer) {
+    // スライダーのコンテナの位置情報を取得
+    const rect = sliderContainer.getBoundingClientRect();
 
-  // ウィンドウの高さを取得（クロスブラウザ対応）
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    // ウィンドウの高さを取得（クロスブラウザ対応）
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  if (rect.top < windowHeight && rect.bottom >= 0) {
-    // スライダーが画面内に入った場合、自動再生を有効にして開始
-    // swiper.params.autoplay.delay = 1000; // 自動再生の遅延設定
-    swiper.autoplay.start();
-  } else {
-    // 画面外に出た場合、自動再生を停止
-    swiper.autoplay.stop();
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+      // スライダーが画面内に入った場合、自動再生を有効にして開始
+      // swiper.params.autoplay.delay = 1000; // 自動再生の遅延設定
+      top_swiper.autoplay.start();
+    } else {
+      // 画面外に出た場合、自動再生を停止
+      top_swiper.autoplay.stop();
+    }
   }
 });

@@ -1,0 +1,37 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-achieve-detail {}
+
+.p-achieve-detail__inner {}
+
+.p-achieve-detail__button {
+  margin-top: 50px;
+}
+
+.p-achieve-detail__link {
+  display: block;
+  width: 9em;
+  margin-inline: auto;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 23.44px 0px 0px;
+    border-color: transparent #337ab7 transparent transparent;
+    left: -1px;
+    bottom: 0;
+    transition: left 0.3s linear 0s;
+  }
+
+  &:hover {
+    &::before {
+      left: -10px;
+    }
+  }
+}

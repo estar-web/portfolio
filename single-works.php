@@ -2,67 +2,71 @@
 
 <?php get_template_part('template/works-top') ?>
 
-<article class="l-works-detail p-works-detail">
-  <div class="l-inner p-works-detail__inner">
-    <div class="p-works-icatch">
-      <div class="swiper p-works-icatch__swiper">
-        <div class="swiper-wrapper p-works-icatch__swiperWrapper">
-          <div class="swiper-slide p-works-icatch__slide">
-            <figure class="p-works-icatch__img p-icatch--pc">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demolp-pc.png" width="310" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-works-icatch__img -->
+<article class="l-achieve-detail p-achieve-detail">
+  <div class="l-inner p-achieve-detail__inner">
+    <div class="p-achieve-icatch">
+      <div class="swiper p-achieve-icatch__swiper">
+        <div class="swiper-wrapper p-achieve-icatch__swiperWrapper">
+          <div class="swiper-slide p-achieve-icatch__slide">
+            <figure class="p-achieve-icatch__img p-icatch--pc">
+            <!-- <figure class="p-achieve-icatch__img p-icatch--top"> -->
+              <img src="<?php the_field('icatch_pc') ?>" width="310" height="180" alt="" loading="lazy" decoding="async">
+            </figure><!-- /.p-achieve-icatch__img -->
           </div>
-          <div class="swiper-slide p-works-icatch__slide">
-            <figure class="p-works-icatch__img p-icatch--tab">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demolp-ipad.png" width="166" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-works-icatch__img -->
+          <div class="swiper-slide p-achieve-icatch__slide">
+            <figure class="p-achieve-icatch__img p-icatch--tab">
+            <!-- <figure class="p-achieve-icatch__img p-icatch--center"> -->
+              <img src="<?php the_field('icatch_tab') ?>" width="166" height="180" alt="" loading="lazy" decoding="async">
+              <!-- <img src="<?php /*the_field('icatch_pc')*/ ?>" width="310" height="180" alt="" loading="lazy" decoding="async"> -->
+            </figure><!-- /.p-achieve-icatch__img -->
           </div>
-          <div class="swiper-slide p-works-icatch__slide">
-            <figure class="p-works-icatch__img p-icatch--sp">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demolp-sp.png" width="83" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-works-icatch__img -->
+          <div class="swiper-slide p-achieve-icatch__slide">
+            <figure class="p-achieve-icatch__img p-icatch--sp">
+            <!-- <figure class="p-achieve-icatch__img p-icatch--bottom"> -->
+              <img src="<?php the_field('icatch_sp') ?>" width="83" height="180" alt="" loading="lazy" decoding="async">
+              <!-- <img src="<?php /*the_field('icatch_pc')*/ ?>" width="310" height="180" alt="" loading="lazy" decoding="async"> -->
+            </figure><!-- /.p-achieve-icatch__img -->
           </div>
         </div>
         <!-- ページネーション -->
       </div>
-      <div class="swiper-pagination p-works-icatch__pagination"></div>
-    </div><!-- /.p-works-icatch -->
+      <div class="swiper-pagination p-achieve-icatch__pagination"></div>
+    </div><!-- /.p-achieve-icatch -->
 
-    <div class="p-works-description">
-      <h3 class="p-works-description__title">デモLPサイト</h3><!-- /.p-works-description__siteTitle -->
-      <dl class="p-works-list">
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">クライアント様 </dt>
-          <dd class="p-works-list__text">Code Cocktails 様</dd>
-        </div><!-- /.p-works-list__wrapper -->
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">URL</dt>
-          <dd class="p-works-list__text">https://codecocktails.yukiusagi-web.com/</dd>
-        </div><!-- /.p-works-list__wrapper -->
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">担当領域</dt>
-          <dd class="p-works-list__text">コーディング</dd>
-        </div><!-- /.p-works-list__wrapper -->
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">制作期間</dt>
-          <dd class="p-works-list__text">一週間</dd>
-        </div><!-- /.p-works-list__wrapper -->
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">目安価格（税抜）</dt>
-          <dd class="p-works-list__text">¥50,000</dd>
-        </div><!-- /.p-works-list__wrapper -->
-        <div class="p-works-list__wrapper">
-          <dt class="p-works-list__title">コメント</dt>
-          <dd class="p-works-list__text">Code Cocktails 様のチームポートフォリオを制作しました。figmaでのデザインカンプからのコーディングでした。
-            ご要望としてWordPressによる制作実績部分の記事投稿ができるようにとのことだったのでなんとかかんとか色々こんな感じできっと描くのよね？
-            なんとかかんとか色々とコメントをつらつら書いてくださいな。
-            どのくらいいるかなぁ？もっと長く書きます？このくらいでいいですかね？
-            もっとながくなるなら横幅はこの幅固定で下にどんどん伸ばしていってくださいね。</dd>
-        </div><!-- /.p-works-list__wrapper -->
-      </dl><!-- /.p-works-list -->
-    </div><!-- /.p-works-description -->
-  </div><!-- /.l-inner p-works-description__inner -->
-</article><!-- /.l-works-detail p-works-description -->
+    <div class="p-achieve-description">
+      <h3 class="p-achieve-description__title"><?php the_field('title'); ?></h3><!-- /.p-achieve-description__siteTitle -->
+      <dl class="p-achieve-list">
+        <div class="p-achieve-list__wrapper p-achieve-list__client">
+          <dt class="p-achieve-list__title">クライアント様 </dt>
+          <dd class="p-achieve-list__text"><?php the_field('Customer'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+        <div class="p-achieve-list__wrapper p-achieve-list__url">
+          <dt class="p-achieve-list__title">URL</dt>
+          <dd class="p-achieve-list__text"><?php the_field('url'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+        <div class="p-achieve-list__wrapper p-achieve-list__area">
+          <dt class="p-achieve-list__title">担当領域</dt>
+          <dd class="p-achieve-list__text"><?php the_field('url'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+        <div class="p-achieve-list__wrapper p-achieve-list__period">
+          <dt class="p-achieve-list__title">制作期間</dt>
+          <dd class="p-achieve-list__text"><?php the_field('period'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+        <div class="p-achieve-list__wrapper p-achieve-list__price">
+          <dt class="p-achieve-list__title">目安価格（税抜）</dt>
+          <dd class="p-achieve-list__text"><?php the_field('price'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+        <div class="p-achieve-list__wrapper p-achieve-list__comment">
+          <dt class="p-achieve-list__title">コメント</dt>
+          <dd class="p-achieve-list__text"><?php the_field('comment'); ?></dd>
+        </div><!-- /.p-achieve-list__wrapper -->
+      </dl><!-- /.p-achieve-list -->
+    </div><!-- /.p-achieve-description -->
+    <div class="p-achieve-detail__button">
+      <a href="<?php echo home_url('/works/'); ?>" class="p-achieve-detail__link c-detail-button">一覧に戻る</a><!-- /.p-achieve__link -->
+    </div><!-- /.p-achieve__button -->
+  </div><!-- /.l-inner p-achieve-description__inner -->
+</article><!-- /.l-achieve-detail p-achieve-description -->
 
 <section class="l-lower-contact">
   <?php get_template_part("/template/contact-section"); ?>
