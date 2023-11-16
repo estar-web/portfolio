@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 
-<div class="p-lower-top">
-  <div class="p-lower-top__titleWrap">
-    <h1 class="p-lower-top__title">Works</h1><!-- /.p-lower-top__title -->
-  </div><!-- /.p-lower-top__titleWrap -->
-</div><!-- /.p-lower-top -->
+<?php get_template_part('/template/works-top') ?>
 
 <div class="l-lower-works p-lower-works">
   <div class="p-works-nav l-inner">

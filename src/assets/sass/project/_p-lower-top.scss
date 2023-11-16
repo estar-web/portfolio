@@ -7,7 +7,6 @@
   position: relative;
   width: 100%;
   background-color: #F5FAFF;
-  // background-color: map.get($color,main);
 }
 
 .p-lower-top__titleWrap {
@@ -20,10 +19,6 @@
 }
 
 .p-lower-top__title {
- @include font(24);
- 
- @include mq(xl){
-   @include font(64);
- }
+
 }
 

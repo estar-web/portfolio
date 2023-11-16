@@ -1,0 +1,29 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-works-other {
+  margin-top: 50px;
+}
+
+
+.p-works-other__title {
+  @include font(20);
+  text-align: center;
+}
+
+.p-works-other__text {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.p-works-other__tableWrapper{
+  margin-top: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-inline: auto;
+  width: min(100%,750px);
+}
+
+.p-works-other__table {
+}

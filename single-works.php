@@ -37,7 +37,7 @@
       <h3 class="p-achieve-description__title"><?php the_field('title'); ?></h3><!-- /.p-achieve-description__siteTitle -->
       <dl class="p-achieve-list">
         <div class="p-achieve-list__wrapper p-achieve-list__client">
-          <dt class="p-achieve-list__title">クライアント様 </dt>
+          <dt class="p-achieve-list__title">クライアント様</dt>
           <dd class="p-achieve-list__text"><?php the_field('Customer'); ?></dd>
         </div><!-- /.p-achieve-list__wrapper -->
         <div class="p-achieve-list__wrapper p-achieve-list__url">
@@ -46,7 +46,7 @@
         </div><!-- /.p-achieve-list__wrapper -->
         <div class="p-achieve-list__wrapper p-achieve-list__area">
           <dt class="p-achieve-list__title">担当領域</dt>
-          <dd class="p-achieve-list__text"><?php the_field('url'); ?></dd>
+          <dd class="p-achieve-list__text"><?php the_field('area'); ?></dd>
         </div><!-- /.p-achieve-list__wrapper -->
         <div class="p-achieve-list__wrapper p-achieve-list__period">
           <dt class="p-achieve-list__title">制作期間</dt>
