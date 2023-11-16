@@ -1,0 +1,11 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.c-lower-top-title{
+  @include font(24);
+ 
+  @include mq(l){
+    @include font(64);
+  }
+}
