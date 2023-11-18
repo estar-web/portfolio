@@ -122,12 +122,15 @@
               'orderby' => 'date',
               'order' => 'DESC',
               'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
-              // 'tax_query' => array(
-              //   array(
-              //     'taxonomy' => 'genre',
-              //     'field' => 'slug',
-              //   )
-              // )
+              //カスタムタクソノミーが非公開（private）の実績は除外する
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'genre',
+                  'field' => 'slug',
+                  'terms' => 'private',
+                  'operator' => 'NOT IN',
+                )
+              )
             )
           );
           ?>
