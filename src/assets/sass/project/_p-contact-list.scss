@@ -1,0 +1,68 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-contact-list {
+  width: min(100%,813px);
+  margin-inline: auto;
+}
+
+.p-contact-list__item {
+  @include mq(l){
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 36px 27px;
+    padding: 2.25em math.div(27,16)*1em;
+    border-bottom: 1px solid #E2E2E2;
+  }
+  +.p-contact-list__item{
+    margin-top: 30px;
+  }
+}
+
+.p-contact-list__title {
+  display: flex;
+  align-items: center;
+
+  @include mq(l){
+    flex: 0 0 262px;
+  }
+}
+
+.p-contact-list__required {
+  margin-left: 23px;
+  @include font(12);
+  color: #FFFFFF;
+  background-color: map.get($color, accent);
+  padding: math.div(2, 12)*1em math.div(7, 12)*1em;
+}
+
+.p-contact-list__inputBox {
+  margin-left: math.div(18, 16)*1em;
+  margin-top: 7px;
+
+  @include mq(l){
+    margin-top: 0;
+    margin-left: 0;
+    flex: 0 1 auto;
+    width: 100%;
+  }
+
+  input{
+    width: 100%;
+  }
+  textarea{
+    height: 161px;
+    width: 100%;
+    padding: math.div(10,14)*1em math.div(12,14)*1em;
+    resize: vertical;
+  }
+}
+
+.p-contact-list__input {
+  @include font(14);
+  padding: math.div(10,14)*1em 0 math.div(10,14)*1em math.div(12,14)*1em;
+  background-color: #F7F7F7;
+  
+}

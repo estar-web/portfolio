@@ -122,12 +122,6 @@
               'orderby' => 'date',
               'order' => 'DESC',
               'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
-              // 'tax_query' => array(
-              //   array(
-              //     'taxonomy' => 'genre',
-              //     'field' => 'slug',
-              //   )
-              // )
             )
           );
           ?>

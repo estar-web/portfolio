@@ -1,0 +1,52 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-lower-contact {
+
+}
+
+.p-lower-contact__inner {
+
+}
+
+.p-lower-contact__textWrapper {
+  text-align: center;
+}
+
+.p-lower-contact__lead{
+  @include font(20);
+  margin-bottom: 50px;
+
+  @include mq(l){
+    @include font(24);
+    margin-bottom: 100px;
+  }
+}
+
+.p-lower-contact__text {
+
+  @include mq(l){
+    @include font(18);
+  }
+}
+
+.p-lower-contact__area {
+margin-top: 53px;
+
+@include mq(l){
+  margin-top: 100px;
+}
+}
+
+.p-lower-contact__list{
+
+}
+
+.p-lower-contact__btn {
+  margin-top: 50px;
+
+  @include mq(l){
+    margin-top: 107px;
+  }
+}

@@ -13,7 +13,7 @@
     </div><!-- /.p-contact__text -->
   </div><!-- /.p-contact__textArea -->
   <div class="p-contact__button">
-    <a href="" class="p-contact__link">今すぐお問い合わせをする</a><!-- /.p-contact__link -->
+    <a href="<?php echo home_url('/contact/'); ?>" class="c-btn">今すぐお問い合わせをする</a><!-- /.c-btn -->
   </div><!-- /.p-contact__button -->
 </div><!-- /.p-contact__inner -->
 <div class="p-contact__decoBottom"></div><!-- /.p-contact__decoBottom -->
