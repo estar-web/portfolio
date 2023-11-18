@@ -11,7 +11,7 @@
         </li><!-- /.p-works-nav__item -->
         <?php $genre_terms = get_terms('genre', array(
           'hide_empty' => false,
-          'exclude' => array(9),
+          'exclude' => array(9), //非公開実績は除外する
         ));
         foreach ($genre_terms as $genre_term) : ?>
           <li class="p-works-nav__item">
