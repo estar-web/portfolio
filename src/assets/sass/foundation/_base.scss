@@ -11,3 +11,39 @@ a{
   color: inherit;
 }
 
+.fade-in-right{
+  opacity: 0;
+  transform: translateX(-1.5rem);
+  transition: opacity $ts-time linear 0s,transform $ts-time linear;
+
+  &.is-in-view{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left{
+  opacity: 0;
+  transform: translateX(1.5rem);
+  transition: opacity $ts-time linear 0s,transform $ts-time linear;
+
+  &.is-in-view{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-delay{
+  transition-delay: 0.3s;
+}
+
+.fade-in-up{
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity $ts-time linear 0s,transform $ts-time linear;
+
+  &.is-in-view{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

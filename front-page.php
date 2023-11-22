@@ -1,19 +1,23 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: トップページ
+*/
+get_header(); ?>
 
 <main>
   <div id="js-mv" class="p-mv">
     <div class="p-mv__inner l-inner">
-      <h1 class="p-mv__ttl">
+      <h1 class="p-mv__ttl js-in-view fade-in-right">
         Code:<br>HOSHI</h1>
-      <div class="p-mv__image">
+      <div class="p-mv__image js-in-view fade-in-left fade-in-delay">
       </div><!-- /.p-mv__image -->
     </div><!-- /.p-mv__inner -->
   </div><!-- /.p-mv -->
 
   <section id="profile" class="l-profile p-profile">
     <div class="p-profile__inner l-inner">
-      <h2 class="p-profile__title c-section-title">Profile</h2><!-- /.p-profile__title -->
-      <div class="p-profile__wrapper">
+      <h2 class="p-profile__title c-section-title js-in-view fade-in-up">Profile</h2><!-- /.p-profile__title -->
+      <div class="p-profile__wrapper js-in-view fade-in-up">
         <figure class="p-profile__icon">
           <img src="<?php echo get_template_directory_uri(); ?>/img/icon-profile.png" alt="アイコン画像" width="1080" height="1080" loading="lazy">
         </figure><!-- /.p-profile__icon -->
@@ -52,8 +56,8 @@
   <section id="skills" class="l-skills p-skills">
     <div class="c-deco__top"></div>
     <div class="p-skills__inner l-inner">
-      <h2 class="p-skills__title c-section-title">Skills</h2><!-- /.p-skills__title -->
-      <div class="p-skills__wrapper">
+      <h2 class="p-skills__title c-section-title js-in-view fade-in-up">Skills</h2><!-- /.p-skills__title -->
+      <div class="p-skills__wrapper js-in-view fade-in-up">
         <div class="p-skills__item">
           <figure class="p-skills__icon">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-html.svg" alt="スキルセットアイコン(HTML)" width="44" height="50" loading="lazy">
@@ -109,9 +113,9 @@
 
   <section id="works" class="l-works p-works">
     <div class="p-works__inner l-inner">
-      <h2 class="p-works__title c-section-title">Works</h2><!-- /.p-works__title -->
+      <h2 class="p-works__title c-section-title js-in-view fade-in-up">Works</h2><!-- /.p-works__title -->
 
-      <div class="swiper p-works__swiper">
+      <div class="swiper p-works__swiper js-in-view fade-in-up">
         <div class="swiper-wrapper p-works__wrapper">
           <?php
           $current_cat = get_queried_object();
@@ -168,7 +172,7 @@
           ?>
         </div><!-- /.p-works__wrapper -->
       </div><!-- /.swiper p-works__swiper -->
-      <div class="p-works__button">
+      <div class="p-works__button js-in-view fade-in-up">
         <a href="<?php echo home_url('/works/'); ?>" class="p-works__link c-detail-button">制作実績をもっと見る</a><!-- /.p-works__link -->
       </div><!-- /.p-works__button -->
     </div><!-- /.p-works__inner l-inner -->
@@ -176,15 +180,15 @@
 
   <section id="check" class="l-check p-check">
     <div class="p-check__inner l-inner">
-      <div class="p-check__title c-section-title">Check</div><!-- /.p-check__title -->
-      <ul class="p-check__nav">
+      <div class="p-check__title c-section-title js-in-view fade-in-up">Check</div><!-- /.p-check__title -->
+      <ul class="p-check__nav js-in-view fade-in-up">
         <li class="p-check__nav-item is-active" data-target="#tab-item01">ご依頼の流れ</li>
         <li class="p-check__nav-item" data-target="#tab-item02">料金の目安</>
         </li>
         <li class="p-check__nav-item" data-target="#tab-item03">注意事項</>
         </li>
       </ul>
-      <div class="p-check__content">
+      <div class="p-check__content js-in-view fade-in-up">
         <div id="tab-item01" class="p-check__body p-check-flow is-active">
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">

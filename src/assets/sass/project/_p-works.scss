@@ -125,20 +125,65 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: max(40%, 200px);
 
+  @include mq(m){
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &::after {
+    @include mq(m){
+      color: #fff;
+      transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+      display: block;
+      opacity: 0;
+      position: absolute;
+      content: "Details";
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition-duration: $ts-time;
+      transform: translateY(100%);
+      height: fit-content;
+      overflow: hidden;
+      transition-delay: .5s;
+    }
+  }
+  
+  @include mq(hov){
+    &:hover {
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      img {
+        filter: blur(3px) brightness(0.7);
+      }
+    }
+  }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
+  
   @include mq(m) {
     width: 70%;
-
+    
     img {
-
       object-fit: cover;
       object-position: center top;
-
+      transition: filter $ts-time linear 0s;
     }
   }
 

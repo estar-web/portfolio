@@ -9,12 +9,33 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
   display: inline-block;
+  overflow: hidden;
+  background-color: #337ab7;
+  transform: perspective(1px) translateY(0);
+  position: relative;
 
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: map.get($z-map,under);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 100%;
+    transform: scale(2);
+    transition: transform $ts-time linear 0s;
+  }
+  
   &:hover {
-    background-color: #337ab7;
+    // background-color: #337ab7;
     color: #fff;
     box-shadow: 0 0 0;
     transform: translateY(0.25em);
+    &::before{
+      transform: scale(0);
+    }
   }
 }
 
@@ -42,4 +63,23 @@
     box-shadow: 0 0 0;
     transform: translateY(0.25em);
   }
+}
+
+.btn {
+  padding: 1rem;
+  border: 3px solid #00c6ff;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-image: radial-gradient(circle at 40% 0, #999 0%, #999 70%, #00c6ff 70%, #00c6ff 100%);
+  background-size: 100% 400%;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 1.5s;
+
+}
+
+.btn:hover {
+  background-position: 50% 100%;
 }

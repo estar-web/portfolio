@@ -307,6 +307,43 @@ a {
 	text-decoration: none;
 }
 
+.fade-in-right {
+	opacity: 0;
+	transform: translateX(-1.5rem);
+	transition: opacity 0.3s linear 0s, transform 0.3s linear;
+}
+
+.fade-in-right.is-in-view {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.fade-in-left {
+	opacity: 0;
+	transform: translateX(1.5rem);
+	transition: opacity 0.3s linear 0s, transform 0.3s linear;
+}
+
+.fade-in-left.is-in-view {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.fade-in-delay {
+	transition-delay: 0.3s;
+}
+
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(1.5rem);
+	transition: opacity 0.3s linear 0s, transform 0.3s linear;
+}
+
+.fade-in-up.is-in-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 .l-header {
 	background: #fff;
 	position: relative;
@@ -356,19 +393,40 @@ a {
 }
 
 .c-btn {
+	background-color: #337ab7;
 	border: 2px solid #337ab7;
 	border-radius: 20px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 	display: inline-block;
+	overflow: hidden;
 	padding: 0.625em 3em;
+	position: relative;
+	transform: perspective(1px) translateY(0);
 	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
+.c-btn::before {
+	background: #fff;
+	border-radius: 100%;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(2);
+	transition: transform 0.3s linear 0s;
+	z-index: -1;
+}
+
 .c-btn:hover {
-	background-color: #337ab7;
 	box-shadow: 0 0 0;
 	color: #fff;
 	transform: translateY(0.25em);
+}
+
+.c-btn:hover::before {
+	transform: scale(0);
 }
 
 .c-btn-send {
@@ -391,6 +449,24 @@ a {
 	box-shadow: 0 0 0;
 	color: #fff;
 	transform: translateY(0.25em);
+}
+
+.btn {
+	background-image: radial-gradient(circle at 40% 0, #999 0%, #999 70%, #00c6ff 70%, #00c6ff 100%);
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+	background-size: 100% 400%;
+	border: 3px solid #00c6ff;
+	border-radius: 1rem;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 1rem;
+	transition: all 1.5s;
+}
+
+.btn:hover {
+	background-position: 50% 100%;
 }
 
 .c-detail-button {
@@ -1557,6 +1633,8 @@ a {
 
 .p-footer__navLink {
 	color: #1e1e1e;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .p-footer__copyright {
@@ -1715,6 +1793,47 @@ a {
 }
 
 .p-works__img {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.p-works__img::after {
+	align-items: center;
+	bottom: 0;
+	color: #fff;
+	content: "Details";
+	display: block;
+	display: flex;
+	font-size: 22px;
+	font-weight: bold;
+	height: -moz-fit-content;
+	height: fit-content;
+	justify-content: center;
+	left: 0;
+	margin: auto;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	transform: translateY(100%);
+	transition-delay: 0.5s;
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.p-works__img:hover::after {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.p-works__img:hover img {
+	filter: blur(3px) brightness(0.7);
+}
+
+.p-works__img {
 	width: 70%;
 }
 
@@ -1723,6 +1842,7 @@ a {
 	-o-object-position: center top;
 	object-fit: cover;
 	object-position: center top;
+	transition: filter 0.3s linear 0s;
 }
 
 .p-works__text {
@@ -1865,8 +1985,37 @@ a {
 }
 
 .p-footer__navList {
-	gap: 0 2.5em;
-	grid-template-columns: repeat(6, 1fr);
+	gap: 0 1.5em;
+	grid-template-columns: repeat(6, auto);
+}
+
+.p-footer__navLink {
+	padding: 0.25em 0.5em; /*背景色の基点とするためrelativeを指定*/
+	position: relative; /*アニメーションの指定*/
+	transition: color 0.3s linear 0s, opacity 0.3s linear 0s;
+}
+
+.p-footer__navLink::after {
+	background: #F9FCFF;
+	bottom: 0;
+	content: "";
+	height: 1px;
+	left: 0;
+	opacity: 0; /*絶対配置で線の位置を決める*/
+	position: absolute; /*背景の形状*/
+	width: 0;
+	z-index: -1; /*はじめは透過を0に*/
+}
+
+.p-footer__navLink:hover {
+	color: #337AB7;
+	z-index: 1;
+}
+
+.p-footer__navLink:hover::after {
+	animation: bgAppear 0.5s forwards;
+	opacity: 1;
+	width: 100%;
 }
 
 .u-hide--m {
@@ -2252,6 +2401,26 @@ a {
 
 100% {
 	opacity: 1;
+}
+
+}
+
+@keyframes bgAppear {
+
+0% {
+	height: 1px;
+	width: 0%;
+}
+
+50% {
+	height: 1px;
+	width: 100%;
+}
+
+100% {
+	background-color: #F9FCFF;
+	height: 100%;
+	width: 100%;
 }
 
 }

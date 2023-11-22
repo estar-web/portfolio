@@ -150,7 +150,7 @@ const top_swiper = new Swiper(".p-works__swiper", {
         },
         next: {
           shadow: false,
-          origin: "left center",
+          origin: "left",
           translate: [0, 0, 0],
           rotate: [0, 90, 0],
 
@@ -204,3 +204,17 @@ jQuery(window).on("scroll", function () {
     }
   }
 });
+
+//表示領域に来た時に表示させる
+const intersectionObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add("is-in-view");
+    }
+  });
+});
+
+const inViewItems = document.querySelectorAll(".js-in-view");
+inViewItems.forEach(function(inViewItem){
+  intersectionObserver.observe(inViewItem);
+})
