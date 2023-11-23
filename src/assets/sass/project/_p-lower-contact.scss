@@ -2,23 +2,19 @@
 @use "sass:math";
 @use "sass:map";
 
-.p-lower-contact {
+.p-lower-contact {}
 
-}
-
-.p-lower-contact__inner {
-
-}
+.p-lower-contact__inner {}
 
 .p-lower-contact__textWrapper {
   text-align: center;
 }
 
-.p-lower-contact__lead{
+.p-lower-contact__lead {
   @include font(20);
   margin-bottom: 50px;
 
-  @include mq(l){
+  @include mq(l) {
     @include font(24);
     margin-bottom: 100px;
   }
@@ -26,27 +22,84 @@
 
 .p-lower-contact__text {
 
-  @include mq(l){
+  @include mq(l) {
     @include font(18);
   }
 }
 
 .p-lower-contact__area {
-margin-top: 53px;
+  margin-top: 53px;
 
-@include mq(l){
-  margin-top: 100px;
-}
-}
-
-.p-lower-contact__list{
-
-}
-
-.p-lower-contact__btn {
-  margin-top: 50px;
-
-  @include mq(l){
-    margin-top: 107px;
+  @include mq(l) {
+    margin-top: 100px;
   }
 }
+
+.p-lower-contact__list {}
+
+.p-lower-contact__btn {
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #337AB7;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  margin-inline: auto;
+  max-width: 224px;
+  transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #337ab7;
+    top: 180%;
+    height: 580px;
+    width: 580px;
+    z-index: -1;
+    border-radius: 38%;
+    left: -85%;
+    transform: rotate(360deg);
+    transition: top 1s linear 0s;
+    animation: wave 30s linear infinite;
+  }
+
+  @include mq(m) {
+    &:hover {
+      color: #fff;
+      box-shadow: 0 0 0;
+      transform: translateY(0.25em);
+
+      &::before {
+        top: -75%;
+      }
+    }
+  }
+
+  @include mq(l) {
+    margin-top: 107px;
+    // padding-inline: 5em;
+  }
+}
+
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+

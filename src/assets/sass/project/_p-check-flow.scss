@@ -114,5 +114,19 @@
 }
 
 .p-check-flow__link {
-  color: map.get($color, accent);
+  // color: map.get($color, accent);
+  display: inline-block;
+  color:#ee2d7b;
+  font-size:120%;
+  text-decoration:none;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #33C0FF 50%);
+  background-position: 100% bottom;
+  background-size: 200% 40%;
+  transition: background-position $ts-time linear 0s;
+
+  @include mq(m){
+    &:hover{
+      background-position: 0 bottom;
+    }
+  }
 }

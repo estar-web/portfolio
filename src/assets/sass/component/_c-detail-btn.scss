@@ -1,8 +1,11 @@
 @use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
 
 .c-detail-button{
   @include font(20);
   position: relative;
+  transition: letter-spacing $ts-time linear 0s,color $ts-time linear 0s,text-shadow $ts-time linear 0s;
   
   &::after{
      content: "";
@@ -17,8 +20,12 @@
   }
 
   &:hover{
+    letter-spacing: 0.2em;
+    color: #fff;
+    text-shadow: -1px 1px 5px map.get($color,text1st), 1px -1px 5px map.get($color,text1st);
+
     &::after{
-      height: 3px;
+
     }
   }
 }

@@ -11,7 +11,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body id="fade">
   <header id="js-header" class="l-header">
     <button id="js-toggle" class="p-header-burger" aria-label="menu">
       <span class="p-header-burger__line"></span>
@@ -33,7 +33,7 @@
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#skills'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Skills</span>できること</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#works'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Works</span>制作実績</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#check'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Check</span>ご確認頂きたいこと</a></li>
-          <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#contact'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Contact</span>お問い合わせはこちら</a></li>
+          <li class="p-header-nav__item"><a href="<?php echo home_url('/contact/'); ?>" class="p-header-nav__link"><span class="p-header-nav__link--eg">Contact</span>お問い合わせはこちら</a></li>
         </ul><!-- /.p-header-nav__list -->
         <figure class="p-header-nav__img u-show--l">
           <img src="<?php echo get_template_directory_uri(); ?>/img/icon-nav.png" alt="ドロワーメニューアイコン" width="504" height="440">

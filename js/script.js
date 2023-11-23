@@ -29,13 +29,15 @@ jQuery('a[href^="#"]').click(function () {
   let speed = 300;
   let id = jQuery(this).attr("href");
   let target = jQuery("#" == id ? "html" : id);
-  // let position = jQuery(target).offset().top - header;
+
   if ("fixed" !== jQuery(".header").css("position")) {
     position = jQuery(target).offset().top;
   }
-  if (0 > position) {
-    position = 0;
-  }
+  // if (0 > position) {
+  //   position = 0;
+  // }
+
+  // アンカーリンククリック時の動作
   jQuery("html, body").animate({
     scrollTop: position
   },
@@ -110,7 +112,6 @@ jQuery('.p-check__nav-item').click(function (e) {
 
 const top_swiper = new Swiper(".p-works__swiper", {
   loop: true,
-  // effect: "fade",
   effect: "creative",
   speed: 2000,
   allowTouchMove: false,
@@ -124,16 +125,12 @@ const top_swiper = new Swiper(".p-works__swiper", {
     prev: {
       shadow: true,
       origin: "left",
-      // origin: "left center",
-      // translate: ["5%", 0, -200],
       translate: [0, 0, -200],
       rotate: [0, 0, 0],
     },
     next: {
       shadow: false,
       origin: "left",
-      // origin: "left center",
-      // translate: ["5%", 0, -200],
       translate: [0, 0, -200],
       rotate: [0, 90, 0],
     },

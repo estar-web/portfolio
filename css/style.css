@@ -302,6 +302,10 @@ body {
 	font-family: "Comfortaa", "游ゴシック", YuGothic, "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
 }
 
+#fade {
+	animation: fadeIn 1s forwards;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -310,7 +314,7 @@ a {
 .fade-in-right {
 	opacity: 0;
 	transform: translateX(-1.5rem);
-	transition: opacity 0.3s linear 0s, transform 0.3s linear;
+	transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
 .fade-in-right.is-in-view {
@@ -321,7 +325,7 @@ a {
 .fade-in-left {
 	opacity: 0;
 	transform: translateX(1.5rem);
-	transition: opacity 0.3s linear 0s, transform 0.3s linear;
+	transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
 .fade-in-left.is-in-view {
@@ -393,7 +397,6 @@ a {
 }
 
 .c-btn {
-	background-color: #337ab7;
 	border: 2px solid #337ab7;
 	border-radius: 20px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
@@ -401,21 +404,22 @@ a {
 	overflow: hidden;
 	padding: 0.625em 3em;
 	position: relative;
-	transform: perspective(1px) translateY(0);
-	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
+	transform: translate3d(0, 0, 0);
+	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
 .c-btn::before {
-	background: #fff;
-	border-radius: 100%;
-	bottom: 0;
+	animation: wave 30s linear infinite;
+	background-color: #337ab7;
+	border-radius: 38%;
 	content: "";
-	left: 0;
+	height: 580px;
+	left: -50%;
 	position: absolute;
-	right: 0;
-	top: 0;
-	transform: scale(2);
-	transition: transform 0.3s linear 0s;
+	top: 170%;
+	transform: rotate(360deg);
+	transition: top 1s linear 0s;
+	width: 580px;
 	z-index: -1;
 }
 
@@ -426,29 +430,13 @@ a {
 }
 
 .c-btn:hover::before {
-	transform: scale(0);
+	top: -75%;
 }
 
 .c-btn-send {
-	align-items: center;
-	background: #fff;
-	border: 1px solid #337AB7;
-	border-radius: 20px;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-	display: flex;
-	justify-content: center;
-	line-height: 1;
-	margin-inline: auto;
-	max-width: 224px;
+	height: inherit;
 	padding: 0.625em 3em;
-	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
-}
-
-.c-btn-send:hover {
-	background-color: #337ab7;
-	box-shadow: 0 0 0;
-	color: #fff;
-	transform: translateY(0.25em);
+	width: 100%;
 }
 
 .btn {
@@ -473,6 +461,7 @@ a {
 	font-size: 20px;
 	font-size: 1.25rem;
 	position: relative;
+	transition: letter-spacing 0.3s linear 0s, color 0.3s linear 0s, text-shadow 0.3s linear 0s;
 }
 
 .c-detail-button::after {
@@ -487,8 +476,10 @@ a {
 	width: 100%;
 }
 
-.c-detail-button:hover::after {
-	height: 3px;
+.c-detail-button:hover {
+	color: #fff;
+	letter-spacing: 0.2em;
+	text-shadow: -1px 1px 5px #337AB7, 1px -1px 5px #337AB7;
 }
 
 .c-section-title {
@@ -748,8 +739,35 @@ a {
 }
 
 .p-profile__link {
+	perspective: 1000px;
+	perspective-origin: 50% 50%;
+	vertical-align: bottom;
+}
+
+.p-profile__link span {
 	align-items: center;
 	display: flex;
+	position: relative;
+	transform-origin: 50% 0%;
+	transform-style: preserve-3d;
+	transition: transform 0.3s linear 0s, background-color 0.3s linear 0s;
+}
+
+.p-profile__link span::after {
+	background-color: #337AB7;
+	color: #fff;
+	content: attr(data-text);
+	display: inline-block;
+	left: 0;
+	padding: 0.2em 0.5em;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	transform: translate3d(0, 105%, 0) rotateX(-90deg);
+	transform-origin: 50% 0%;
+	transition: visibility 0.3s linear 0s;
+	visibility: hidden;
+	width: 100%;
 }
 
 .p-profile__web-icon {
@@ -758,6 +776,7 @@ a {
 
 .p-profile__web-icon path {
 	fill: #337AB7;
+	transition: fill 0.3s linear 0s;
 }
 
 .p-profile__account {
@@ -784,6 +803,41 @@ a {
 	left: 0;
 	position: absolute;
 	top: 0;
+}
+
+.sample_link12 a {
+	color: #ee2d7b;
+	display: inline-block;
+	font-size: 120%;
+	overflow: hidden;
+	perspective: 1000px;
+	perspective-origin: 50% 50%;
+	vertical-align: bottom;
+}
+
+.sample_link12 a span {
+	display: inline-block;
+	position: relative;
+	transform-origin: 50% 0%;
+	transform-style: preserve-3d;
+	transition: 0.4s;
+}
+
+.sample_link12 a:hover span {
+	background-color: #2ecc71;
+	transform: translate3d(0, 0, -30px) rotateX(90deg);
+}
+
+.sample_link12 a span:after {
+	background-color: #2ecc71;
+	color: #fff;
+	content: attr(data-text);
+	display: inline-block;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: translate3d(0, 105%, 0) rotateX(-90deg);
+	transform-origin: 50% 0%;
 }
 
 .p-skills {
@@ -1117,7 +1171,14 @@ a {
 }
 
 .p-check-flow__link {
-	color: #FF739E;
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #33C0FF 50%);
+	background-position: 100% bottom;
+	background-size: 200% 40%;
+	color: #ee2d7b;
+	display: inline-block;
+	font-size: 120%;
+	text-decoration: none;
+	transition: background-position 0.3s linear 0s;
 }
 
 .p-check-price__textItem {
@@ -1318,8 +1379,33 @@ a {
 	border-radius: 20px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	color: #fff;
+	overflow: hidden;
 	padding-block: 0.4285714286em;
+	position: relative;
+	transition: box-shadow 0.3s linear 0s;
 	width: 7.5rem;
+	z-index: 1;
+}
+
+.p-works-nav__item::before {
+	background-color: #57A5D4;
+	border-radius: 10rem;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: width 0.3s linear 0s;
+	width: 0%;
+	z-index: -1;
+}
+
+.p-works-nav__item:hover {
+	box-shadow: none;
+}
+
+.p-works-nav__item:hover::before {
+	width: 100%;
 }
 
 .p-works-nav__item.selected {
@@ -1350,12 +1436,32 @@ a {
 }
 
 .p-works-contents__item {
+	position: relative;
 	transition: box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
+.p-works-contents__item::before {
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+	content: "";
+	height: 10px;
+	left: 5%;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 100%;
+	transition-duration: 0.3s;
+	transition-property: transform, opacity;
+	width: 90%;
+	z-index: -1;
+}
+
 .p-works-contents__item:hover {
-	box-shadow: 0 4px 0 rgba(0, 0, 0, 0.16);
-	transform: translateY(-0.25em);
+	transform: translateY(-0.5em);
+}
+
+.p-works-contents__item:hover::before {
+	opacity: 1;
+	transform: translateY(0.5em);
 }
 
 .p-works-contents__img {
@@ -1544,7 +1650,53 @@ a {
 }
 
 .p-lower-contact__btn {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #337AB7;
+	border-radius: 20px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	line-height: 1;
+	margin-inline: auto;
 	margin-top: 50px;
+	max-width: 224px;
+	overflow: hidden;
+	position: relative;
+	transform: translate3d(0, 0, 0);
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-lower-contact__btn::before {
+	animation: wave 30s linear infinite;
+	background-color: #337ab7;
+	border-radius: 38%;
+	content: "";
+	height: 580px;
+	left: -85%;
+	position: absolute;
+	top: 180%;
+	transform: rotate(360deg);
+	transition: top 1s linear 0s;
+	width: 580px;
+	z-index: -1;
+}
+
+input[type=submit] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.wpcf7-spinner {
+	display: none;
+}
+
+.wpcf7-response-output {
+	display: none;
 }
 
 .p-contact-list {
@@ -1788,6 +1940,19 @@ a {
 	position: absolute;
 }
 
+.p-profile__link:hover span {
+	background-color: #337AB7;
+	transform: translate3d(0, 0, -30px) rotateX(90deg);
+}
+
+.p-profile__link:hover span::after {
+	visibility: visible;
+}
+
+.p-profile__link:hover .p-profile__web-icon path {
+	fill: #fff;
+}
+
 .p-works__item {
 	width: calc(100vw - 200px - 40px - 30px);
 }
@@ -1920,6 +2085,10 @@ a {
 	margin-top: 0;
 }
 
+.p-check-flow__link:hover {
+	background-position: 0 bottom;
+}
+
 .p-check-price__textItem {
 	font-size: 16px;
 	font-size: 1rem;
@@ -1982,6 +2151,16 @@ a {
 .p-works-table th,
 .p-works-table td {
 	white-space: wrap;
+}
+
+.p-lower-contact__btn:hover {
+	box-shadow: 0 0 0;
+	color: #fff;
+	transform: translateY(0.25em);
+}
+
+.p-lower-contact__btn:hover::before {
+	top: -75%;
 }
 
 .p-footer__navList {
@@ -2389,6 +2568,30 @@ a {
 
 .u-hide--pc {
 	display: block;
+}
+
+}
+
+@keyframes fadeIn {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes wave {
+
+0% {
+	transform: rotate(0deg);
+}
+
+100% {
+	transform: rotate(3600deg);
 }
 
 }

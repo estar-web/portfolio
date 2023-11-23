@@ -7,62 +7,68 @@
   border: 2px solid #337ab7;
   border-radius: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
+  transition: background-color $ts-time linear 0s, color 1s linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
   display: inline-block;
   overflow: hidden;
-  background-color: #337ab7;
-  transform: perspective(1px) translateY(0);
+  transform: translate3d(0, 0, 0);
   position: relative;
 
   &::before{
     content: "";
     position: absolute;
-    z-index: map.get($z-map,under);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    border-radius: 100%;
-    transform: scale(2);
-    transition: transform $ts-time linear 0s;
+    background-color: #337ab7;
+    top: 170%;
+    height: 580px;
+    width: 580px;
+    z-index: -1;
+    border-radius: 38%;
+    left: -50%;
+    transform: rotate(360deg);
+    transition: top 1s linear 0s;
+    animation: wave 30s linear infinite;
   }
   
   &:hover {
-    // background-color: #337ab7;
     color: #fff;
     box-shadow: 0 0 0;
     transform: translateY(0.25em);
     &::before{
-      transform: scale(0);
+      top: -75%;
     }
   }
 }
 
 .c-btn-send{
-  align-items: center;
-  background: #fff;
-  border: 1px solid #337AB7;
-  border-radius: 20px;
-  display: flex;
+  width: 100%;
+  height: inherit;
   padding: 0.625em 3em;
-  justify-content: center;
-  line-height: 1;
-  margin-inline: auto;
-  max-width: 224px;
-  transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+  // align-items: center;
+  // background: #fff;
+  // border: 1px solid #337AB7;
+  // border-radius: 20px;
+  // display: flex;
+  // justify-content: center;
+  // line-height: 1;
+  // margin-inline: auto;
+  // max-width: 224px;
+  // transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
+  // box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 
   @include mq(l){
     padding-inline: 5em;
   }
 
-  &:hover {
-    background-color: #337ab7;
-    color: #fff;
-    box-shadow: 0 0 0;
-    transform: translateY(0.25em);
-  }
+  // &:hover {
+  //   background-color: #337ab7;
+  //   color: #fff;
+  //   box-shadow: 0 0 0;
+  //   transform: translateY(0.25em);
+  // }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(3600deg); }
 }
 
 .btn {
