@@ -42,28 +42,10 @@
   width: 100%;
   height: inherit;
   padding: 0.625em 3em;
-  // align-items: center;
-  // background: #fff;
-  // border: 1px solid #337AB7;
-  // border-radius: 20px;
-  // display: flex;
-  // justify-content: center;
-  // line-height: 1;
-  // margin-inline: auto;
-  // max-width: 224px;
-  // transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
-  // box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 
   @include mq(l){
     padding-inline: 5em;
   }
-
-  // &:hover {
-  //   background-color: #337ab7;
-  //   color: #fff;
-  //   box-shadow: 0 0 0;
-  //   transform: translateY(0.25em);
-  // }
 }
 
 @keyframes wave {

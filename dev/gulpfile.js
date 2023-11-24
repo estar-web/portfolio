@@ -30,7 +30,7 @@ function formatHTML() {
         }))
         .pipe(gulp.dest("../"))
 }
-
+    
 function browserInit(done) {
     browserSync.init({
         proxy: "http://localhost:10048/",

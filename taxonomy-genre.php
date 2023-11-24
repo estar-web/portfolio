@@ -9,14 +9,15 @@
       <li class="p-works-nav__item">
         <a href="<?php echo get_post_type_archive_link('works'); ?>" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
       </li><!-- /.p-works-nav__item -->
-      <?php $genre_terms = get_terms('genre', array('hide_empty' => false));
-      //投稿タイプの情報を取得
-      $q_object = get_queried_object();
-      foreach ($genre_terms as $genre_term) : ?>
-        <li class="p-works-nav__item <?php if ($q_object->name == $genre_term->name) : ?>selected<?php endif; ?>">
-          <a href="<?php echo get_term_link($genre_term, 'genre'); ?>" class="p-works-nav__link"><?php echo $genre_term->name; ?></a><!-- /.p-works-nav__link -->
-        </li><!-- /.p-works-nav__item -->
-      <?php endforeach; ?>
+      <?php $genre_terms = get_terms('genre', array(
+          'hide_empty' => false,
+          'exclude' => array(9), //非公開実績は除外する
+        ));
+        foreach ($genre_terms as $genre_term) : ?>
+          <li class="p-works-nav__item">
+            <a href="<?php echo get_term_link($genre_term, 'genre'); ?>" class="p-works-nav__link"><?php echo $genre_term->name; ?></a><!-- /.p-works-nav__link -->
+          </li><!-- /.p-works-nav__item -->
+        <?php endforeach; ?>
     </ul><!-- /.p-works-nav__item -->
   </div><!-- /.p-works-nav -->
 

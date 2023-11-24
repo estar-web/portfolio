@@ -20,11 +20,7 @@
   row-gap: 40px;
   grid-template-columns: repeat(auto-fit,min(320px,100%));
   justify-content: center;
-  // column-gap: 20px;
   column-gap: 40px;
-
-  // @include mq(m){
-  // }
 
   @include mq(xl){
     row-gap: 80px;
@@ -57,7 +53,6 @@
   }
 
   &:hover{
-    // box-shadow: 0 4px 0 rgba(0,0,0,0.16);
     transform: translateY(-0.5em);
 
     &::before{

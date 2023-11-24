@@ -8,13 +8,6 @@ function my_setup()
 }
 add_action("after_setup_theme", "my_setup");
 
-
-// function gg_gfonts_prefetch() {
-//   echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
-//   echo '<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>';
-//  }
-//  add_action( 'wp_head', 'gg_gfonts_prefetch' );
-
 function my_script_init()
 {
   wp_enqueue_style("anime", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css", array(), "3.6.2", "all");

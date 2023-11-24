@@ -11,7 +11,6 @@
 }
 
 .p-footer__inner {
-  // padding-inline: 100px;
   padding-inline: 0;
 
   @include mq(xl) {
@@ -40,7 +39,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5em 18.66667vw;
-  // gap: 2.5em 4.375em;
   align-items: center;
   justify-items: center;
   line-height: math.div(24, 16);

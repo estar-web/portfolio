@@ -6,6 +6,12 @@ body{
   color: map.get($color, text1st);
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+//読み込み時のアニメーション
 #fade{
   animation: fadeIn 1s forwards;
 }
@@ -15,11 +21,7 @@ body{
 	100% {opacity: 1}
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
-}
-
+//スクロール時の出現アニメーション
 .fade-in-right{
   opacity: 0;
   transform: translateX(-1.5rem);
@@ -55,4 +57,48 @@ a{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+//マウスストーカー
+.bubble {
+  position: fixed;
+  top: -15px;
+  left: -15px;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(transparent,lighten(#33C0FF,10%));
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+  z-index: map.get($z-map,modal) + 1;
+  animation: bubble 1.5s  0s forwards;
+  pointer-events: none;
+
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0) rotate(-5deg);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-50px) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+//問い合わせフォームの初期設定
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

@@ -37,7 +37,6 @@
         </ul><!-- /.p-header-nav__list -->
         <figure class="p-header-nav__img u-show--l">
           <img src="<?php echo get_template_directory_uri(); ?>/img/icon-nav.png" alt="ドロワーメニューアイコン" width="504" height="440">
-          <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/img/icon-nav.jpg" alt="ドロワーメニューアイコン" width="504" height="440"> -->
         </figure><!-- /.p-header-nav__img -->
       </div><!-- /.p-header-nav__inner -->
     </nav><!-- /.p-header-nav -->

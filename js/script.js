@@ -1,6 +1,3 @@
-//wow使用のための初期化
-// new WOW().init();
-
 var $header = jQuery('#js-header');
 
 // navigation
@@ -46,22 +43,32 @@ jQuery('a[href^="#"]').click(function () {
   return false;
 });
 
-// スクロール判定
-// jQuery(window).on("scroll", function () {
+//マウスストーカー
+var body = jQuery("body");
+var flag = true;
 
-//   if (100 < jQuery(this).scrollTop()) {
-//     jQuery('.totop').addClass('is-show');
-//   } else {
-//     jQuery('.totop').removeClass('is-show');
-//   }
-// });
+jQuery(document).on("mousemove", function (e) {
+  if (flag) {
+    var x = e.clientX;
+    var y = e.clientY;
 
-// クリック（メニュー）
-// jQuery('.header__nav ul li a').click(function () {
-//   jQuery('.header__nav ul li a').removeClass('is-active');
-//   jQuery(this).addClass('is-active');
-//   return false;
-// });
+    var bubble = jQuery("<span>").attr("class", "bubble");
+    bubble.css({
+      "top": y + "px",
+      "left": x + "px"
+    });
+    body.prepend(bubble);
+    setTimeout(function () {
+      bubble.remove();
+    }, 2000);
+
+    flag = false;
+    setTimeout(function () {
+      flag = true;
+    }, 100);
+  }
+});
+
 
 // クリック（タブ）
 jQuery('.p-check__nav-item').click(function (e) {
@@ -118,7 +125,6 @@ const top_swiper = new Swiper(".p-works__swiper", {
 
   autoplay: {
     delay: 3000, // 次のスライドに自動で切り替える時間
-    // delay: 1000, // デバッグ用
   },
 
   creativeEffect: {
@@ -173,7 +179,6 @@ const lower_swiper = new Swiper(".p-achieve-icatch__swiper", {
   speed: 2000,
   autoplay: {
     delay: 3000, // 次のスライドに自動で切り替える時間
-    // delay: 1000, // デバッグ用
   },
   slidePerView: 1,
 });
@@ -203,15 +208,15 @@ jQuery(window).on("scroll", function () {
 });
 
 //表示領域に来た時に表示させる
-const intersectionObserver = new IntersectionObserver(function(entries){
-  entries.forEach(function(entry){
-    if(entry.isIntersecting){
-      entry.target.classList.add("is-in-view");
+const intersectionObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      jQuery(entry.target).addClass("is-in-view");
     }
   });
 });
 
-const inViewItems = document.querySelectorAll(".js-in-view");
-inViewItems.forEach(function(inViewItem){
-  intersectionObserver.observe(inViewItem);
-})
+const inViewItems = jQuery(".js-in-view");
+inViewItems.each(function () {
+  intersectionObserver.observe(this);
+});

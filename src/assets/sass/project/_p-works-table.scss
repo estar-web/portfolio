@@ -4,18 +4,15 @@
 
 .p-works-table {
   border-collapse: collapse;
-  // table-layout: fixed;
   @include font(14);
   margin-inline: auto;
   
   th,td{
     padding: 1em 0.5em;
-    // padding: math.div(20,14)*1em;
     border: 1px solid #33C0FF;
     text-align: center;
 
     @include mq(m){
-      // width: 100%;
       white-space: wrap;
     }
     

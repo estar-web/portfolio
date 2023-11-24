@@ -22,7 +22,7 @@
 
 .p-achieve-icatch__img {
   width: calc(100% - 25px);
-  // aspect-ratio: 1;
+
   aspect-ratio: math.div(310,180);
   height: 100%;
   display: flex;
@@ -37,11 +37,11 @@
 }
 
 .p-icatch--pc{
-  // aspect-ratio: math.div(310,180);
+
 }
 
 .p-icatch--tab{
-  // aspect-ratio: math.div(166,180);
+
   img{
     width: math.div(820,1280) * 100%;
   }

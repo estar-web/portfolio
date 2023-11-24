@@ -8,16 +8,13 @@
   gap: 20px;
 
   @include mq(xl){
-    // gap: 20px 100px;
+
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 .p-achieve-list__wrapper {
 
-  +.p-achieve-list__wrapper {
-    // margin-top: 20px;
-  }
 }
 
 .p-achieve-list__client {

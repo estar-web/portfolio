@@ -44,39 +44,13 @@
 }
 
 .p-works__wrapper {
-  // margin-top: 30px;
-  // background: #CCA365;
-  // border-radius: 0 10px 10px 0;
-  // padding: 20px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
   position: relative;
-  // margin-inline: auto;
   width: calc(100% - 20px * 2);
   overflow: hidden;
-
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 0;
-  //   width: 3%;
-  //   height: 95%;
-  //   background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
-  //   transform: translateY(-50%);
-
-  //   @include mq(l) {
-  //     top: 50%;
-  //     left: 50%;
-  //     width: 3%;
-  //     height: 88%;
-  //     background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
-  //     transform: translate(-50%, -50%);
-  //   }
-  // }
 
   @include mq(l) {
     border-radius: 10px;
@@ -93,15 +67,11 @@
   border-radius: 10px;
   justify-items: center;
   align-items: center;
-  // width: calc(math.div(310,375) * 100vw - (math.div(15,375) * 2) * 100vw);
-  // width: calc(math.div(310,375) * 100vw - 15px * 2);
   width: calc(100vw - 25px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   overflow: hidden;
 
   @include mq(m) {
     width: calc(100vw - 200px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
-    // width: calc(68.658333vw - 30px);
-    // width: calc(math.div(568,768) * 100vw - 15px * 2);
   }
 
   @include mq(l) {

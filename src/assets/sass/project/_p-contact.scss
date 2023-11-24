@@ -11,16 +11,9 @@
     content: "";
     position: absolute;
     background: url(../img/picture-jelly-fish-sp.png) no-repeat center center /contain;
-    // top: -23vw;
     top: -90px;
-    // top: math.div(40, 375) * 100vw * (-1);
     left: 0;
-    // left: -1.6vw;
-    // left: -5.5px;
-    // width: math.div(74, 375) * 100vw;
     width: 74px;
-    // width: fit-content;
-    // height: math.div(381,454)*100%;
     height: auto;
     aspect-ratio: math.div(74, 381);
 
@@ -31,10 +24,8 @@
     @include mq(m) {
       background-image: url(../img/picture-jelly-fish1.png);
       width: math.div(376.2, 1440) * 100%;
-      // width: 376.2px;
       aspect-ratio: math.div(376.2, 510);
       height: auto;
-      // height: 510px;
       top: 0;
     }
 

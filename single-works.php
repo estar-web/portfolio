@@ -9,22 +9,17 @@
         <div class="swiper-wrapper p-achieve-icatch__swiperWrapper">
           <div class="swiper-slide p-achieve-icatch__slide">
             <figure class="p-achieve-icatch__img p-icatch--pc">
-            <!-- <figure class="p-achieve-icatch__img p-icatch--top"> -->
               <img src="<?php the_field('icatch_pc') ?>" width="310" height="180" alt="" loading="lazy" decoding="async">
             </figure><!-- /.p-achieve-icatch__img -->
           </div>
           <div class="swiper-slide p-achieve-icatch__slide">
             <figure class="p-achieve-icatch__img p-icatch--tab">
-            <!-- <figure class="p-achieve-icatch__img p-icatch--center"> -->
               <img src="<?php the_field('icatch_tab') ?>" width="166" height="180" alt="" loading="lazy" decoding="async">
-              <!-- <img src="<?php /*the_field('icatch_pc')*/ ?>" width="310" height="180" alt="" loading="lazy" decoding="async"> -->
             </figure><!-- /.p-achieve-icatch__img -->
           </div>
           <div class="swiper-slide p-achieve-icatch__slide">
             <figure class="p-achieve-icatch__img p-icatch--sp">
-            <!-- <figure class="p-achieve-icatch__img p-icatch--bottom"> -->
               <img src="<?php the_field('icatch_sp') ?>" width="83" height="180" alt="" loading="lazy" decoding="async">
-              <!-- <img src="<?php /*the_field('icatch_pc')*/ ?>" width="310" height="180" alt="" loading="lazy" decoding="async"> -->
             </figure><!-- /.p-achieve-icatch__img -->
           </div>
         </div>

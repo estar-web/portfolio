@@ -7,8 +7,7 @@ get_header(); ?>
 <main>
   <div id="js-mv" class="p-mv">
     <div class="p-mv__inner l-inner">
-      <h1 class="p-mv__ttl js-in-view fade-in-right">
-        Code:<br>HOSHI</h1>
+      <h1 class="p-mv__ttl js-in-view fade-in-right">Code:<br>HOSHI</h1>
       <div class="p-mv__image js-in-view fade-in-left fade-in-delay">
       </div><!-- /.p-mv__image -->
     </div><!-- /.p-mv__inner -->

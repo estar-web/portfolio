@@ -302,13 +302,13 @@ body {
 	font-family: "Comfortaa", "游ゴシック", YuGothic, "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
 }
 
-#fade {
-	animation: fadeIn 1s forwards;
-}
-
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+#fade {
+	animation: fadeIn 1s forwards;
 }
 
 .fade-in-right {
@@ -346,6 +346,27 @@ a {
 .fade-in-up.is-in-view {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+.bubble {
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+	animation: bubble 1.5s 0s forwards;
+	background: radial-gradient(transparent, #66d0ff);
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+	height: 15px;
+	left: -15px;
+	pointer-events: none;
+	position: fixed;
+	top: -15px;
+	width: 15px;
+	z-index: 101;
+}
+
+input[type=submit] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .l-header {
@@ -770,6 +791,19 @@ a {
 	width: 100%;
 }
 
+.p-profile__link:hover span {
+	background-color: #337AB7;
+	transform: translate3d(0, 0, -30px) rotateX(90deg);
+}
+
+.p-profile__link:hover span::after {
+	visibility: visible;
+}
+
+.p-profile__link:hover .p-profile__web-icon path {
+	fill: #fff;
+}
+
 .p-profile__web-icon {
 	margin-right: 10px;
 }
@@ -803,41 +837,6 @@ a {
 	left: 0;
 	position: absolute;
 	top: 0;
-}
-
-.sample_link12 a {
-	color: #ee2d7b;
-	display: inline-block;
-	font-size: 120%;
-	overflow: hidden;
-	perspective: 1000px;
-	perspective-origin: 50% 50%;
-	vertical-align: bottom;
-}
-
-.sample_link12 a span {
-	display: inline-block;
-	position: relative;
-	transform-origin: 50% 0%;
-	transform-style: preserve-3d;
-	transition: 0.4s;
-}
-
-.sample_link12 a:hover span {
-	background-color: #2ecc71;
-	transform: translate3d(0, 0, -30px) rotateX(90deg);
-}
-
-.sample_link12 a span:after {
-	background-color: #2ecc71;
-	color: #fff;
-	content: attr(data-text);
-	display: inline-block;
-	left: 0;
-	position: absolute;
-	top: 0;
-	transform: translate3d(0, 105%, 0) rotateX(-90deg);
-	transform-origin: 50% 0%;
 }
 
 .p-skills {
@@ -1115,7 +1114,7 @@ a {
 	animation-name: displayAnime;
 	display: none;
 	padding: 38px 17px 50px;
-	position: relative; /*ふわっと表示させるためのアニメーション*/
+	position: relative;
 }
 
 .p-check__body.is-active {
@@ -1410,6 +1409,7 @@ a {
 
 .p-works-nav__item.selected {
 	background-color: #57A5D4;
+	box-shadow: none;
 }
 
 .p-works-nav__link {
@@ -1685,20 +1685,6 @@ a {
 	z-index: -1;
 }
 
-input[type=submit] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-.wpcf7-spinner {
-	display: none;
-}
-
-.wpcf7-response-output {
-	display: none;
-}
-
 .p-contact-list {
 	margin-inline: auto;
 	width: min(100%, 813px);
@@ -1845,6 +1831,14 @@ input[type=submit] {
 	width: calc(100vw - 25px - 40px);
 }
 
+.wpcf7-spinner {
+	display: none;
+}
+
+.wpcf7-response-output {
+	display: none;
+}
+
 @media screen {
 
 [hidden~=screen] {
@@ -1938,19 +1932,6 @@ input[type=submit] {
 	height: fit-content;
 	margin-block: 72px auto;
 	position: absolute;
-}
-
-.p-profile__link:hover span {
-	background-color: #337AB7;
-	transform: translate3d(0, 0, -30px) rotateX(90deg);
-}
-
-.p-profile__link:hover span::after {
-	visibility: visible;
-}
-
-.p-profile__link:hover .p-profile__web-icon path {
-	fill: #fff;
 }
 
 .p-works__item {
@@ -2580,6 +2561,28 @@ input[type=submit] {
 
 100% {
 	opacity: 1;
+}
+
+}
+
+@keyframes bubble {
+
+0% {
+	opacity: 0;
+	transform: translateY(0) rotate(-5deg);
+}
+
+5% {
+	opacity: 1;
+}
+
+80% {
+	opacity: 1;
+}
+
+100% {
+	opacity: 0;
+	transform: translateY(-50px) rotate(5deg);
 }
 
 }

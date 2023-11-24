@@ -85,21 +85,6 @@
 
   @include mq(l) {
     margin-top: 107px;
-    // padding-inline: 5em;
   }
-}
-
-input[type="submit"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.wpcf7-spinner {
-  display: none;
-}
-
-.wpcf7-response-output {
-  display: none;
 }
 
