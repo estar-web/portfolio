@@ -119,6 +119,8 @@ const top_swiper = new Swiper(".p-works__swiper", {
   effect: "creative",
   speed: 2000,
   allowTouchMove: false,
+  autoHeight: true,
+
 
   autoplay: {
     delay: 3000, // 次のスライドに自動で切り替える時間
@@ -130,6 +132,7 @@ const top_swiper = new Swiper(".p-works__swiper", {
       origin: "left",
       translate: [0, 0, -200],
       rotate: [0, 0, 0],
+      opacity: 0,
     },
     next: {
       shadow: false,
@@ -141,12 +144,13 @@ const top_swiper = new Swiper(".p-works__swiper", {
 
   breakpoints: {
     992: {
+      // autoHeight: false,
       creativeEffect: {
         prev: {
           shadow: true,
           origin: "center",
           translate: [0, 0, 0],
-          rotate: [0, 45, 0],
+          rotate: [0, 90, 0],
         },
         next: {
           shadow: false,
@@ -180,45 +184,45 @@ const lower_swiper = new Swiper(".p-achieve-icatch__swiper", {
   slidePerView: 1,
 });
 
-function matchHeight(elements) {
-  // const target = Array.from(document.querySelectorAll(elements));
-  // const heightList = [];
-  var target = jQuery(elements);
+// function matchHeight(elements) {
+//   // const target = Array.from(document.querySelectorAll(elements));
+//   // const heightList = [];
+//   var target = jQuery(elements);
 
-  var iniHight = [];
-  target.each(function () {
-    // jQuery(this).css('height','auto').height();
-    var temp = jQuery(this).height();
-    iniHight.push(temp);
-  });
+//   var iniHight = [];
+//   target.each(function () {
+//     // jQuery(this).css('height','auto').height();
+//     var temp = jQuery(this).height();
+//     iniHight.push(temp);
+//   });
 
-  var heightList = [];
-  // target.forEach(element => {
-  //  const height = element.clientHeight;
-  //  heightList.push(height);
-  // });
-  target.each(function () {
-    var height = jQuery(this).height();
-    heightList.push(height);
-  });
-  // const maxHeight = Math.max.apply(null,heightList);
-  // target.forEach(element => {
-  //  element.style.height = maxHeight + 'px'; // 最大高さに揃える
-  // });
-  var maxHeight = Math.max(...heightList);
+//   var heightList = [];
+//   // target.forEach(element => {
+//   //  const height = element.clientHeight;
+//   //  heightList.push(height);
+//   // });
+//   target.each(function () {
+//     var height = jQuery(this).height();
+//     heightList.push(height);
+//   });
+//   // const maxHeight = Math.max.apply(null,heightList);
+//   // target.forEach(element => {
+//   //  element.style.height = maxHeight + 'px'; // 最大高さに揃える
+//   // });
+//   var maxHeight = Math.max(...heightList);
 
-  target.each(function () {
-    // jQuery(this).height(maxHeight);
-  });
-  console.log(target);
-  console.log(iniHight);
-  console.log(heightList);
-  console.log(maxHeight);
- }
+//   target.each(function () {
+//     // jQuery(this).height(maxHeight);
+//   });
+//   console.log(target);
+//   console.log(iniHight);
+//   console.log(heightList);
+//   console.log(maxHeight);
+//  }
 
- jQuery(window).on('load resize', function(){
-  //  matchHeight('.p-works__item');
- });
+//  jQuery(window).on('load resize', function(){
+//   //  matchHeight('.p-works__item');
+//  });
 
 jQuery(window).on("scroll", function () {
 

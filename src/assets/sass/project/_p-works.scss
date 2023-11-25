@@ -51,10 +51,15 @@
   position: relative;
   width: calc(100% - 20px * 2);
   overflow: hidden;
+  align-items: stretch;
 
   @include mq(l) {
     border-radius: 10px;
   }
+}
+
+.p-works__slide {
+  // height: 100%;
 }
 
 .p-works__item {
@@ -62,7 +67,8 @@
   padding-inline: 15px;
   padding-block: 15px 30px;
   color: map.get($color, text2nd);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 20px;
   border-radius: 10px;
   justify-items: center;
@@ -70,24 +76,25 @@
   width: calc(100vw - 25px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   overflow: hidden;
 
-
-  grid-template-rows: 160px 1fr;
-
   @include mq(m) {
     width: calc(100vw - 200px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   }
 
   @include mq(l) {
-    grid-template-columns: repeat(2, 1fr);
-    align-content: center;
+    // grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    // align-content: center;
     column-gap: 40px;
     padding-block: 48px 64px;
     row-gap: 0;
+    // align-items: stretch;
+    align-items: center;
   }
 
   @include mq(xl) {
-    padding-inline: 0;
+    padding-inline: 20px;
     width: calc(100% - 40px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
+    align-items: stretch;
   }
 
 }
@@ -97,15 +104,28 @@
   aspect-ratio: math.div(200, 160);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: max(50%, 200px);
+  overflow: hidden;
 
-  @include mq(m){
+  @include mq(m) {
     position: relative;
     z-index: 1;
-    overflow: hidden;
+  }
+
+  @include mq(l) {
+    // grid-column: 1 / 2;
+    // grid-row: 1 / 2;
+    // width: min(100%, 440px);
+    flex: 0 0 min(440px, calc(50% - 40px / 2));
+    aspect-ratio: math.div(440, 352);
+    height: 100%;
+  }
+
+  @include mq(xl) {
+    // flex: 0 0 min(440px, calc(50% - 40px / 2));
   }
 
   &::after {
-    @include mq(m){
+    @include mq(m) {
       color: #fff;
       transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
       display: block;
@@ -130,14 +150,14 @@
       transition-delay: .5s;
     }
   }
-  
-  @include mq(hov){
+
+  @include mq(hov) {
     &:hover {
       &::after {
         opacity: 1;
         transform: translateY(0);
       }
-  
+
       img {
         filter: blur(3px) brightness(0.7);
       }
@@ -148,42 +168,34 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  @include mq(m) {
-    // width: 70%;
-    
-    img {
-      object-fit: cover;
-      object-position: center top;
+    object-position: center top;
+
+    @include mq(m) {
       transition: filter $ts-time linear 0s;
     }
-  }
-
-  @include mq(l) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    width: min(100%, 440px);
-    aspect-ratio: math.div(440, 352);
   }
 }
 
 .p-works__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 20px;
-  height: 100%;
-
   width: 100%;
 
   @include mq(m) {
     padding-inline: 30px;
   }
 
-  @include mq(xl) {
-    padding-inline: 78px calc(77px - 15px);
+  @include mq(l) {
 
+    width: auto;
+  }
+
+  @include mq(xl) {
+    padding-inline: 60px;
+    width: auto;
+    // align-items: stretch;
   }
 }
 
@@ -220,6 +232,10 @@
   width: 72%;
   justify-content: flex-start;
   gap: math.div(8, 14) * 1em 0.94em;
+
+  @include mq(s) {
+    justify-content: center;
+  }
 
   @include mq(m) {
     width: 100%;
@@ -302,13 +318,10 @@
 .p-works__item-comment {
   @include font(14);
   line-height: math.div(20.79, 14);
+  flex-grow: 1;
 
   @include mq(l) {
     @include font(16);
-  }
-
-  p{
-    flex-grow: 1;
   }
 }
 

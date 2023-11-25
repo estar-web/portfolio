@@ -867,6 +867,7 @@ input[type=submit] {
 }
 
 .p-works__wrapper {
+	align-items: stretch;
 	margin-bottom: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -881,8 +882,8 @@ input[type=submit] {
 	background-color: #FDFDFD;
 	border-radius: 10px;
 	color: #1e1e1e;
-	display: grid;
-	grid-template-rows: 160px 1fr;
+	display: flex;
+	flex-direction: column;
 	justify-items: center;
 	overflow: hidden;
 	padding-block: 15px 30px;
@@ -894,23 +895,25 @@ input[type=submit] {
 .p-works__img {
 	aspect-ratio: 1.25;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
 	text-align: center;
 	width: max(50%, 200px);
 }
 
 .p-works__img img {
 	-o-object-fit: cover;
+	-o-object-position: center top;
 	height: 100%;
 	object-fit: cover;
+	object-position: center top;
 	width: 100%;
 }
 
 .p-works__text {
-	align-items: center;
+	align-items: stretch;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	height: 100%;
 	width: 100%;
 }
 
@@ -983,13 +986,10 @@ input[type=submit] {
 }
 
 .p-works__item-comment {
+	flex-grow: 1;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.485;
-}
-
-.p-works__item-comment p {
-	flex-grow: 1;
 }
 
 .p-works__button {
@@ -1859,6 +1859,10 @@ input[type=submit] {
 	column-gap: 45px;
 }
 
+.p-works__item-category-wrapper {
+	justify-content: center;
+}
+
 .p-contact__decoTop::before {
 	width: 85px;
 }
@@ -1970,7 +1974,6 @@ input[type=submit] {
 }
 
 .p-works__img {
-	overflow: hidden;
 	position: relative;
 	z-index: 1;
 }
@@ -2011,10 +2014,6 @@ input[type=submit] {
 }
 
 .p-works__img img {
-	-o-object-fit: cover;
-	-o-object-position: center top;
-	object-fit: cover;
-	object-position: center top;
 	transition: filter 0.3s linear 0s;
 }
 
@@ -2345,18 +2344,21 @@ input[type=submit] {
 
 .p-works__item {
 	-moz-column-gap: 40px;
-	align-content: center;
+	align-items: center;
 	column-gap: 40px;
-	grid-template-columns: repeat(2, 1fr);
+	flex-direction: row;
 	padding-block: 48px 64px;
 	row-gap: 0;
 }
 
 .p-works__img {
 	aspect-ratio: 1.25;
-	grid-column: 1/2;
-	grid-row: 1/2;
-	width: min(100%, 440px);
+	flex: 0 0 min(440px, 50% - 20px);
+	height: 100%;
+}
+
+.p-works__text {
+	width: auto;
 }
 
 .p-works__item-title::after {
@@ -2507,12 +2509,14 @@ input[type=submit] {
 }
 
 .p-works__item {
-	padding-inline: 0;
+	align-items: stretch;
+	padding-inline: 20px;
 	width: calc(100% - 40px);
 }
 
 .p-works__text {
-	padding-inline: 78px 62px;
+	padding-inline: 60px;
+	width: auto;
 }
 
 .p-works__item-category-wrapper {
