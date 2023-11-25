@@ -70,6 +70,9 @@
   width: calc(100vw - 25px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   overflow: hidden;
 
+
+  grid-template-rows: 160px 1fr;
+
   @include mq(m) {
     width: calc(100vw - 200px - 40px - 30px); // 画面全体幅 - インナー横のpadding - キャンバスのpadding - ページのpadding
   }
@@ -93,7 +96,7 @@
   text-align: center;
   aspect-ratio: math.div(200, 160);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: max(40%, 200px);
+  width: max(50%, 200px);
 
   @include mq(m){
     position: relative;
@@ -148,7 +151,7 @@
   }
   
   @include mq(m) {
-    width: 70%;
+    // width: 70%;
     
     img {
       object-fit: cover;
@@ -171,6 +174,8 @@
   align-items: center;
   gap: 20px;
   height: 100%;
+
+  width: 100%;
 
   @include mq(m) {
     padding-inline: 30px;
@@ -300,6 +305,10 @@
 
   @include mq(l) {
     @include font(16);
+  }
+
+  p{
+    flex-grow: 1;
   }
 }
 

@@ -13,8 +13,9 @@
           'hide_empty' => false,
           'exclude' => array(9), //非公開実績は除外する
         ));
+        $select_object = get_queried_object();
         foreach ($genre_terms as $genre_term) : ?>
-          <li class="p-works-nav__item">
+          <li class="p-works-nav__item <?php if ($select_object->name == $genre_term->name) : ?>selected<?php endif; ?>">
             <a href="<?php echo get_term_link($genre_term, 'genre'); ?>" class="p-works-nav__link"><?php echo $genre_term->name; ?></a><!-- /.p-works-nav__link -->
           </li><!-- /.p-works-nav__item -->
         <?php endforeach; ?>

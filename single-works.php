@@ -37,7 +37,11 @@
         </div><!-- /.p-achieve-list__wrapper -->
         <div class="p-achieve-list__wrapper p-achieve-list__url">
           <dt class="p-achieve-list__title">URL</dt>
-          <dd class="p-achieve-list__text"><?php the_field('url'); ?></dd>
+          <dd class="p-achieve-list__text">
+            <a href="<?php the_field('url'); ?>" class="p-achieve-list__link">
+              <span data-text="View Site"><?php the_field('url'); ?></span>
+            </a><!-- /.p-achieve-list__link -->
+          </dd>
         </div><!-- /.p-achieve-list__wrapper -->
         <div class="p-achieve-list__wrapper p-achieve-list__area">
           <dt class="p-achieve-list__title">担当領域</dt>

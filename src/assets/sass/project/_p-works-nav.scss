@@ -41,7 +41,6 @@
   }
 
   &:hover{
-    box-shadow: none;
     &::before{
       width: 100%;
     }
@@ -49,7 +48,6 @@
   
   &.selected{
     background-color: #57A5D4;
-    box-shadow: none;
   }
 }
 

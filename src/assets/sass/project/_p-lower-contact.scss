@@ -38,14 +38,13 @@
 .p-lower-contact__list {}
 
 .p-lower-contact__btn {
-  position: relative;
   margin-top: 50px;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   cursor: pointer;
   align-items: center;
   background: #fff;
-  border: 1px solid #337AB7;
+  border: 2px solid #337AB7;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -55,28 +54,31 @@
   transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   width: fit-content;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: #337ab7;
-    top: 180%;
-    height: 580px;
-    width: 580px;
-    z-index: -1;
-    border-radius: 38%;
-    left: -85%;
-    transform: rotate(360deg);
-    transition: top 1s linear 0s;
-    animation: wave 30s linear infinite;
+  @include mq(m){
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #337ab7;
+      top: 180%;
+      height: 580px;
+      width: 580px;
+      z-index: -1;
+      border-radius: 38%;
+      left: -85%;
+      transform: rotate(360deg);
+      transition: top 1s linear 0s;
+      animation: wave 30s linear infinite;
+    }
   }
 
-  @include mq(m) {
-    &:hover {
-      color: #fff;
-      box-shadow: 0 0 0;
-      transform: translateY(0.25em);
-
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 0;
+    transform: translateY(0.25em);
+    
+    @include mq(m) {
       &::before {
         top: -75%;
       }

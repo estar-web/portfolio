@@ -30,9 +30,6 @@ jQuery('a[href^="#"]').click(function () {
   if ("fixed" !== jQuery(".header").css("position")) {
     position = jQuery(target).offset().top;
   }
-  // if (0 > position) {
-  //   position = 0;
-  // }
 
   // アンカーリンククリック時の動作
   jQuery("html, body").animate({
@@ -182,6 +179,46 @@ const lower_swiper = new Swiper(".p-achieve-icatch__swiper", {
   },
   slidePerView: 1,
 });
+
+function matchHeight(elements) {
+  // const target = Array.from(document.querySelectorAll(elements));
+  // const heightList = [];
+  var target = jQuery(elements);
+
+  var iniHight = [];
+  target.each(function () {
+    // jQuery(this).css('height','auto').height();
+    var temp = jQuery(this).height();
+    iniHight.push(temp);
+  });
+
+  var heightList = [];
+  // target.forEach(element => {
+  //  const height = element.clientHeight;
+  //  heightList.push(height);
+  // });
+  target.each(function () {
+    var height = jQuery(this).height();
+    heightList.push(height);
+  });
+  // const maxHeight = Math.max.apply(null,heightList);
+  // target.forEach(element => {
+  //  element.style.height = maxHeight + 'px'; // 最大高さに揃える
+  // });
+  var maxHeight = Math.max(...heightList);
+
+  target.each(function () {
+    // jQuery(this).height(maxHeight);
+  });
+  console.log(target);
+  console.log(iniHight);
+  console.log(heightList);
+  console.log(maxHeight);
+ }
+
+ jQuery(window).on('load resize', function(){
+  //  matchHeight('.p-works__item');
+ });
 
 jQuery(window).on("scroll", function () {
 

@@ -7,51 +7,37 @@
   display: grid;
   gap: 20px;
 
-  @include mq(xl){
+  @include mq(xl) {
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.p-achieve-list__wrapper {
+.p-achieve-list__wrapper {}
 
-}
+.p-achieve-list__client {}
 
-.p-achieve-list__client {
+.p-achieve-list__url {}
 
-}
+.p-achieve-list__area {}
 
-.p-achieve-list__url {
+.p-achieve-list__period {}
 
-}
-
-.p-achieve-list__area {
-
-}
-
-.p-achieve-list__period {
-
-}
-
-.p-achieve-list__price {
-
-}
+.p-achieve-list__price {}
 
 .p-achieve-list__comment {
-  @include mq(l){
+  @include mq(l) {
     grid-column: 2 / 3;
     grid-row: 1 / 5;
 
-    >.p-achieve-list__text{
+    >.p-achieve-list__text {
       margin-block-start: 1em;
     }
   }
 }
 
-
-
 .p-achieve-list__title {
-  @include mq(xl){
+  @include mq(xl) {
     @include font(20);
   }
 }
@@ -59,9 +45,60 @@
 .p-achieve-list__text {
   margin-inline-start: 1em;
   @include font(14);
-  
-  @include mq(l){
+
+  @include mq(l) {
     margin-block-start: 0.5em;
     @include font(16);
+  }
+
+  a {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    width: fit-content;
+    display: block;
+
+    span {
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: transform $ts-time linear 0s, background-color $ts-time linear 0s;
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+
+      &::after {
+        background-color: #337AB7;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: attr(data-text);
+        display: inline-block;
+        color: #fff;
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-transform: translate3d(0, 105%, 0) rotateX(-90deg);
+        transform: translate3d(0, 105%, 0) rotateX(-90deg);
+        width: 100%;
+        text-align: center;
+        padding: 0.2em 0.5em;
+        visibility: hidden;
+        transition: visibility $ts-time linear 0s;
+      }
+    }
+
+    &:hover {
+      span {
+        background-color: #337AB7;
+        -webkit-transform: translate3d(0, 0, -30px) rotateX(90deg);
+        transform: translate3d(0, 0, -30px) rotateX(90deg);
+
+        &::after {
+          visibility: visible;
+        }
+      }
+    }
   }
 }
