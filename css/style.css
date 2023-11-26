@@ -425,7 +425,7 @@ input[type=submit] {
 }
 
 .l-lower-contact {
-	margin-block: 30px 26px;
+	margin-block: 30px 0;
 }
 
 .c-btn {
@@ -734,52 +734,37 @@ input[type=submit] {
 }
 
 .p-profile__link {
-	perspective: 1000px;
-	perspective-origin: 50% 50%;
-	vertical-align: bottom;
-}
-
-.p-profile__link span {
 	align-items: center;
 	display: flex;
 	position: relative;
-	transform-origin: 50% 0%;
-	transform-style: preserve-3d;
-	transition: transform 0.3s linear 0s, background-color 0.3s linear 0s;
 }
 
-.p-profile__link span::after {
-	background-color: #337AB7;
+.p-profile__link:hover .p-profile__link--hover {
+	opacity: 1;
+}
+
+.p-profile__link:hover .p-profile__web-icon,
+.p-profile__link:hover .p-profile__account {
+	opacity: 0;
+}
+
+.p-profile__link--hover {
+	background: #337ab7;
 	color: #fff;
-	content: attr(data-text);
-	display: inline-block;
-	left: 0;
+	display: block;
+	left: 50%;
+	opacity: 0;
 	padding: 0.2em 0.5em;
 	position: absolute;
-	text-align: center;
-	top: 0;
-	transform: translate3d(0, 105%, 0) rotateX(-90deg);
-	transform-origin: 50% 0%;
-	transition: visibility 0.3s linear 0s;
-	visibility: hidden;
-	width: 100%;
-}
-
-.p-profile__link:hover span {
-	background-color: #337AB7;
-	transform: translate3d(0, 0, -30px) rotateX(90deg);
-}
-
-.p-profile__link:hover span::after {
-	visibility: visible;
-}
-
-.p-profile__link:hover .p-profile__web-icon path {
-	fill: #fff;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s linear 0s, color 0.3s linear 0s, background-color 0.3s linear 0s;
+	white-space: nowrap;
 }
 
 .p-profile__web-icon {
 	margin-right: 10px;
+	transition: opacity 0.3s linear 0s;
 }
 
 .p-profile__web-icon path {
@@ -792,6 +777,7 @@ input[type=submit] {
 	font-size: 0.875rem;
 	font-style: normal;
 	line-height: 1.5;
+	transition: opacity 0.3s linear 0s;
 }
 
 .p-profile__text {
@@ -812,6 +798,46 @@ input[type=submit] {
 	left: 0;
 	position: absolute;
 	top: 0;
+}
+
+.sample_link12 { /*ボタンの形状*/
+	border: 1px solid #555;
+	border-radius: 25px;
+	color: #333;
+	display: inline-block;
+	min-width: 210px;
+	outline: none;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none; /*アニメーションの指定*/
+	transition: all 0.2s;
+}
+
+.sample_link12:hover {
+	background-color: #2ecc71;
+}
+
+.sample_link12:hover .omote {
+	opacity: 0;
+}
+
+.sample_link12:hover .ura {
+	opacity: 1;
+}
+
+.sample_link12 span { /*ブロック要素にしてテキスト折り返しなし*/
+	display: block;
+	left: 50%; /*絶対配置でテキストの位置を決める*/
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%); /*アニメーションの指定*/
+	transition: all 0.5s;
+	white-space: nowrap;
+}
+
+.ura {
+	opacity: 0;
 }
 
 .p-skills {
@@ -1441,6 +1467,7 @@ input[type=submit] {
 	aspect-ratio: 320/230;
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -1614,47 +1641,36 @@ input[type=submit] {
 	margin-inline-start: 1em;
 }
 
-.p-achieve-list__text a {
-	display: block;
-	perspective: 1000px;
-	perspective-origin: 50% 50%;
-	width: -moz-fit-content;
-	width: fit-content;
-}
-
-.p-achieve-list__text a span {
-	align-items: center;
-	display: flex;
+.p-achieve-list__link {
 	position: relative;
-	transform-origin: 50% 0%;
-	transform-style: preserve-3d;
-	transition: transform 0.3s linear 0s, background-color 0.3s linear 0s;
 }
 
-.p-achieve-list__text a span::after {
-	background-color: #337AB7;
+.p-achieve-list__link:hover .p-achieve-list__link--nonHover {
+	opacity: 0;
+}
+
+.p-achieve-list__link:hover .p-achieve-list__link--hover {
+	opacity: 1;
+}
+
+.p-achieve-list__link--nonHover {
+	transition: opacity 0.3s linear 0s;
+}
+
+.p-achieve-list__link--hover {
+	background: #337ab7;
 	color: #fff;
-	content: attr(data-text);
-	display: inline-block;
-	left: 0;
+	display: block;
+	left: 50%;
+	opacity: 0;
 	padding: 0.2em 0.5em;
 	position: absolute;
 	text-align: center;
-	top: 0;
-	transform: translate3d(0, 105%, 0) rotateX(-90deg);
-	transform-origin: 50% 0%;
-	transition: visibility 0.3s linear 0s;
-	visibility: hidden;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s linear 0s, color 0.3s linear 0s, background-color 0.3s linear 0s;
+	white-space: nowrap;
 	width: 100%;
-}
-
-.p-achieve-list__text a:hover span {
-	background-color: #337AB7;
-	transform: translate3d(0, 0, -30px) rotateX(90deg);
-}
-
-.p-achieve-list__text a:hover span::after {
-	visibility: visible;
 }
 
 .p-lower-contact__textWrapper {
@@ -1695,6 +1711,10 @@ input[type=submit] {
 	box-shadow: 0 0 0;
 	color: #fff;
 	transform: translateY(0.25em);
+}
+
+.p-lower-contact__spacer {
+	margin-top: 50px;
 }
 
 .p-contact-list {
@@ -2241,7 +2261,7 @@ input[type=submit] {
 @media screen and (min-width:992px) {
 
 .l-lower-contact {
-	margin-block: 100px 143px;
+	margin-block: 100px 0;
 }
 
 .c-btn-send {
@@ -2451,6 +2471,10 @@ input[type=submit] {
 
 .p-lower-contact__btn {
 	margin-top: 107px;
+}
+
+.p-lower-contact__spacer {
+	margin-top: 143px;
 }
 
 .p-contact-list__item {

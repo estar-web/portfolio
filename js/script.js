@@ -7,7 +7,7 @@ jQuery('#js-toggle').on('click', function (e) {
 });
 
 jQuery('.js-navLink').on('click', function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   $header.removeClass('add-active');
 });
 
@@ -138,7 +138,7 @@ const top_swiper = new Swiper(".p-works__swiper", {
       shadow: false,
       origin: "left",
       translate: [0, 0, -200],
-      rotate: [0, 90, 0],
+      rotate: [0, -90, 0],
     },
   },
 
@@ -148,15 +148,17 @@ const top_swiper = new Swiper(".p-works__swiper", {
       creativeEffect: {
         prev: {
           shadow: true,
-          origin: "center",
+          origin: "left",
           translate: [0, 0, 0],
-          rotate: [0, 90, 0],
+          rotate: [0, 60, 0],
+          opacity: 0,
         },
         next: {
           shadow: false,
           origin: "left",
           translate: [0, 0, 0],
-          rotate: [0, 90, 0],
+          rotate: [0, -60, 0],
+          opacity: 0,
 
         },
       },

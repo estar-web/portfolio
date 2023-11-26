@@ -29,7 +29,7 @@
             $front_class = 'js-navLink';
           } else {
             $page_link = home_url('/');
-            $front_class = null;
+            $front_class = 'js-navLink';
           } ?>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#profile'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Profile</span>自己紹介</a></li>
           <li class="p-header-nav__item"><a href="<?php echo ($page_link . '#skills'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Skills</span>できること</a></li>

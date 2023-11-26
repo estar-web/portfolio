@@ -90,3 +90,10 @@
   }
 }
 
+.p-lower-contact__spacer{
+  margin-top: 50px;
+
+  @include mq(l){
+    margin-top: 143px;
+  }
+}

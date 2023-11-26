@@ -66,7 +66,8 @@
           <dt class="p-achieve-list__title">URL</dt>
           <dd class="p-achieve-list__text">
             <a href="<?php the_field('url'); ?>" class="p-achieve-list__link" target="_blank">
-              <span data-text="View Site"><?php the_field('url'); ?></span>
+              <span class="p-achieve-list__link--nonHover"><?php the_field('url'); ?></span>
+              <span class="p-achieve-list__link--hover">View Site</span>
             </a><!-- /.p-achieve-list__link -->
           </dd>
         </div><!-- /.p-achieve-list__wrapper -->
