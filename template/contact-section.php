@@ -1,7 +1,7 @@
 <div class="c-deco__top"></div>
 <div class="p-contact__decoTop"></div><!-- /.p-contact__decotop -->
 <div class="p-contact__inner">
-  <div class="p-contact__title c-section-title js-in-view fade-in-up">Contact</div><!-- /.p-contact__title -->
+  <h2 class="p-contact__title c-section-title js-in-view fade-in-up">Contact</h2><!-- /.p-contact__title -->
   <div class="p-contact__textArea js-in-view fade-in-up">
     <div class="p-contact__lead">＼お問い合わせはこちらから／</div><!-- /.p-contact__lead -->
     <div class="p-contact__text">

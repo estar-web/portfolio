@@ -81,13 +81,10 @@
   }
 
   @include mq(l) {
-    // grid-template-columns: repeat(2, 1fr);
     flex-direction: row;
-    // align-content: center;
     column-gap: 40px;
     padding-block: 48px 64px;
     row-gap: 0;
-    // align-items: stretch;
     align-items: center;
   }
 
@@ -101,7 +98,7 @@
 
 .p-works__img {
   text-align: center;
-  aspect-ratio: math.div(200, 160);
+  aspect-ratio: 200 / 160;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: max(50%, 200px);
   overflow: hidden;
@@ -112,16 +109,12 @@
   }
 
   @include mq(l) {
-    // grid-column: 1 / 2;
-    // grid-row: 1 / 2;
-    // width: min(100%, 440px);
     flex: 0 0 min(440px, calc(50% - 40px / 2));
-    aspect-ratio: math.div(440, 352);
+    aspect-ratio: 440 / 352;
     height: 100%;
   }
 
   @include mq(xl) {
-    // flex: 0 0 min(440px, calc(50% - 40px / 2));
   }
 
   &::after {
@@ -188,7 +181,6 @@
   }
 
   @include mq(l) {
-
     width: auto;
   }
 
@@ -320,7 +312,12 @@
   line-height: math.div(20.79, 14);
   flex-grow: 1;
 
+  @include mq(m){
+    padding-inline: 3em;
+  }
+  
   @include mq(l) {
+    padding-inline: 0;
     @include font(16);
   }
 }

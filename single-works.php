@@ -8,19 +8,46 @@
       <div class="swiper p-achieve-icatch__swiper">
         <div class="swiper-wrapper p-achieve-icatch__swiperWrapper">
           <div class="swiper-slide p-achieve-icatch__slide">
-            <figure class="p-achieve-icatch__img p-icatch--pc">
-              <img src="<?php the_field('icatch_pc') ?>" width="310" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-achieve-icatch__img -->
+            <?php
+            $pc_image = get_field('icatch_pc');   //pcイメージの情報を取得
+            $tab_image = get_field('icatch_tab'); //tabイメージの情報を取得
+            $sp_image = get_field('icatch_sp');   //spイメージの情報を取得
+
+            // PC画像のurlとalt情報を取得
+            if (!empty($pc_image)) :
+              $url = $pc_image['url']; //画像のURLを取得
+              $alt = $pc_image['alt']; //画像のaltを取得
+              // $url = wp_get_attachment_url($pc_image);
+              // $alt = get_post_meta(get_post($pc_image) -> ID, '_wp_attachment_image_alt' , true );
+            ?>
+              <figure class="p-achieve-icatch__img p-icatch--pc">
+                <img src="<?php echo esc_url($url); ?>" width="310" height="180" alt="<?php echo esc_attr($alt); ?>" loading="lazy" decoding="async">
+              </figure><!-- /.p-achieve-icatch__img -->
+            <?php endif; ?>
           </div>
           <div class="swiper-slide p-achieve-icatch__slide">
-            <figure class="p-achieve-icatch__img p-icatch--tab">
-              <img src="<?php the_field('icatch_tab') ?>" width="166" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-achieve-icatch__img -->
+            <?php
+            // PC画像のurlとalt情報を取得
+            if (!empty($tab_image)) :
+              $url = $tab_image['url']; //画像のURLを取得
+              $alt = $tab_image['alt']; //画像のaltを取得 
+            ?>
+              <figure class="p-achieve-icatch__img p-icatch--tab">
+                <img src="<?php echo $url; ?>" width="166" height="180" alt="<?php echo $alt; ?>" loading="lazy" decoding="async">
+              </figure><!-- /.p-achieve-icatch__img -->
+            <?php endif; ?>
           </div>
           <div class="swiper-slide p-achieve-icatch__slide">
-            <figure class="p-achieve-icatch__img p-icatch--sp">
-              <img src="<?php the_field('icatch_sp') ?>" width="83" height="180" alt="" loading="lazy" decoding="async">
-            </figure><!-- /.p-achieve-icatch__img -->
+            <?php
+            // PC画像のurlとalt情報を取得
+            if (!empty($sp_image)) :
+              $url = $sp_image['url']; //画像のURLを取得
+              $alt = $sp_image['alt']; //画像のaltを取得
+            ?>
+              <figure class="p-achieve-icatch__img p-icatch--sp">
+                <img src="<?php echo $url; ?>" width="83" height="180" alt="<?php echo $alt; ?>" loading="lazy" decoding="async">
+              </figure><!-- /.p-achieve-icatch__img -->
+            <?php endif; ?>
           </div>
         </div>
         <!-- ページネーション -->
@@ -38,7 +65,7 @@
         <div class="p-achieve-list__wrapper p-achieve-list__url">
           <dt class="p-achieve-list__title">URL</dt>
           <dd class="p-achieve-list__text">
-            <a href="<?php the_field('url'); ?>" class="p-achieve-list__link">
+            <a href="<?php the_field('url'); ?>" class="p-achieve-list__link" target="_blank">
               <span data-text="View Site"><?php the_field('url'); ?></span>
             </a><!-- /.p-achieve-list__link -->
           </dd>

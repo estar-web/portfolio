@@ -51,7 +51,7 @@
   line-height: 1;
   margin-inline: auto;
   max-width: 224px;
-  transition: background-color $ts-time linear 0s, color $ts-time linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
+  transition: background-color $ts-time linear 0s, color 1s linear 0s, box-shadow $ts-time linear 0s, transform $ts-time linear 0s;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   width: fit-content;
   @include mq(m){

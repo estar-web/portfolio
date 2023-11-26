@@ -6,7 +6,7 @@ get_header(); ?>
 
 <div class="p-lower-top">
   <div class="p-lower-top__titleWrap">
-    <h1 class="p-lower-top__title c-lower-top-title">Contact</h1><!-- /.p-lower-top__title -->
+    <h2 class="p-lower-top__title c-lower-top-title">Contact</h2><!-- /.p-lower-top__title -->
   </div><!-- /.p-lower-top__titleWrap -->
 </div><!-- /.p-lower-top -->
 

@@ -64,7 +64,7 @@
 
 .p-works-contents__img {
   width: 100%;
-  aspect-ratio: math.div(320,230);
+  aspect-ratio: 320 / 230;
 
   display: flex;
   justify-content: center;

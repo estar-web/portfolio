@@ -56,20 +56,16 @@
   margin-top: 50px;
 }
 
-.l-lower-contact{
-  margin-top: 50px;
-}
-
 .l-achieve-detail{
   margin-top: 30px;
 }
 
 .l-lower-contact{
-  
+
   margin-block: 30px calc(50px - 24px);
-  
+
   @include mq(l){
-    margin-block: 100px 0;
+    margin-block: 100px 143px;
     // margin-block: 100px calc(143px - 24px);
   }
 }

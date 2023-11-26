@@ -15,7 +15,7 @@
     left: 0;
     width: 74px;
     height: auto;
-    aspect-ratio: math.div(74, 381);
+    aspect-ratio: 74 / 381;
 
     @include mq(s) {
       width: 85px;
@@ -24,7 +24,7 @@
     @include mq(m) {
       background-image: url(../img/picture-jelly-fish1.png);
       width: math.div(376.2, 1440) * 100%;
-      aspect-ratio: math.div(376.2, 510);
+      aspect-ratio: 376.2 / 510;
       height: auto;
       top: 0;
     }
@@ -91,7 +91,7 @@
     @include mq(m) {
       background-image: url(../img/picture-jelly-fish2.png);
       width: math.div(417.26, 1440) * 100%;
-      aspect-ratio: math.div(376.2, 510);
+      aspect-ratio: 376.2 / 510;
       height: auto;
       bottom: -50px;
       right: 0;

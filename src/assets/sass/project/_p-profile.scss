@@ -26,7 +26,7 @@
 
   width: 150px;
   margin-inline: auto;
-  aspect-ratio: math.div(150, 150);
+  aspect-ratio: 150 / 150;
   border-radius: 99px;
   overflow: hidden;
 
@@ -146,6 +146,7 @@
 .p-profile__account {
   @include font(14);
   line-height: math.div(21, 14);
+  font-style: normal;
 }
 
 .p-profile__text {

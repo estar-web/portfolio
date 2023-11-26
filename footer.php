@@ -14,7 +14,7 @@
         <li class="p-footer__navItem"><a href="<?php echo ($page_link . '#skills'); ?>" class="p-footer__navLink">Skills</a></li><!-- /.p-footer__navItem -->
         <li class="p-footer__navItem"><a href="<?php echo ($page_link . '#works'); ?>" class="p-footer__navLink">Works</a></li><!-- /.p-footer__navItem -->
         <li class="p-footer__navItem"><a href="<?php echo ($page_link . '#check'); ?>" class="p-footer__navLink">Check</a></li><!-- /.p-footer__navItem -->
-        <li class="p-footer__navItem"><a href="<?php echo ($page_link . '#contact'); ?>" class="p-footer__navLink">Contact</a></li><!-- /.p-footer__navItem -->
+        <li class="p-footer__navItem"><a href="<?php echo home_url('/contact/'); ?>" class="p-footer__navLink">Contact</a></li><!-- /.p-footer__navItem -->
       </ul><!-- /.p-footer__navList -->
     </nav><!-- /.p-footer__nav -->
   </div><!-- /.p-footer__inner -->
