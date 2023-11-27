@@ -42,9 +42,9 @@ get_header(); ?>
           </a><!-- /.p-profile__link -->
         </div><!-- /.p-profile__link-wrapper -->
         <div class="p-profile__text">
-          愛知出身、埼玉在住のフリーのWebコーダーです。<br>
-          会社員時代はソフトウェアエンジニアとして働いていました。<br>
-          旅行、お酒、飲食店巡りが趣味です。
+          埼玉県でホームページ制作のお仕事をしております。<br>
+          会社員時代はプログラマーとして働いていました。<br>
+          カメラやドローンを使って、サイトに掲載する写真や動画の撮影のお手伝いもできます。<br>
           <div class="p-profile__label mt-20">■お仕事内容</div><!-- /.p-profile__label -->
           <ul class="p-profile__list">
             <li class="p-profile__list-item">Webサイト制作</li>
@@ -76,7 +76,7 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-css.svg" alt="スキルセットアイコン(CSS)" width="44" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">CSS(Sass)</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">保守・運用性を意識したコーディング、BEM, FLOCSSを意識したファイル構成、Gulpによる自動コンパイル</div><!-- /.p-skills__text -->
+          <div class="p-skills__text">保守・運用性を意識したコーディング、BEM, FLOCSSを意識したファイル構成</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
         <div class="p-skills__item">
@@ -84,7 +84,7 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-js.svg" alt="スキルセットアイコン(JavaScript)" width="50" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">JavaScript(jQuery)</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">ライブラリを用いたアニメーション実装、カルーセル、スムーススクロール、フェードイン、アコーディオン、モーダルウィンドウ</div><!-- /.p-skills__text -->
+          <div class="p-skills__text">ライブラリを用いたアニメーション実装<br>（スライダー、スムーススクロール、フェードイン、アコーディオン、モーダルウィンドウ等）</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
         <div class="p-skills__item">
@@ -105,10 +105,11 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-drone.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-camera.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy">
+            <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/img/icon-drone.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy"> -->
           </figure><!-- /.p-skills__icon -->
-          <div class="p-skills__label">ドローン</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">民間資格(UAS Level 2)所持<br>サイトに掲載する空撮写真・動画の撮影</div><!-- /.p-skills__text -->
+          <div class="p-skills__label">写真・動画撮影</div><!-- /.p-skills__label -->
+          <div class="p-skills__text">サイトに掲載する空撮写真・動画の撮影</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
       </div><!-- /.p-skills__wrapper -->
