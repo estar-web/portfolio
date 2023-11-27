@@ -124,6 +124,7 @@ const top_swiper = new Swiper(".p-works__swiper", {
 
   autoplay: {
     delay: 3000, // 次のスライドに自動で切り替える時間
+    disableOnInteraction: false, // クリックしても自動再生を止めない
   },
 
   creativeEffect: {
@@ -182,6 +183,7 @@ const lower_swiper = new Swiper(".p-achieve-icatch__swiper", {
   speed: 2000,
   autoplay: {
     delay: 3000, // 次のスライドに自動で切り替える時間
+    disableOnInteraction: false, // クリックしても自動再生を止めない
   },
   slidePerView: 1,
 });

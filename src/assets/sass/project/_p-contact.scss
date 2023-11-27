@@ -2,7 +2,9 @@
 @use "sass:math";
 @use "sass:map";
 
-.p-contact {}
+.p-contact {
+  background: map.get($color, main);
+}
 
 .p-contact__decoTop {
   position: relative;
@@ -30,15 +32,17 @@
     }
 
     @include mq(l) {
+      // top: 80px;
+      // left: -20%;
+      // left: -200px;
       top: -70px;
+      max-width: 376.2px;
     }
   }
 }
 
 .p-contact__inner {
-  width: 100%;
-  background: skyblue;
-  background: map.get($color, main);
+  // width: 100%;
   padding-bottom: 72px;
 
   @include mq(m) {
@@ -99,7 +103,15 @@
     }
 
     @include mq(l) {
+      bottom: -180px;
+      // right: -17.59259%;
+      // right: -190px;
       bottom: -100px;
+      max-width: 417.26px;
+    }
+
+    @include mq(xl){
+
     }
   }
 }

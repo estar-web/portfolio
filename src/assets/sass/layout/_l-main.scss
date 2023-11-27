@@ -1,4 +1,6 @@
 @use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
 
 .l-inner {
   width: min(100%, $m-inner);
@@ -41,11 +43,11 @@
 }
 
 .l-contact {
-  margin-top: 90px;
+  // margin-top: 90px;
 
-  @include mq(xl) {
-    margin-top: 150px;
-  }
+  // @include mq(xl) {
+  //   margin-top: 150px;
+  // }
 }
 
 .l-lower-works{
@@ -61,12 +63,12 @@
 }
 
 .l-lower-contact{
+  background: map.get($color, main);
+  // margin-block: 30px 0;
+  // // margin-block: 30px calc(50px - 24px);
 
-  margin-block: 30px 0;
-  // margin-block: 30px calc(50px - 24px);
-
-  @include mq(l){
-    margin-block: 100px 0;
-    // margin-block: 100px calc(143px - 24px);
-  }
+  // @include mq(l){
+  //   margin-block: 100px 0;
+  //   // margin-block: 100px calc(143px - 24px);
+  // }
 }

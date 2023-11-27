@@ -412,10 +412,6 @@ input[type=submit] {
 	margin-top: 92px;
 }
 
-.l-contact {
-	margin-top: 90px;
-}
-
 .l-lower-works-contents {
 	margin-top: 50px;
 }
@@ -425,25 +421,18 @@ input[type=submit] {
 }
 
 .l-lower-contact {
-	margin-block: 30px 0;
+	background: #F9FCFF;
 }
 
 .c-btn {
 	border: 2px solid #337ab7;
-	border-radius: 20px;
+	border-radius: 23px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 	display: inline-block;
 	overflow: hidden;
-	padding: 0.625em 3em;
+	padding: 0.625em 2.6em;
 	transform: translate3d(0, 0, 0);
-	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
-}
-
-.c-btn:hover {
-	background-color: #337ab7;
-	box-shadow: 0 0 0;
-	color: #fff;
-	transform: translateY(0.25em);
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
 .c-btn-send {
@@ -471,12 +460,6 @@ input[type=submit] {
 	width: 100%;
 }
 
-.c-detail-button:hover {
-	color: #fff;
-	letter-spacing: 0.2em;
-	text-shadow: -1px 1px 5px #337AB7, 1px -1px 5px #337AB7;
-}
-
 .c-section-title {
 	font-size: 24px;
 	font-size: 1.5rem;
@@ -488,6 +471,7 @@ input[type=submit] {
 
 .c-deco__top {
 	height: 13.8666666667vw;
+	margin-top: 90px;
 	position: relative;
 }
 
@@ -502,6 +486,10 @@ input[type=submit] {
 	right: 0;
 	top: 0%;
 	width: 100%;
+}
+
+.c-deco__top--lower {
+	margin-block: 30px 0;
 }
 
 .c-deco__bottom {
@@ -739,15 +727,6 @@ input[type=submit] {
 	position: relative;
 }
 
-.p-profile__link:hover .p-profile__link--hover {
-	opacity: 1;
-}
-
-.p-profile__link:hover .p-profile__web-icon,
-.p-profile__link:hover .p-profile__account {
-	opacity: 0;
-}
-
 .p-profile__link--hover {
 	background: #337ab7;
 	color: #fff;
@@ -798,46 +777,6 @@ input[type=submit] {
 	left: 0;
 	position: absolute;
 	top: 0;
-}
-
-.sample_link12 { /*ボタンの形状*/
-	border: 1px solid #555;
-	border-radius: 25px;
-	color: #333;
-	display: inline-block;
-	min-width: 210px;
-	outline: none;
-	padding: 20px;
-	position: relative;
-	text-align: center;
-	text-decoration: none; /*アニメーションの指定*/
-	transition: all 0.2s;
-}
-
-.sample_link12:hover {
-	background-color: #2ecc71;
-}
-
-.sample_link12:hover .omote {
-	opacity: 0;
-}
-
-.sample_link12:hover .ura {
-	opacity: 1;
-}
-
-.sample_link12 span { /*ブロック要素にしてテキスト折り返しなし*/
-	display: block;
-	left: 50%; /*絶対配置でテキストの位置を決める*/
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%); /*アニメーションの指定*/
-	transition: all 0.5s;
-	white-space: nowrap;
-}
-
-.ura {
-	opacity: 0;
 }
 
 .p-skills {
@@ -1294,6 +1233,10 @@ input[type=submit] {
 	margin-top: 5px;
 }
 
+.p-contact {
+	background: #F9FCFF;
+}
+
 .p-contact__decoTop {
 	position: relative;
 }
@@ -1310,10 +1253,7 @@ input[type=submit] {
 }
 
 .p-contact__inner {
-	background: skyblue;
-	background: #F9FCFF;
 	padding-bottom: 72px;
-	width: 100%;
 }
 
 .p-contact__textArea {
@@ -1400,10 +1340,6 @@ input[type=submit] {
 	transition: width 0.3s linear 0s;
 	width: 0%;
 	z-index: -1;
-}
-
-.p-works-nav__item:hover::before {
-	width: 100%;
 }
 
 .p-works-nav__item.selected {
@@ -1645,14 +1581,6 @@ input[type=submit] {
 	position: relative;
 }
 
-.p-achieve-list__link:hover .p-achieve-list__link--nonHover {
-	opacity: 0;
-}
-
-.p-achieve-list__link:hover .p-achieve-list__link--hover {
-	opacity: 1;
-}
-
 .p-achieve-list__link--nonHover {
 	transition: opacity 0.3s linear 0s;
 }
@@ -1671,6 +1599,14 @@ input[type=submit] {
 	transition: opacity 0.3s linear 0s, color 0.3s linear 0s, background-color 0.3s linear 0s;
 	white-space: nowrap;
 	width: 100%;
+}
+
+.p-lower-contact {
+	padding-block: 30px 50px;
+}
+
+.p-lower-contact.p-lower-contact--thanks {
+	padding-block: 50px;
 }
 
 .p-lower-contact__textWrapper {
@@ -1705,16 +1641,6 @@ input[type=submit] {
 	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 	width: -moz-fit-content;
 	width: fit-content;
-}
-
-.p-lower-contact__btn:hover {
-	box-shadow: 0 0 0;
-	color: #fff;
-	transform: translateY(0.25em);
-}
-
-.p-lower-contact__spacer {
-	margin-top: 50px;
 }
 
 .p-contact-list {
@@ -1869,6 +1795,98 @@ input[type=submit] {
 
 }
 
+@media (hover: hover) and (pointer: fine) {
+
+.c-btn {
+	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
+}
+
+.c-btn:hover {
+	box-shadow: 0 0 0;
+	color: #fff;
+	transform: translateY(0.25em);
+}
+
+.c-btn:hover::before {
+	top: -75%;
+}
+
+.c-detail-button:hover {
+	color: #fff;
+	letter-spacing: 0.2em;
+	text-shadow: -1px 1px 5px #337AB7, 1px -1px 5px #337AB7;
+}
+
+.p-profile__link:hover .p-profile__link--hover {
+	opacity: 1;
+}
+
+.p-profile__link:hover .p-profile__web-icon,
+.p-profile__link:hover .p-profile__account {
+	opacity: 0;
+}
+
+.p-works-nav__item:hover::before {
+	width: 100%;
+}
+
+.p-achieve-list__link:hover .p-achieve-list__link--nonHover {
+	opacity: 0;
+}
+
+.p-achieve-list__link:hover .p-achieve-list__link--hover {
+	opacity: 1;
+}
+
+.p-lower-contact__btn {
+	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
+}
+
+.p-lower-contact__btn:hover {
+	box-shadow: 0 0 0;
+	color: #fff;
+	transform: translateY(0.25em);
+}
+
+.p-lower-contact__btn:hover::before {
+	top: -75%;
+}
+
+}
+
+@media (hover: none) {
+
+.c-btn:active {
+	opacity: 0.7;
+}
+
+.c-detail-button:active {
+	opacity: 0.7;
+}
+
+.p-profile__link:active .p-profile__web-icon,
+.p-profile__link:active .p-profile__account {
+	opacity: 0.7;
+}
+
+.p-works-nav__item::before {
+	transition-duration: 0s;
+}
+
+.p-works-nav__item:active {
+	opacity: 0.7;
+}
+
+.p-achieve-list__link:active .p-achieve-list__link--nonHover {
+	opacity: 0.7;
+}
+
+.p-lower-contact__btn:active {
+	opacity: 0.7;
+}
+
+}
+
 @media screen and (min-width:576px) {
 
 .p-skills__wrapper {
@@ -1915,6 +1933,7 @@ input[type=submit] {
 
 .c-btn {
 	position: relative;
+	transition: background-color 0.3s linear 0s, color 1s linear 0s, box-shadow 0.3s linear 0s, transform 0.3s linear 0s;
 }
 
 .c-btn::before {
@@ -1930,14 +1949,6 @@ input[type=submit] {
 	transition: top 1s linear 0s;
 	width: 580px;
 	z-index: -1;
-}
-
-.c-btn:hover {
-	background-color: inherit;
-}
-
-.c-btn:hover::before {
-	top: -75%;
 }
 
 .c-section-title {
@@ -2206,10 +2217,6 @@ input[type=submit] {
 	z-index: -1;
 }
 
-.p-lower-contact__btn:hover::before {
-	top: -75%;
-}
-
 .p-footer__navList {
 	gap: 0 1.5em;
 	grid-template-columns: repeat(6, auto);
@@ -2260,10 +2267,6 @@ input[type=submit] {
 
 @media screen and (min-width:992px) {
 
-.l-lower-contact {
-	margin-block: 100px 0;
-}
-
 .c-btn-send {
 	padding-inline: 5em;
 }
@@ -2271,6 +2274,10 @@ input[type=submit] {
 .c-section-title {
 	font-size: 64px;
 	font-size: 4rem;
+}
+
+.c-deco__top--lower {
+	margin-block: 100px 0;
 }
 
 .c-lower-top-title {
@@ -2426,11 +2433,14 @@ input[type=submit] {
 }
 
 .p-contact__decoTop::before {
+	max-width: 376.2px;
 	top: -70px;
 }
 
 .p-contact__decoBottom::before {
+	bottom: -180px;
 	bottom: -100px;
+	max-width: 417.26px;
 }
 
 .p-works-table th,
@@ -2454,6 +2464,14 @@ input[type=submit] {
 	margin-block-start: 0.5em;
 }
 
+.p-lower-contact {
+	padding-block: 100px 143px;
+}
+
+.p-lower-contact.p-lower-contact--thanks {
+	padding-block: 100px 150px;
+}
+
 .p-lower-contact__lead {
 	font-size: 24px;
 	font-size: 1.5rem;
@@ -2471,10 +2489,6 @@ input[type=submit] {
 
 .p-lower-contact__btn {
 	margin-top: 107px;
-}
-
-.p-lower-contact__spacer {
-	margin-top: 143px;
 }
 
 .p-contact-list__item {
@@ -2526,7 +2540,7 @@ input[type=submit] {
 	margin-top: 194px;
 }
 
-.l-contact {
+.c-deco__top {
 	margin-top: 150px;
 }
 

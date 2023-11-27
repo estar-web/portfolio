@@ -10,7 +10,7 @@ get_header(); ?>
   </div><!-- /.p-lower-top__titleWrap -->
 </div><!-- /.p-lower-top -->
 
-<section class="l-lower-contact p-lower-contact">
+<section class="l-lower-contact p-lower-contact p-lower-contact--thanks">
   <div class="p-lower-contact__inner l-inner">
     <div class="p-lower-contact__textWrapper">
       <p class="p-lower-contact__lead">送信完了！</p><!-- /.p-lower-contact__lead -->
@@ -21,5 +21,4 @@ get_header(); ?>
     </div><!-- /.p-lower-contact__textWrapper -->
   </div><!-- /.p-lower-contact__inner l-inner -->
 </section><!-- /.l-lower-contact p-lower-contact -->
-<div class="p-lower-contact__spacer"></div><!-- /.p-lower-contact__spacer -->
 <?php get_footer(); ?>

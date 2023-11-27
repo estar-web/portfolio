@@ -38,10 +38,20 @@
 		border-radius: 10rem;
 		z-index: map.get($z-map,under);
   }
-  
-  &:hover{
+  @media (hover: hover) and (pointer: fine) {
+    &:hover{
+      &::before{
+        width: 100%;
+      }
+    }
+  }
+
+  @media (hover:none){
     &::before{
-      width: 100%;
+      transition-duration: 0s;
+    }
+    &:active{
+      opacity: 0.7;
     }
   }
   

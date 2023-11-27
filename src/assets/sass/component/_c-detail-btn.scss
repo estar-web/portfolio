@@ -19,13 +19,16 @@
      transition: height 0.3s linear 0s;
   }
 
-  &:hover{
-    letter-spacing: 0.2em;
-    color: #fff;
-    text-shadow: -1px 1px 5px map.get($color,text1st), 1px -1px 5px map.get($color,text1st);
-
-    &::after{
-
+  @media (hover: hover) and (pointer: fine) {
+    &:hover{
+      letter-spacing: 0.2em;
+      color: #fff;
+      text-shadow: -1px 1px 5px map.get($color,text1st), 1px -1px 5px map.get($color,text1st);
+    }
+  }
+  @media (hover: none){
+    &:active{
+      opacity: 0.7;
     }
   }
 }

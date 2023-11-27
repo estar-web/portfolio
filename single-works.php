@@ -95,6 +95,7 @@
   </div><!-- /.l-inner p-achieve-description__inner -->
 </article><!-- /.l-achieve-detail p-achieve-description -->
 
+<div class="c-deco__top c-deco__top--lower"></div>
 <section class="l-lower-contact">
   <?php get_template_part("/template/contact-section"); ?>
 </section><!-- /.l-lower-contact -->
