@@ -49,6 +49,7 @@ get_header(); ?>
           <ul class="p-profile__list">
             <li class="p-profile__list-item">Webサイト制作</li>
             <li class="p-profile__list-item">既存サイト修正、レスポンシブ対応、WordPress化</li>
+            <li class="p-profile__list-item">サイトの保守/運用</li>
             <li class="p-profile__list-item">サイトに使用する空撮写真 / 動画の撮影</li>
           </ul><!-- /.p-profile__list -->
         </div><!-- /.p-profile__text -->
@@ -68,7 +69,7 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-html.svg" alt="スキルセットアイコン(HTML)" width="44" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">HTML</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">HTML Living Standardの準拠</div><!-- /.p-skills__text -->
+          <div class="p-skills__text">HTML Living Standardに準拠したコーディング</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
         <div class="p-skills__item">
@@ -92,7 +93,7 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-gulp.svg" alt="スキルセットアイコン(gulp)" width="25" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">gulp</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">タスクの自動実行による作業効率向上</div><!-- /.p-skills__text -->
+          <div class="p-skills__text">タスクの自動実行による作業効率向上、Sassのコンパイル</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
         <div class="p-skills__item">
@@ -100,12 +101,12 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-wp.svg" alt="スキルセットアイコン(WordPress)" width="50" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">WordPress</div><!-- /.p-skills__label -->
-          <div class="p-skills__text">オリジナルテーマの制作、自作によるカスタム投稿、カスタムフィールドの構築</div><!-- /.p-skills__text -->
+          <div class="p-skills__text">オリジナルテーマの制作、カスタム投稿/カスタムフィールドの構築</div><!-- /.p-skills__text -->
         </div><!-- /.p-skills__item -->
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-camera.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-camera.svg" alt="スキルセットアイコン(カメラ)" width="48" height="48" loading="lazy">
             <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/img/icon-drone.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy"> -->
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">写真・動画撮影</div><!-- /.p-skills__label -->
@@ -191,7 +192,7 @@ get_header(); ?>
       <ul class="p-check__nav js-in-view fade-in-up">
         <li class="p-check__nav-item is-active" data-target="#tab-item01">ご依頼の流れ</li>
         <li class="p-check__nav-item" data-target="#tab-item02">料金の目安</li>
-        <li class="p-check__nav-item" data-target="#tab-item03">注意事項</li>
+        <li class="p-check__nav-item" data-target="#tab-item03">確認事項</li>
       </ul>
       <div class="p-check__content js-in-view fade-in-up">
         <div id="tab-item01" class="p-check__body p-check-flow is-active">
@@ -203,9 +204,9 @@ get_header(); ?>
             <div class="p-check-flow__title">ご依頼、ご相談</div><!-- /.p-check-flow__title -->
             <div class="p-check-flow__text">
               <a href="<?php echo home_url('/contact/'); ?>" class="p-check-flow__link">メールフォーム</a>、または<a href="https://twitter.com/fre_e_star" target="_blank" class="p-check-flow__link">X(旧Twitter)</a>のDMよりお問い合わせ下さい。<br>
+              ご相談だけでも大歓迎です！
             </div><!-- /.p-check-flow__text -->
           </div><!-- /.p-check-flow__item -->
-
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
               <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow2.svg" width="100" height="100" alt="アイコン：資料アイコン" loading="lazy" decoding="async">
@@ -225,7 +226,8 @@ get_header(); ?>
             <div class="p-check-flow__title">制作</div><!-- /.p-check-flow__title -->
             <div class="p-check-flow__text">
               頂いたデータをもとに制作を開始します。<br>
-              作業の進捗度合いについては、notionの進捗管理シートにより共有いたします。
+              作業の進捗度合いについては、notionの進捗管理シートにより共有いたします。<br>
+              （その他の共有方法にも対応いたしますのでお申し付け下さい！）
             </div><!-- /.p-check-flow__text -->
           </div><!-- /.p-check-flow__item -->
           <div class="p-check-flow__item">
@@ -267,7 +269,7 @@ get_header(); ?>
                   <li class="p-check-price__detailItem">マップ、SNSなどのリンクの埋め込み</li><!-- /.p-check-price__detailItem -->
                   <li class="p-check-price__detailItem">お問合せフォーム</li><!-- /.p-check-price__detailItem -->
                   <li class="p-check-price__detailItem">タブレット・スマートフォン表示</li><!-- /.p-check-price__detailItem -->
-                  <li class="p-check-price__detailItem">簡単なアニメーション</li><!-- /.p-check-price__detailItem -->
+                  <li class="p-check-price__detailItem">簡単なアニメーション（スクロールアニメーション等）</li><!-- /.p-check-price__detailItem -->
                 </ul><!-- /.p-check-price__detailList -->
               </li><!-- /.p-check-price__textItem -->
               <li class="p-check-price__textItem">ご要望によっては追加料金が発生する可能性もございます。<br>ヒヤリング時にお聞かせ下さい。</li><!-- /.p-check-price__textItem -->
@@ -291,8 +293,20 @@ get_header(); ?>
               <div class="p-check-price__price">10,000円 〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
             <div class="p-check-price__item">
-              <div class="p-check-price__head">投稿機能<br>(ブログ・お知らせ等)</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__head">WordPress</div><!-- /.p-check-price__head -->
               <div class="p-check-price__price">20,000円</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">スライダー</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">一箇所5,000円</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">モーダルウィンドウ</div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">一箇所5,000円</div><!-- /.p-check-price__price -->
+            </div><!-- /.p-check-price__item -->
+            <div class="p-check-price__item">
+              <div class="p-check-price__head">サイトに使用する写真・動画の撮影<br><small>※内容・撮影場所により変動</small></div><!-- /.p-check-price__head -->
+              <div class="p-check-price__price">10,000円〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
             <div class="p-check-price__item u-hide">
               <div class="p-check-price__head">画像のスライド機能</div><!-- /.p-check-price__head -->
@@ -322,15 +336,17 @@ get_header(); ?>
 
         <div id="tab-item03" class="p-check__body p-check-promise">
           <div class="p-check-promise__item">
-            <div class="p-check-promise__label">ご用意頂きたいもの</div><!-- /.p-check-promise__label -->
+            <div class="p-check-promise__label">ご用意頂けると嬉しいもの</div><!-- /.p-check-promise__label -->
             <div class="p-check-promise__text">
               <ul class="p-check-promise__list">
-                <li class="p-check-promise__listItem">デザインデータ</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">デザインデータ(XD、Figma等)</li><!-- /.p-check-promise__listItem -->
                 <li class="p-check-promise__listItem">画像</li><!-- /.p-check-promise__listItem -->
                 <li class="p-check-promise__listItem">テキスト</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">サーバー情報</li><!-- /.p-check-promise__listItem -->
               </ul><!-- /.p-check-promise__list -->
               <div class="p-check-promise__spacer"></div><!-- /.p-check-promise__spacer -->
-              ご用意が難しい場合は、ご相談下さい！
+              ご用意が難しい場合でもこちらで対応できる場合がございます。<br>
+              お気軽にご相談下さい！<br>
             </div><!-- /.p-check-promise__text -->
           </div><!-- /.p-check-promise__item -->
           <div class="p-check-promise__item">
@@ -346,9 +362,9 @@ get_header(); ?>
             <div class="p-check-promise__label">納品</div><!-- /.p-check-promise__label -->
             <div class="p-check-promise__text">
               <ul class="p-check-promise__list">
-                <li class="p-check-promise__listItem">当方の作業完了後、問題ないことを確認頂くか、7日間経過したことを持ちまして納品とさせて頂きます。</li><!-- /.p-check-promise__listItem -->
+                <!-- <li class="p-check-promise__listItem">当方の作業完了後、問題ないことを確認頂くか、7日間経過したことを持ちまして納品とさせて頂きます。</li>/.p-check-promise__listItem -->
                 <li class="p-check-promise__listItem">納品後、１ヶ月間は修正を無料で承ります。</li><!-- /.p-check-promise__listItem -->
-                <li class="p-check-promise__listItem">上記期間を過ぎての修正、作業着手後のデザイン変更は別途追加料金を頂きます。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">上記期間を過ぎての修正、作業着手後のデザイン変更は別途追加料金を頂く場合がございます。</li><!-- /.p-check-promise__listItem -->
               </ul><!-- /.p-check-promise__list -->
             </div><!-- /.p-check-promise__text -->
           </div><!-- /.p-check-promise__item -->
