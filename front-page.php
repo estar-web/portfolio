@@ -203,7 +203,7 @@ get_header(); ?>
             <div class="p-check-flow__num">STEP 1</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">ご依頼、ご相談</div><!-- /.p-check-flow__title -->
             <div class="p-check-flow__text">
-              <a href="<?php echo home_url('/contact/'); ?>" class="p-check-flow__link">メールフォーム</a>、または<a href="https://twitter.com/fre_e_star" target="_blank" class="p-check-flow__link">X(旧Twitter)</a>のDMよりお問い合わせ下さい。<br>
+              <a href="<?php echo home_url('/contact/'); ?>" class="p-check-flow__link">お問い合わせフォーム</a>、または<a href="https://twitter.com/fre_e_star" target="_blank" class="p-check-flow__link">X(旧Twitter)</a>のDMよりお問い合わせ下さい。<br>
               ご相談だけでも大歓迎です！
             </div><!-- /.p-check-flow__text -->
           </div><!-- /.p-check-flow__item -->
