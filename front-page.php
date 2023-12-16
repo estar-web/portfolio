@@ -354,7 +354,7 @@ get_header(); ?>
             <div class="p-check-promise__text">
               <ul class="p-check-promise__list">
                 <li class="p-check-promise__listItem">平日22:00までに頂いたご連絡については30分以内にご返信いたします。</li><!-- /.p-check-promise__listItem -->
-                <li class="p-check-promise__listItem">都合により連絡が取りにい日時が予めわかっている場合は、前もってご連絡いたします。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">都合により連絡が取りにくい日時が予めわかっている場合は、前もってご連絡いたします。</li><!-- /.p-check-promise__listItem -->
               </ul><!-- /.p-check-promise__list -->
             </div><!-- /.p-check-promise__text -->
           </div><!-- /.p-check-promise__item -->
