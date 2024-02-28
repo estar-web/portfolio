@@ -19,7 +19,7 @@
     </nav><!-- /.p-footer__nav -->
   </div><!-- /.p-footer__inner -->
   <div class="p-footer__copyright">
-    <small>&copy; 2023 Hoshi</small>
+    <small>&copy; 2024 Hoshi</small>
   </div><!-- /.p-footer__copyright -->
 </footer><!-- /.l-footer -->
 

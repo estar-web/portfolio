@@ -1,0 +1,23 @@
+{
+  "specs": {
+    "\\.[jt]sx?$": "@markuplint/react-spec",
+    "\\.vue$": "@markuplint/vue-spec"
+  },
+  "parser": {
+    "\\.[jt]sx?$": "@markuplint/jsx-parser",
+    "\\.vue$": "@markuplint/vue-parser",
+    "\\.svelte$": "@markuplint/svelte-parser",
+    "\\.astro$": "@markuplint/astro-parser",
+    "\\.pug$": "@markuplint/pug-parser",
+    ".php$": "@markuplint/php-parser",
+    "\\.tpl$": "@markuplint/smarty-parser",
+    "\\.erb$": "@markuplint/erb-parser",
+    "\\.ejs$": "@markuplint/ejs-parser",
+    "\\.(mustache|hbs)$": "@markuplint/mustache-parser",
+    "\\.nunjucks$": "@markuplint/nunjucks-parser",
+    "\\.liquid$": "@markuplint/liquid-parser"
+  },
+  "extends": [
+    "markuplint:recommended"
+  ]
+}

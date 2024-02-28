@@ -107,7 +107,6 @@ get_header(); ?>
         <div class="p-skills__item">
           <figure class="p-skills__icon">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-camera.svg" alt="スキルセットアイコン(カメラ)" width="48" height="48" loading="lazy">
-            <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/img/icon-drone.svg" alt="スキルセットアイコン(ドローン)" width="48" height="48" loading="lazy"> -->
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">写真・動画撮影</div><!-- /.p-skills__label -->
           <div class="p-skills__text">サイトに掲載する空撮写真・動画の撮影</div><!-- /.p-skills__text -->

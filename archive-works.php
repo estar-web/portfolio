@@ -48,9 +48,16 @@
       <p class="p-works-other__text">非公開実績の一覧となります</p><!-- /.p-works-other__text -->
       <div class="p-works-other__tableWrapper">
         <table class="p-works-other__table p-works-table">
+          <?php
+          $user_login_check = is_user_logged_in();
+          var_dump($user_login_check);
+          ?>
           <tr class="p-works-table__row">
             <th class="p-works-table__head">サイト概要</th>
             <th class="p-works-table__head">業務内容</th>
+            <?php if ($user_login_check == true) : ?>
+              <th class="p-works-table__head">URL</th>
+            <?php endif; ?>
             <th class="p-works-table__head">担当ページ数</th>
             <th class="p-works-table__head">期間</th>
           </tr><!-- /.p-works-table__row -->
@@ -78,6 +85,9 @@
               <tr class="p-works-table__row">
                 <td class="p-works-table__data"><?php the_field('Customer') ?></td>
                 <td class="p-works-table__data"><?php the_field('area') ?></td>
+                <?php if ($user_login_check == true) : ?>
+                  <td class="p-works-table__data"><?php the_field('url') ?></td>
+                <?php endif; ?>
                 <td class="p-works-table__data"><?php the_field('page') ?>ページ</td>
                 <td class="p-works-table__data"><?php the_field('period') ?></td>
               </tr><!-- /.p-works-table__row -->
