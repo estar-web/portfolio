@@ -50,12 +50,11 @@
         <table class="p-works-other__table p-works-table">
           <?php
           $user_login_check = is_user_logged_in();
-          var_dump($user_login_check);
           ?>
           <tr class="p-works-table__row">
             <th class="p-works-table__head">サイト概要</th>
             <th class="p-works-table__head">業務内容</th>
-            <?php if ($user_login_check == true) : ?>
+            <?php if ($user_login_check) : ?>
               <th class="p-works-table__head">URL</th>
             <?php endif; ?>
             <th class="p-works-table__head">担当ページ数</th>
@@ -65,7 +64,6 @@
           $private = new WP_Query(
             array(
               'post_type' => 'works',
-              // 'posts_per_page' => -1,
               'orderby' => 'date',
               'order' => 'DESC',
               'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
@@ -85,9 +83,17 @@
               <tr class="p-works-table__row">
                 <td class="p-works-table__data"><?php the_field('Customer') ?></td>
                 <td class="p-works-table__data"><?php the_field('area') ?></td>
-                <?php if ($user_login_check == true) : ?>
-                  <td class="p-works-table__data"><?php the_field('url') ?></td>
-                <?php endif; ?>
+                <?php
+                if ($user_login_check) :
+                ?>
+                  <td class="p-works-table__data">
+                    <?php
+                    the_field('url')
+                    ?>
+                  </td>
+                <?php
+                endif;
+                ?>
                 <td class="p-works-table__data"><?php the_field('page') ?>ページ</td>
                 <td class="p-works-table__data"><?php the_field('period') ?></td>
               </tr><!-- /.p-works-table__row -->
