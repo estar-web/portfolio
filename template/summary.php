@@ -6,10 +6,26 @@
           $post_query->the_post(); ?>
           <a href="<?php the_permalink(); ?>" class="p-works-contents__item">
             <figure class="p-works-contents__img">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
+              <?php
+              $terms = get_the_terms(get_the_ID(), 'genre');
+              $is_private = false;
+              if ($terms) {
+                foreach ($terms as $term) {
+                  if ($term->slug === 'private') {
+                    $is_private = true;
+                    break;
+                  }
+                }
+              }
+              if ($is_private) : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-dummy.png" width="320" height="230" alt="非公開画像" loading="lazy" decoding="async">
               <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="320" height="230" alt="画像：ダミー画像" loading="lazy" decoding="async">
+                <!-- 通常の画像処理はここに記述されます -->
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="320" height="230" alt="画像：ダミー画像" loading="lazy" decoding="async">
+                <?php endif; ?>
               <?php endif; ?>
             </figure><!-- /.p-works-contents__img -->
             <div class="p-works-contents__body">

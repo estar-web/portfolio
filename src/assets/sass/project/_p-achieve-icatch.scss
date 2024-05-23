@@ -3,7 +3,8 @@
 @use "sass:map";
 
 .p-achieve-icatch {
-
+  display: grid;
+  place-items: center;
 }
 
 .p-achieve-icatch__swiper {
