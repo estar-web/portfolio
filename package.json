@@ -1,19 +1,31 @@
 {
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@markuplint/astro-parser": "^3.12.0",
-    "@markuplint/ejs-parser": "^3.12.0",
-    "@markuplint/erb-parser": "^3.12.0",
-    "@markuplint/jsx-parser": "^3.12.0",
-    "@markuplint/liquid-parser": "^3.12.0",
-    "@markuplint/mustache-parser": "^3.12.0",
-    "@markuplint/nunjucks-parser": "^3.12.0",
-    "@markuplint/php-parser": "^3.12.0",
-    "@markuplint/pug-parser": "^3.12.0",
-    "@markuplint/react-spec": "^3.13.0",
-    "@markuplint/smarty-parser": "^3.12.0",
-    "@markuplint/svelte-parser": "^3.12.0",
-    "@markuplint/vue-parser": "^3.12.0",
-    "@markuplint/vue-spec": "^3.13.0",
-    "markuplint": "^3.15.0"
-  }
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.29.3",
+    "css-declaration-sorter": "^6.3.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  },
+  "browserslistrc": [
+    "default"
+  ]
 }
