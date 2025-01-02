@@ -16,7 +16,7 @@
   }
 
   &::before {
-    background: url(../img/deco-section-top.png) no-repeat;
+    background: url('images/deco-section-top.webp') no-repeat;
     background-position: top center;
     background-size: cover;
     content: "";
@@ -49,7 +49,7 @@
   }
 
   &::before {
-    background: url(../img/deco-section-bottom.png) no-repeat;
+    background: url('images/deco-section-bottom.webp') no-repeat;
     background-position: top center;
     background-size: cover;
     content: "";

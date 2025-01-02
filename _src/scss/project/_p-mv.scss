@@ -19,7 +19,7 @@
 }
 
 .p-mv__image {
-  background: transparent url(../img/mv.jpg) no-repeat center center / cover; //親要素に対する画像の割合
+  background: transparent url(images/mv.webp) no-repeat center center / cover; //親要素に対する画像の割合
   padding-top: math.div(325, 375) * 100%;
   margin-top: 50px;
 

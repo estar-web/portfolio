@@ -18,7 +18,7 @@
       }
       if ($is_private) : ?>
         <figure class="p-achieve-icatch__img -private">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/picture-dummy.png" width="310" height="180" alt="非公開画像" loading="lazy" decoding="async">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-dummy.webp" width="310" height="180" alt="非公開画像" loading="lazy" decoding="async">
         </figure><!-- /.p-achieve-icatch__img -->
       <?php else : ?>
         <div class="swiper p-achieve-icatch__swiper">

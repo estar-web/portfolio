@@ -28,7 +28,7 @@
     left: 0;
     width: 3%;
     height: 95%;
-    background: transparent url(../img/deco-ring.svg) repeat-y top center / contain;
+    background: transparent url(images/deco-ring.svg) repeat-y top center / contain;
     transform: translateY(-50%);
 
     @include mq(l) {
@@ -36,7 +36,7 @@
       left: 50%;
       width: 3%;
       height: 88%;
-      background: transparent url(../img/deco-ring-pc.svg) repeat-y top center / contain;
+      background: transparent url(images/deco-ring-pc.svg) repeat-y top center / contain;
       transform: translate(-50%, -50%);
       z-index: map.get($z-map, base);
     }

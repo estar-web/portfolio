@@ -18,13 +18,13 @@
                 }
               }
               if ($is_private) : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/picture-dummy.png" width="320" height="230" alt="非公開画像" loading="lazy" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-dummy.webp" width="320" height="230" alt="非公開画像" loading="lazy" decoding="async">
               <?php else : ?>
                 <!-- 通常の画像処理はここに記述されます -->
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail(); ?>
                 <?php else : ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/picture-demo1.png" width="320" height="230" alt="画像：ダミー画像" loading="lazy" decoding="async">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-demo1.webp" width="320" height="230" alt="画像：ダミー画像" loading="lazy" decoding="async">
                 <?php endif; ?>
               <?php endif; ?>
             </figure><!-- /.p-works-contents__img -->

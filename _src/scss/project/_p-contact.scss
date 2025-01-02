@@ -12,7 +12,7 @@
   &::before {
     content: "";
     position: absolute;
-    background: url(../img/picture-jelly-fish-sp.png) no-repeat center center /contain;
+    background: url(images/picture-jelly-fish-sp.webp) no-repeat center center /contain;
     top: -90px;
     left: 0;
     width: 74px;
@@ -24,7 +24,7 @@
     }
 
     @include mq(m) {
-      background-image: url(../img/picture-jelly-fish1.png);
+      background-image: url(images/picture-jelly-fish1.webp);
       width: math.div(376.2, 1440) * 100%;
       aspect-ratio: 376.2 / 510;
       height: auto;
@@ -81,7 +81,7 @@
   &::before {
     content: "";
     position: absolute;
-    background: url(../img/deco-bubble.png) no-repeat center center /contain;
+    background: url(images/deco-bubble.webp) no-repeat center center /contain;
     bottom: 24px;
 
     right: calc(50% - 34vw);
@@ -93,7 +93,7 @@
     }
 
     @include mq(m) {
-      background-image: url(../img/picture-jelly-fish2.png);
+      background-image: url(images/picture-jelly-fish2.webp);
       width: math.div(417.26, 1440) * 100%;
       aspect-ratio: 376.2 / 510;
       height: auto;

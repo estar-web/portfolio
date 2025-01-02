@@ -1,10 +1,9 @@
-// common.scss
-
 @charset "utf-8";
 
-@use "foundation";
-@use "external";
-@use "layout";
-@use "component";
-@use "project";
-@use "utility";
+@use "foundation/reset" as *;
+@use "foundation/base" as *;
+@use "external/*" as *;
+@use "layout/*" as *;
+@use "component/*" as *;
+@use "project/*" as *;
+@use "utility/*" as *;

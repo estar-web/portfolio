@@ -18,7 +18,7 @@ get_header(); ?>
       <h2 class="p-profile__title c-section-title js-in-view fade-in-up">Profile</h2><!-- /.p-profile__title -->
       <div class="p-profile__wrapper js-in-view fade-in-up">
         <figure class="p-profile__icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-profile.png" alt="アイコン画像" width="1080" height="1080" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-profile.webp" alt="アイコン画像" width="1080" height="1080" loading="lazy">
         </figure><!-- /.p-profile__icon -->
         <div class="p-profile__spacer u-hide--sp"></div>
         <!-- <div class="p-profile__text"> -->
@@ -26,7 +26,7 @@ get_header(); ?>
 
         <div class="p-profile__link-wrapper">
           <a class="p-profile__link" href="https://twitter.com/fre_e_star" target="_blank">
-            <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/img/icon-x.svg" alt="Xアイコン画像" class="p-profile__web-icon" loading="lazy"> -->
+            <!-- <img src="<?php /*echo get_template_directory_uri();*/ ?>/assets/images/icon-x.svg" alt="Xアイコン画像" class="p-profile__web-icon" loading="lazy"> -->
             <svg class="p-profile__web-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.7508 0H18.8175L12.1175 7.6255L20 18H13.8283L8.995 11.7071L3.46333 18H0.395L7.56167 9.84345L0 0.0008298H6.32833L10.6975 5.75273L15.7508 0ZM14.675 16.1729H16.3742L5.405 1.73171H3.58167L14.675 16.1729Z" fill="#337AB7" />
             </svg>
@@ -66,7 +66,7 @@ get_header(); ?>
       <div class="p-skills__wrapper js-in-view fade-in-up">
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-html.svg" alt="スキルセットアイコン(HTML)" width="44" height="50" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-html.svg" alt="スキルセットアイコン(HTML)" width="44" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">HTML</div><!-- /.p-skills__label -->
           <div class="p-skills__text">HTML Living Standardに準拠したコーディング</div><!-- /.p-skills__text -->
@@ -74,7 +74,7 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-css.svg" alt="スキルセットアイコン(CSS)" width="44" height="50" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-css.svg" alt="スキルセットアイコン(CSS)" width="44" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">CSS(Sass)</div><!-- /.p-skills__label -->
           <div class="p-skills__text">保守・運用性を意識したコーディング、BEM, FLOCSSを意識したファイル構成</div><!-- /.p-skills__text -->
@@ -82,7 +82,7 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-js.svg" alt="スキルセットアイコン(JavaScript)" width="50" height="50" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-js.svg" alt="スキルセットアイコン(JavaScript)" width="50" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">JavaScript(jQuery)</div><!-- /.p-skills__label -->
           <div class="p-skills__text">ライブラリを用いたアニメーション実装<br>（スライダー、スムーススクロール、フェードイン、アコーディオン、モーダルウィンドウ等）</div><!-- /.p-skills__text -->
@@ -90,7 +90,7 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-gulp.svg" alt="スキルセットアイコン(gulp)" width="25" height="50" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-gulp.svg" alt="スキルセットアイコン(gulp)" width="25" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">gulp</div><!-- /.p-skills__label -->
           <div class="p-skills__text">タスクの自動実行による作業効率向上、Sassのコンパイル</div><!-- /.p-skills__text -->
@@ -98,7 +98,7 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-wp.svg" alt="スキルセットアイコン(WordPress)" width="50" height="50" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-wp.svg" alt="スキルセットアイコン(WordPress)" width="50" height="50" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">WordPress</div><!-- /.p-skills__label -->
           <div class="p-skills__text">オリジナルテーマの制作、カスタム投稿/カスタムフィールドの構築</div><!-- /.p-skills__text -->
@@ -106,7 +106,7 @@ get_header(); ?>
 
         <div class="p-skills__item">
           <figure class="p-skills__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-camera.svg" alt="スキルセットアイコン(カメラ)" width="48" height="48" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-camera.svg" alt="スキルセットアイコン(カメラ)" width="48" height="48" loading="lazy">
           </figure><!-- /.p-skills__icon -->
           <div class="p-skills__label">写真・動画撮影</div><!-- /.p-skills__label -->
           <div class="p-skills__text">サイトに掲載する空撮写真・動画の撮影</div><!-- /.p-skills__text -->
@@ -152,7 +152,7 @@ get_header(); ?>
                     <?php if (has_post_thumbnail()) :
                       the_post_thumbnail();
                     else :
-                    ?><img src="<?php echo get_template_directory_uri() ?>/img/picture-demo1.png" width="200" height="160" alt="画像：ダミー" loading="lazy" decoding="async">
+                    ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/picture-demo1.webp" width="200" height="160" alt="画像：ダミー" loading="lazy" decoding="async">
                     <?php endif; ?>
                   </figure><!-- /.p-works__img -->
                   <div class="p-works__text">
@@ -197,7 +197,7 @@ get_header(); ?>
         <div id="tab-item01" class="p-check__body p-check-flow is-active">
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow1.svg" width="100" height="100" alt="アイコン：ヒアリングしている画像" loading="lazy" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flow1.svg" width="100" height="100" alt="アイコン：ヒアリングしている画像" loading="lazy" decoding="async">
             </figure><!-- /.p-check-flow__img -->
             <div class="p-check-flow__num">STEP 1</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">ご依頼、ご相談</div><!-- /.p-check-flow__title -->
@@ -208,7 +208,7 @@ get_header(); ?>
           </div><!-- /.p-check-flow__item -->
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow2.svg" width="100" height="100" alt="アイコン：資料アイコン" loading="lazy" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flow2.svg" width="100" height="100" alt="アイコン：資料アイコン" loading="lazy" decoding="async">
             </figure><!-- /.p-check-flow__img -->
             <div class="p-check-flow__num">STEP 2</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">内容の確認<br class="u-hide--m"><span class="u-show--m">/</span>見積もり</div><!-- /.p-check-flow__title -->
@@ -219,7 +219,7 @@ get_header(); ?>
           </div><!-- /.p-check-flow__item -->
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow3.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flow3.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
             </figure><!-- /.p-check-flow__img -->
             <div class="p-check-flow__num">STEP 3</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">制作</div><!-- /.p-check-flow__title -->
@@ -231,7 +231,7 @@ get_header(); ?>
           </div><!-- /.p-check-flow__item -->
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow4.svg" width="100" height="100" alt="アイコン：チェックマークアイコン" loading="lazy" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flow4.svg" width="100" height="100" alt="アイコン：チェックマークアイコン" loading="lazy" decoding="async">
             </figure><!-- /.p-check-flow__img -->
             <div class="p-check-flow__num">STEP 4</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">チェック</div><!-- /.p-check-flow__title -->
@@ -242,7 +242,7 @@ get_header(); ?>
           </div><!-- /.p-check-flow__item -->
           <div class="p-check-flow__item">
             <figure class="p-check-flow__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-flow5.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flow5.svg" width="100" height="100" alt="アイコン：パソコンのアイコン" loading="lazy" decoding="async">
             </figure><!-- /.p-check-flow__img -->
             <div class="p-check-flow__num">STEP 5</div><!-- /.p-check-flow__num -->
             <div class="p-check-flow__title">納品、サイト公開</div><!-- /.p-check-flow__title -->

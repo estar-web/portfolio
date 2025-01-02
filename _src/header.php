@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico?ver=1.0.1">
-  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon-180x180.png?ver=1.0.1" sizes="180x180">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico?ver=1.0.1">
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-touch-icon-180x180.webp?ver=1.0.1" sizes="180x180">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
           <li class="p-header-nav__item"><a href="<?php echo home_url('/contact/'); ?>" class="p-header-nav__link <?php echo $front_class ?>"><span class="p-header-nav__link--eg">Contact</span>お問い合わせはこちら</a></li>
         </ul><!-- /.p-header-nav__list -->
         <figure class="p-header-nav__img u-show--l">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-nav.png" alt="ドロワーメニューアイコン" width="504" height="440">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nav.webp" alt="ドロワーメニューアイコン" width="504" height="440">
         </figure><!-- /.p-header-nav__img -->
       </div><!-- /.p-header-nav__inner -->
     </nav><!-- /.p-header-nav -->
