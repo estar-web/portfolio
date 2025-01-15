@@ -25,7 +25,7 @@
     $post_query = new WP_Query(
       array(
         'post_type' => 'works',
-        // 'posts_per_page' => -1,
+        'posts_per_page' => -1,
         'orderby' => 'date',
         'order' => 'DESC',
         'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,

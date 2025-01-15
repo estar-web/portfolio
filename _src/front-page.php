@@ -169,7 +169,6 @@ get_header(); ?>
                       <?php $comment = get_field('comment');
                       echo $comment;
                       ?>
-                      <!-- コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント -->
                     </p>
                   </div><!-- /.p-works__text -->
                 </div><!-- /.p-works__item -->
@@ -278,18 +277,18 @@ get_header(); ?>
             <div class="p-check-price__label">基本料金</div><!-- /.p-check-price__label -->
             <div class="p-check-price__item">
               <div class="p-check-price__head">Topページ</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">50,000円 〜</div><!-- /.p-check-price__price -->
+              <div class="p-check-price__price">70,000円 〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
             <div class="p-check-price__item">
               <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">10,000円 〜</div><!-- /.p-check-price__price -->
+              <div class="p-check-price__price">15,000円 〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
           </div><!-- /.p-check-price__wrapper -->
           <div class="p-check-price__wrapper">
             <div class="p-check-price__label">各種オプション</div><!-- /.p-check-price__label -->
             <div class="p-check-price__item">
               <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">10,000円 〜</div><!-- /.p-check-price__price -->
+              <div class="p-check-price__price">15,000円 〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
             <div class="p-check-price__item">
               <div class="p-check-price__head">WordPress</div><!-- /.p-check-price__head -->
@@ -305,29 +304,6 @@ get_header(); ?>
             </div><!-- /.p-check-price__item -->
             <div class="p-check-price__item">
               <div class="p-check-price__head">サイトに使用する写真・動画の撮影<br><small>※内容・撮影場所により変動</small></div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">10,000円〜</div><!-- /.p-check-price__price -->
-            </div><!-- /.p-check-price__item -->
-            <div class="p-check-price__item u-hide">
-              <div class="p-check-price__head">画像のスライド機能</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
-            </div><!-- /.p-check-price__item -->
-            <div class="p-check-price__item u-hide">
-              <div class="p-check-price__head">モーダルウィンドウ</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
-            </div><!-- /.p-check-price__item -->
-            <div class="p-check-price__item u-hide">
-              <div class="p-check-price__head">タブ切り替え</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">1箇所5000円〜</div><!-- /.p-check-price__price -->
-            </div><!-- /.p-check-price__item -->
-          </div><!-- /.p-check-price__wrapper -->
-          <div class="p-check-price__wrapper u-hide">
-            <div class="p-check-price__label">修正</div><!-- /.p-check-price__label -->
-            <div class="p-check-price__item">
-              <div class="p-check-price__head">投稿機能追加</div><!-- /.p-check-price__head -->
-              <div class="p-check-price__price">10,000円</div><!-- /.p-check-price__price -->
-            </div><!-- /.p-check-price__item -->
-            <div class="p-check-price__item">
-              <div class="p-check-price__head">1ページ追加</div><!-- /.p-check-price__head -->
               <div class="p-check-price__price">10,000円〜</div><!-- /.p-check-price__price -->
             </div><!-- /.p-check-price__item -->
           </div><!-- /.p-check-price__wrapper -->
@@ -352,7 +328,7 @@ get_header(); ?>
             <div class="p-check-promise__label">対応時間</div><!-- /.p-check-promise__label -->
             <div class="p-check-promise__text">
               <ul class="p-check-promise__list">
-                <li class="p-check-promise__listItem">平日22:00までに頂いたご連絡については30分以内にご返信いたします。</li><!-- /.p-check-promise__listItem -->
+                <li class="p-check-promise__listItem">平日21:00までに頂いたご連絡については30分以内にご返信いたします。</li><!-- /.p-check-promise__listItem -->
                 <li class="p-check-promise__listItem">都合により連絡が取りにくい日時が予めわかっている場合は、前もってご連絡いたします。</li><!-- /.p-check-promise__listItem -->
               </ul><!-- /.p-check-promise__list -->
             </div><!-- /.p-check-promise__text -->
