@@ -8,16 +8,15 @@
     <div class="p-lower-works__nav p-works-nav">
       <ul class="p-works-nav__list">
         <li class="p-works-nav__item">
-          <a href="<?php echo get_post_type_archive_link('works'); ?>" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
+          <a href="<?php echo home_url('/works/'); ?>" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
         </li><!-- /.p-works-nav__item -->
-        <?php $genre_terms = get_terms('genre', array(
+        <?php $categories = get_categories(array(
           'hide_empty' => false,
-          'exclude' => array(9), //非公開実績は除外する
         ));
         $select_object = get_queried_object();
-        foreach ($genre_terms as $genre_term) : ?>
-          <li class="p-works-nav__item <?php if ($select_object->name == $genre_term->name) : ?>selected<?php endif; ?>">
-            <a href="<?php echo get_term_link($genre_term, 'genre'); ?>" class="p-works-nav__link"><?php echo $genre_term->name; ?></a><!-- /.p-works-nav__link -->
+        foreach ($categories as $category) : ?>
+          <li class="p-works-nav__item <?php if ($select_object->term_id == $category->term_id) : ?>selected<?php endif; ?>">
+            <a href="<?php echo get_category_link($category->term_id); ?>" class="p-works-nav__link"><?php echo $category->name; ?></a><!-- /.p-works-nav__link -->
           </li><!-- /.p-works-nav__item -->
         <?php endforeach; ?>
       </ul><!-- /.p-works-nav__item -->
@@ -27,18 +26,12 @@
     $selected_cat = get_queried_object();
     $post_query = new WP_Query(
       array(
-        'post_type' => 'works',
-        // 'posts_per_page' => -1,
+        'post_type' => 'post',
+        'posts_per_page' => -1,
         'orderby' => 'date',
         'order' => 'DESC',
         'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',            //カスタムタクソノミー"genre"を選択
-            'field' => 'slug',                //スラッグに設定
-            'terms' => $selected_cat->slug,   //現在選ばれたページのスラッグに限定
-          )
-        )
+        'cat' => $selected_cat->term_id // 選択されたカテゴリーIDを指定して記事を絞り込み
       )
     );
     set_query_var('post_query', $post_query);

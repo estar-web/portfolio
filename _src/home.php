@@ -7,15 +7,14 @@
     <div class="p-lower-works__nav p-works-nav">
       <ul class="p-works-nav__list">
         <li class="p-works-nav__item selected">
-          <a href="<?php echo get_post_type_archive_link('works'); ?>" class="p-works-nav__link">All</a>
+        <a href="<?php echo home_url('/works/'); ?>" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
         </li>
-        <?php $genre_terms = get_terms('genre', array(
+        <?php $categories = get_categories(array(
           'hide_empty' => false,
-          'exclude' => array(9),
         ));
-        foreach ($genre_terms as $genre_term) : ?>
+        foreach ($categories as $category) : ?>
           <li class="p-works-nav__item">
-            <a href="<?php echo get_term_link($genre_term, 'genre'); ?>" class="p-works-nav__link"><?php echo $genre_term->name; ?></a>
+            <a href="<?php echo get_category_link($category->term_id); ?>" class="p-works-nav__link"><?php echo $category->name; ?></a>
           </li>
         <?php endforeach; ?>
       </ul>
@@ -24,7 +23,7 @@
     <?php
     $post_query = new WP_Query(
       array(
-        'post_type' => 'works',
+        'post_type' => 'post',
         'posts_per_page' => -1,
         'orderby' => 'date',
         'order' => 'DESC',

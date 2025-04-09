@@ -1,7 +1,9 @@
 @use "../global/" as *;
 @use "sass:math";
 
-.p-profile {}
+.p-profile {
+  background-color: #F9FCFF;
+}
 
 .p-profile__inner {}
 
