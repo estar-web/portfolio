@@ -5,6 +5,9 @@
  * @package WordPress
  */
 
+
+ define('TPLDIR', get_template_directory_uri());
+
 // こちらはWordPressの環境で動作するため、add_theme_supportなどの関数は定義済みです
 function my_setup()
 {
@@ -14,6 +17,43 @@ function my_setup()
   add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
 }
 add_action("after_setup_theme", "my_setup");
+
+
+/**
+ * ファビコン/OGの設定
+ */
+function add_wp_head()
+{
+  /* favicon */
+  echo '<link rel="shortcut icon" href="' . TPLDIR . '/assets/images/common/favicon.ico" type="image/x-icon" />' . "\n";
+  echo '<link rel="apple-touch-icon" href="' . TPLDIR . '/assets/images/common/apple-touch-icon.webp" />' . "\n";
+
+  if (is_single()) {
+    if (!has_post_thumbnail()) {
+      echo '<meta property="og:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+      echo '<meta name="twitter:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+    }
+  }
+
+  if (is_singular('works')) {
+    echo '<meta property="og:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+    echo '<meta name="twitter:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+  }
+
+  if (is_category()) {
+    echo '<meta property="og:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+    echo '<meta name="twitter:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
+  }
+
+
+  /* pingback */
+  if (is_singular() && pings_open()) {
+    printf('<link rel="pingback" href="%s" />' . "\n", esc_url(get_bloginfo('pingback_url')));
+  }
+}
+add_action('wp_head', 'add_wp_head');
+
+
 
 function my_script_init()
 {

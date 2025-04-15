@@ -26,7 +26,14 @@ get_header(); ?>
               'orderby' => 'date',
               'order' => 'DESC',
               'paged' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
-              'category__not_in' => array(get_cat_ID('private'))
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'category',
+                  'field'    => 'slug',
+                  'terms'    => 'private',
+                  'operator' => 'NOT IN',
+                ),
+              ),
             )
           );
           ?>
@@ -43,7 +50,7 @@ get_header(); ?>
                     <?php endif; ?>
                   </figure>
                   <div class="p-works__text">
-                    <div class="p-works__item-title"><?php the_title(); ?></div>
+                    <div class="p-works__item-title"><?php echo get_post_meta(get_the_ID(), 'Customer', true); ?></div>
                     <ul class="p-works__item-category-wrapper">
                       <?php 
                       $categories = get_the_category();

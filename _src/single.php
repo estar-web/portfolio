@@ -33,7 +33,7 @@ global $post;
       <h3 class="p-achieve-description__title"><?php echo get_post_meta(get_the_ID(), 'title', true); ?></h3>
       <dl class="p-achieve-list">
         <div class="p-achieve-list__wrapper p-achieve-list__client">
-          <dt class="p-achieve-list__title">クライアント様</dt>
+          <dt class="p-achieve-list__title">クライアント様 / 案件概要</dt>
           <dd class="p-achieve-list__text"><?php echo get_post_meta($post->ID, 'Customer', true); ?></dd>
         </div>
         <div class="p-achieve-list__wrapper p-achieve-list__url">
@@ -62,12 +62,10 @@ global $post;
           <dt class="p-achieve-list__title">目安価格（税抜）</dt>
           <dd class="p-achieve-list__text">¥<?php echo get_post_meta(get_the_ID(), 'price', true); ?></dd>
         </div>
-        <?php if ($is_private === false) { ?>
-          <div class="p-achieve-list__wrapper p-achieve-list__comment">
-            <dt class="p-achieve-list__title">コメント</dt>
-            <dd class="p-achieve-list__text"><?php echo nl2br(get_post_meta(get_the_ID(), 'comment', true)); ?></dd>
-          </div>
-        <?php } ?>
+        <div class="p-achieve-list__wrapper p-achieve-list__comment">
+          <dt class="p-achieve-list__title">コメント</dt>
+          <dd class="p-achieve-list__text"><?php echo nl2br(get_post_meta(get_the_ID(), 'comment', true)); ?></dd>
+        </div>
       </dl>
     </div>
     <div class="p-achieve-detail__button">
