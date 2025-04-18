@@ -21,7 +21,7 @@ get_header();
       </p><!-- /.p-lower-contact__text -->
     </div><!-- /.p-lower-contact__textWrapper -->
     <div class="p-lower-contact__area">
-      <?php echo apply_shortcodes('[contact-form-7 id="93ff9da" title="お問い合わせ"]'); ?>
+      <?php echo apply_shortcodes('[contact-form-7 id="0e5bfaf" title="お問い合わせ"]'); ?>
     </div>
   </div><!-- /.p-lower-contact__inner l-inner -->
 </section><!-- /.l-lower-contact p-lower-contact -->

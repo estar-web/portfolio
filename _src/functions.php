@@ -25,19 +25,14 @@ add_action("after_setup_theme", "my_setup");
 function add_wp_head()
 {
   /* favicon */
-  echo '<link rel="shortcut icon" href="' . TPLDIR . '/assets/images/common/favicon.ico" type="image/x-icon" />' . "\n";
-  echo '<link rel="apple-touch-icon" href="' . TPLDIR . '/assets/images/common/apple-touch-icon.webp" />' . "\n";
+  // echo '<link rel="shortcut icon" href="' . TPLDIR . '/assets/images/common/favicon.ico" type="image/x-icon" />' . "\n";
+  // echo '<link rel="apple-touch-icon" href="' . TPLDIR . '/assets/images/common/apple-touch-icon.webp" />' . "\n";
 
   if (is_single()) {
     if (!has_post_thumbnail()) {
       echo '<meta property="og:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
       echo '<meta name="twitter:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
     }
-  }
-
-  if (is_singular('works')) {
-    echo '<meta property="og:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
-    echo '<meta name="twitter:image" content="' . TPLDIR . '/assets/images/common/OGP.webp" />' . "\n";
   }
 
   if (is_category()) {
@@ -82,7 +77,7 @@ function add_origin_thanks_page()
   echo <<< EOC
 <script>
 var thanksPage = {
-24: '{$contact_thanks}',
+10: '{$contact_thanks}',
 };
 document.addEventListener( 'wpcf7mailsent', function( event ) {
 location = thanksPage[event.detail.contactFormId];

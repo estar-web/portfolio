@@ -110,13 +110,13 @@ get_header(); ?>
         <div class="p-profile__text">
           埼玉県でホームページ制作のお仕事をしております。<br>
           会社員時代はプログラマーとして働いていました。<br>
-          カメラやドローンを使って、サイトに掲載する写真や動画の撮影のお手伝いもできます。<br>
+          認知拡大のための広告運用のご提案も可能です。<br>
           <div class="p-profile__label mt-20">■お仕事内容</div>
           <ul class="p-profile__list">
             <li class="p-profile__list-item">Webサイト制作</li>
             <li class="p-profile__list-item">既存サイト修正、レスポンシブ対応、WordPress化</li>
             <li class="p-profile__list-item">サイトの保守/運用</li>
-            <li class="p-profile__list-item">サイトに使用する空撮写真 / 動画の撮影</li>
+            <li class="p-profile__list-item">Google/Meta広告の設定、運用</li>
           </ul>
         </div>
       </div>

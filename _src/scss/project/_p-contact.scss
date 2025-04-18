@@ -55,13 +55,7 @@
 .p-contact__textArea {
   max-width: 100%;
   line-height: math.div(23.76, 16);
-  margin-top: 40px;
   margin-inline: auto;
-  text-align: center;
-
-  @include mq(m) {
-    margin-top: 50px;
-  }
 }
 
 .p-contact__lead {}
@@ -104,8 +98,6 @@
 
     @include mq(l) {
       bottom: -180px;
-      // right: -17.59259%;
-      // right: -190px;
       bottom: -100px;
       max-width: 417.26px;
     }
