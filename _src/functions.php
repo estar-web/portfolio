@@ -7,6 +7,8 @@
 
 
  define('TPLDIR', get_template_directory_uri());
+ define('LINE','https://lin.ee/eThijZM');
+ define('INSTAGRAM','https://www.instagram.com/fre_e_star/');
 
 // こちらはWordPressの環境で動作するため、add_theme_supportなどの関数は定義済みです
 function my_setup()
