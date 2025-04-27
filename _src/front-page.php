@@ -5,7 +5,6 @@ Template Name: トップページ
 get_header(); ?>
 
 <main>
-  <?php get_template_part('template-parts/sns'); ?>
   <div id="js-mv" class="p-mv">
     <div class="p-mv__inner l-inner">
       <h1 class="p-mv__ttl js-in-view fade-in-right">Code:<br>HOSHI</h1>

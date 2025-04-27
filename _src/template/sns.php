@@ -1,5 +1,5 @@
 <div class="p-sns">
-  <a href="<?php echo LINE; ?>" class="p-sns__link">
+  <a href="<?php echo LINE; ?>" class="p-sns__link" target="_blank" rel="noopener noreferrer">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="144px" height="144px" fill-rule="nonzero">
       <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
         <g transform="scale(5.33333,5.33333)">
@@ -9,13 +9,8 @@
       </g>
     </svg>
   </a>
-  <a href="<?php echo get_home_url('/contact/'); ?>" class="p-sns__link">
-    <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 128px; height: 128px; opacity: 1;" xml:space="preserve">
-      <style type="text/css">
-        .st0 {
-          fill: #4B4B4B;
-        }
-      </style>
+  <a href="<?php echo home_url('/contact/'); ?>" class="p-sns__link">
+    <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
       <g>
         <path class="st0" d="M510.678,112.275c-2.308-11.626-7.463-22.265-14.662-31.054c-1.518-1.915-3.104-3.63-4.823-5.345
 		c-12.755-12.818-30.657-20.814-50.214-20.814H71.021c-19.557,0-37.395,7.996-50.21,20.814c-1.715,1.715-3.301,3.43-4.823,5.345

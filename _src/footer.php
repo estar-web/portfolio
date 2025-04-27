@@ -1,3 +1,4 @@
+<?php get_template_part('template/sns'); ?>
 <footer class="l-footer p-footer">
   <div class="p-footer__inner l-inner">
     <h3 class="p-footer__title u-hide--pc">Code:<br>HOSHI</h3><!-- /.p-footer__title -->
