@@ -1,0 +1,70 @@
+---
+// 制作実績一覧（WordPress テーマの home.php / category.php / template/summary.php に相当）
+import LowerTop from './LowerTop.astro';
+import LowerContact from './LowerContact.astro';
+import { imageSrcset, imageUrl, isPrivateWork, type Category, type Work } from '../lib/microcms';
+
+interface Props {
+  works: Work[];
+  categories: Category[];
+  /** 選択中のカテゴリ ID（すべての場合は未指定） */
+  currentCategoryId?: string;
+}
+
+const { works, categories, currentCategoryId } = Astro.props;
+---
+
+<LowerTop title="Works" />
+
+<div class="l-lower-works p-lower-works">
+  <div class="p-lower-works__inner l-inner">
+    <div class="p-lower-works__nav p-works-nav">
+      <ul class="p-works-nav__list">
+        <li class:list={['p-works-nav__item', { selected: !currentCategoryId }]}>
+          <a href="/works/" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
+        </li>
+        {
+          categories.map((category) => (
+            <li class:list={['p-works-nav__item', { selected: category.id === currentCategoryId }]}>
+              <a href={`/works/category/${category.id}/`} class="p-works-nav__link">{category.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div><!-- /.p-works-nav -->
+
+    <div class="l-lower-works-contents p-works-contents">
+      <div class="p-works-contents__inner l-inner">
+        <div class="p-works-contents__wrapper">
+          {
+            works.map((work) => (
+              <a href={`/works/${work.id}/`} class="p-works-contents__item">
+                <figure class="p-works-contents__img">
+                  {isPrivateWork(work) || !work.thumbnail ? (
+                    <img src="/assets/images/picture-dummy.webp" width="320" height="230" alt="非公開画像" loading="lazy" decoding="async" />
+                  ) : (
+                    <img
+                      src={imageUrl(work.thumbnail, 640)}
+                      srcset={imageSrcset(work.thumbnail, [320, 640, 960])}
+                      sizes="(min-width: 992px) 320px, 100vw"
+                      width={work.thumbnail.width}
+                      height={work.thumbnail.height}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                </figure>
+                <div class="p-works-contents__body">
+                  <h3 class="p-works-contents__title">{work.customer}</h3>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div><!-- /.p-lower-works__inner -->
+</div><!-- /.l-lower-works p-lower-works -->
+
+<LowerContact />

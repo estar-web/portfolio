@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LowerTop from '../components/LowerTop.astro';
+---
+
+<BaseLayout title="ページが見つかりません" noindex>
+  <LowerTop title="404" />
+
+  <section class="l-lower-contact p-lower-contact p-lower-contact--thanks">
+    <div class="p-lower-contact__inner l-inner">
+      <div class="p-lower-contact__textWrapper">
+        <p class="p-lower-contact__lead">ページが見つかりませんでした</p>
+        <p class="p-lower-contact__text">
+          お探しのページは移動または削除された可能性があります。<br />
+          <a href="/" class="p-check-flow__link">トップページ</a>または<a href="/works/" class="p-check-flow__link">制作実績</a>からお探しください。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

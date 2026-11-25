@@ -1,6 +1,17 @@
+# ビルド出力
 dist/
 dist copy/
+.astro/
+
+# 依存パッケージ
 node_modules/
 
+# 環境変数（.env.example のみコミットする）
 .env
-.env.deploy.local
+.env.*
+!.env.example
+
+.DS_Store
+
+# ローカル環境専用の設定
+.claude/launch.json

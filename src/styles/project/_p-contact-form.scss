@@ -1,0 +1,24 @@
+@use "../global/" as *;
+@use "sass:map";
+
+// Contact Form 7 から外部フォームサービスへの移行で追加した要素
+
+// スパム対策の入力欄（画面にもスクリーンリーダーにも出さない）
+.p-contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// 送信エラーなどの案内
+.p-contact-form__status {
+  margin-top: 24px;
+  text-align: center;
+  color: map.get($color, accent);
+
+  &:empty {
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LowerTop from '../../components/LowerTop.astro';
+import { PUBLIC_FORM_ENDPOINT } from 'astro:env/client';
+
+// Contact Form 7 の代わりに、外部フォームサービス（Formspree など）へ送信する
+const fields = [
+  { name: 'name', label: 'お名前', type: 'text', required: true, placeholder: '例 : 鈴木　太郎', autocomplete: 'name' },
+  { name: 'kana', label: 'フリガナ', type: 'text', required: true, placeholder: '例 : スズキ　タロウ', autocomplete: 'off' },
+  { name: 'company', label: '会社名', type: 'text', required: false, placeholder: '例 :〇〇株式会社', autocomplete: 'organization' },
+  { name: 'email', label: 'メールアドレス', type: 'email', required: true, placeholder: '例 : sample@mail.com', autocomplete: 'email' },
+  { name: 'tel', label: '電話番号', type: 'tel', required: true, placeholder: '例 : 000-0000-0000', autocomplete: 'tel' },
+] as const;
+---
+
+<BaseLayout
+  title="お問い合わせ"
+  description="Web制作・コーディングに関するご相談やお見積りのご依頼はこちらから。丁寧なコーディングで貴社のデザインを正確に再現します。お気軽にお問い合わせください。迅速かつ丁寧にご対応いたします。"
+>
+  <LowerTop title="Contact" />
+
+  <section class="l-lower-contact p-lower-contact">
+    <div class="p-lower-contact__inner l-inner">
+      <div class="p-lower-contact__textWrapper">
+        <p class="p-lower-contact__text">
+          ご相談だけでも大歓迎です！<br class="u-hide--l" />
+          お気軽にお問い合わせください。
+        </p><!-- /.p-lower-contact__text -->
+      </div><!-- /.p-lower-contact__textWrapper -->
+      <div class="p-lower-contact__area">
+        <form id="js-contact-form" action={PUBLIC_FORM_ENDPOINT} method="post" aria-label="コンタクトフォーム">
+          <input type="hidden" name="_subject" value="【Code:HOSHI】お問い合わせがありました" />
+          <!-- スパム対策（人には見えない入力欄。入力があれば送信先で破棄される） -->
+          <input type="text" name="_gotcha" class="p-contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <dl class="p-lower-contact__list p-contact-list">
+            {
+              fields.map((field) => (
+                <div class="p-contact-list__item">
+                  <dt class="p-contact-list__title">
+                    <label for={`contact-${field.name}`}>{field.label}</label>
+                    {field.required && <span class="p-contact-list__required">必須</span>}
+                  </dt>
+                  <dd class="p-contact-list__inputBox">
+                    <input
+                      id={`contact-${field.name}`}
+                      class="p-contact-list__input"
+                      type={field.type}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      autocomplete={field.autocomplete}
+                      maxlength="400"
+                      required={field.required}
+                    />
+                  </dd>
+                </div>
+              ))
+            }
+            <div class="p-contact-list__item">
+              <dt class="p-contact-list__title">
+                <label for="contact-message">お問い合わせ内容</label>
+                <span class="p-contact-list__required">必須</span>
+              </dt>
+              <dd class="p-contact-list__inputBox">
+                <textarea id="contact-message" class="p-contact-list__input p-contact__textArea" name="message" cols="40" rows="10" maxlength="2000" required></textarea>
+              </dd>
+            </div>
+            <input class="p-contact__button" type="submit" value="送信する" />
+          </dl>
+          <p id="js-contact-status" class="p-contact-form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div><!-- /.p-lower-contact__inner l-inner -->
+  </section><!-- /.l-lower-contact p-lower-contact -->
+
+  <script>
+    import '../../scripts/contact-form';
+  </script>
+</BaseLayout>

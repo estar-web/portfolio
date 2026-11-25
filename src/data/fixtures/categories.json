@@ -1,0 +1,56 @@
+[
+  {
+    "id": "lp",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "LP",
+    "order": 1
+  },
+  {
+    "id": "wp",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "WordPress",
+    "order": 2
+  },
+  {
+    "id": "client",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "お客様案件",
+    "order": 3
+  },
+  {
+    "id": "other",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "その他",
+    "order": 4
+  },
+  {
+    "id": "demo",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "デモサイト",
+    "order": 5
+  },
+  {
+    "id": "private",
+    "createdAt": "2025-03-01T00:00:00.000Z",
+    "updatedAt": "2025-03-01T00:00:00.000Z",
+    "publishedAt": "2025-03-01T00:00:00.000Z",
+    "revisedAt": "2025-03-01T00:00:00.000Z",
+    "name": "非公開実績",
+    "order": 6
+  }
+]

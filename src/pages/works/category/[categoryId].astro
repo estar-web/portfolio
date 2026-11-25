@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import WorksArchive from '../../../components/WorksArchive.astro';
+import { getCategories, getWorks, type Category } from '../../../lib/microcms';
+
+// 実績が 0 件のカテゴリもページを作る（WordPress の hide_empty => false と同じ）
+export const getStaticPaths = (async () => {
+  const categories = await getCategories();
+  return categories.map((category) => ({
+    params: { categoryId: category.id },
+    props: { category },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const [allWorks, categories] = await Promise.all([getWorks(), getCategories()]);
+const works = allWorks.filter((work) => work.categories.some((c) => c.id === category.id));
+---
+
+<BaseLayout
+  title={category.name}
+  description={`${category.name}の制作実績一覧です。`}
+>
+  <WorksArchive works={works} categories={categories} currentCategoryId={category.id} />
+</BaseLayout>

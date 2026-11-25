@@ -1,0 +1,115 @@
+---
+import 'swiper/css/bundle';
+import '../styles/style.scss';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Sns from '../components/Sns.astro';
+
+interface Props {
+  /** ページ名（「 - Code:HOSHI」は自動で付く） */
+  title: string;
+  description?: string;
+  ogType?: 'website' | 'article';
+  /** OGP 画像の URL（未指定ならサイト共通の画像） */
+  ogImage?: string;
+  /** トップページのときは、ナビのリンクをページ内リンクにする */
+  isFront?: boolean;
+  noindex?: boolean;
+}
+
+const SITE_NAME = 'Code:HOSHI';
+const SITE_TAGLINE = '丁寧なコードで、デザインを正確に再現';
+const DEFAULT_DESCRIPTION =
+  'Web制作・コーディングのプロフェッショナル。デザインカンプから正確なコーディングまで、丁寧な構築と保守しやすいコードで高品質なウェブサイトを提供します。Web周りを幅広くサポートいたします。';
+const DEFAULT_OG_IMAGE = '/assets/images/ogp.png';
+
+const {
+  title,
+  description = DEFAULT_DESCRIPTION,
+  ogType = 'website',
+  ogImage,
+  isFront = false,
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = `${title} - ${SITE_NAME}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = new URL(ogImage ?? DEFAULT_OG_IMAGE, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KZHB5NSW');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-D7VB4NYDWN"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-D7VB4NYDWN');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="max-image-preview:large" />}
+    <meta name="google-site-verification" content="si-hfa7XQ9YTZXyeLVKFto-ZZy5w8-oXLs4Pki2EpC8" />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content={`${SITE_NAME} - ${SITE_TAGLINE}`} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" href="/assets/images/favicon-32x32.webp" sizes="32x32" />
+    <link rel="icon" href="/assets/images/favicon-192x192.webp" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon-180x180.webp" sizes="180x180" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="fade">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZHB5NSW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <Header isFront={isFront} />
+    <slot />
+    <Sns />
+    <Footer isFront={isFront} />
+
+    <script>
+      import '../scripts/app';
+    </script>
+  </body>
+</html>
