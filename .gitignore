@@ -2,3 +2,5 @@ dist/
 dist copy/
 node_modules/
 
+.env
+.env.deploy.local
