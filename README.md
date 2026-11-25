@@ -75,8 +75,9 @@ npm run build
 
 3. 「API キー」で 2 つのキーを作ります。
    - 読み取り用：`categories` と `works` の GET のみ → `MICROCMS_API_KEY`
-   - 移行用：`categories` と `works` の PUT、マネジメント API の「メディアのアップロード」 → `MICROCMS_WRITE_API_KEY`
-4. WordPress の実績を移行します。まず確認だけ行い、内容に問題がなければ `--execute` を付けて実行します。実行すると、公開中の WordPress サイトからサムネイル画像をダウンロードして microCMS にアップロードします。**1 回だけ実行してください。**
+   - 移行用：`categories` と `works` の GET・PUT、マネジメント API の「メディアのアップロード」 → `MICROCMS_WRITE_API_KEY`
+4. WordPress の実績を移行します。まず確認だけ行い、内容に問題がなければ `--execute` を付けて実行します。実行すると、公開中の WordPress サイトからサムネイル画像をダウンロードして microCMS にアップロードします。登録済みの ID は飛ばすので、途中で失敗したらそのまま再実行してください。
+   - 非公開実績の「管理用タイトル」は、公開リポジトリに実名を載せないよう案件概要と同じ文言にしてあります。必要なら移行後に管理画面で書き換えてください。
 
    ```bash
    npm run microcms:import
@@ -105,7 +106,9 @@ Contact Form 7 の代わりに、外部のフォームサービスへ送信し�
 
 ## デプロイ
 
-今のサーバーのドキュメントルートへ、`dist/` を rsync で差分転送します。`deploy/rsync-exclude.txt` に書いたもの（`/sobolon/`、`/demo-lp/` など、サーバーにだけあるもの）は転送も削除もされません。
+今のサーバーのドキュメントルートへ、`dist/` を rsync で差分転送します。
+
+> WordPress 時代の `.env` の接続設定は FTP（ポート 21）です。rsync には SSH 接続が必要なので、サーバー側で SSH を有効にして公開鍵を登録してください。SSH が使えないサーバーの場合は、デプロイ方法（FTP/SFTP での差分反映）を見直します。`deploy/rsync-exclude.txt` に書いたもの（`/sobolon/`、`/demo-lp/` など、サーバーにだけあるもの）は転送も削除もされません。
 
 ### 手動で反映する
 
