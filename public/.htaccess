@@ -1,0 +1,46 @@
+# WordPress 時代の URL から、Astro 版の URL への恒久的な転送（301）
+#
+# ※ 本番切り替え時は、サーバーにある既存の .htaccess（HTTPS への転送などの設定）と
+#   見比べ、必要な設定をこのファイルへ移してから反映すること。
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 制作実績の詳細ページ（/年/月/日/スラッグ/ → /works/ID/）
+RewriteRule ^2025/05/04/createe/?$ /works/createe/ [R=301,L]
+RewriteRule ^2025/04/15/samot/?$ /works/samot/ [R=301,L]
+RewriteRule ^2025/04/15/pirvate8/?$ /works/private-09/ [R=301,L]
+RewriteRule ^2025/04/15/pirvate7/?$ /works/private-08/ [R=301,L]
+RewriteRule ^2025/04/15/tokuzo/?$ /works/tokuzo/ [R=301,L]
+RewriteRule ^2025/04/15/sukkiri/?$ /works/sukkiri-fuwari/ [R=301,L]
+RewriteRule ^2025/04/15/comot/?$ /works/comot/ [R=301,L]
+RewriteRule ^2025/04/15/takcafe/?$ /works/takcafe/ [R=301,L]
+RewriteRule ^2025/04/15/private6/?$ /works/private-05/ [R=301,L]
+RewriteRule ^2025/04/12/private4/?$ /works/private-04/ [R=301,L]
+RewriteRule ^2025/04/12/prive5/?$ /works/private-03/ [R=301,L]
+RewriteRule ^2025/04/12/prive3/?$ /works/private-02/ [R=301,L]
+RewriteRule ^2025/04/10/tokujob/?$ /works/tokujob/ [R=301,L]
+RewriteRule ^2025/04/09/private1/?$ /works/private-01/ [R=301,L]
+RewriteRule ^2025/04/09/e廃車コーポレートサイト/?$ /works/e-haisha/ [R=301,L]
+RewriteRule ^2025/04/09/sobolon/?$ /works/sobolon/ [R=301,L]
+RewriteRule ^2025/04/09/dogteethsmile/?$ /works/dogteethsmile/ [R=301,L]
+RewriteRule ^2025/03/10/demo-lp/?$ /works/demo-lp/ [R=301,L]
+RewriteRule ^2025/03/09/portfolio/?$ /works/portfolio/ [R=301,L]
+# 上記以外の旧記事 URL は制作実績一覧へ
+RewriteRule ^[0-9]{4}/[0-9]{2}/[0-9]{2}/[^/]+/?$ /works/ [R=301,L]
+
+# カテゴリ一覧（/category/スラッグ/ → /works/category/ID/）
+RewriteRule ^category/lp/?$ /works/category/lp/ [R=301,L]
+RewriteRule ^category/wp/?$ /works/category/wp/ [R=301,L]
+RewriteRule ^category/client/?$ /works/category/client/ [R=301,L]
+RewriteRule ^category/uncategorized/?$ /works/category/other/ [R=301,L]
+RewriteRule ^category/demo/?$ /works/category/demo/ [R=301,L]
+RewriteRule ^category/private/?$ /works/category/private/ [R=301,L]
+RewriteRule ^category/ /works/ [R=301,L]
+
+# WordPress の RSS フィードはトップへ
+RewriteRule ^(.*/)?feed/?$ / [R=301,L]
+</IfModule>
