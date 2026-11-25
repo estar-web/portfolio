@@ -1,0 +1,79 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "title",
+      "name": "管理用タイトル",
+      "kind": "text",
+      "description": "管理画面で見分けるための名前です。サイトには表示されません",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "customer",
+      "name": "クライアント様 / 案件概要",
+      "kind": "text",
+      "description": "一覧・詳細・ページタイトルに表示されます。非公開実績では社名を伏せた書き方にしてください",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "thumbnail",
+      "name": "サムネイル",
+      "kind": "media",
+      "description": "非公開実績では表示されず、ダミー画像になります",
+      "required": false
+    },
+    {
+      "fieldId": "categories",
+      "name": "カテゴリ",
+      "kind": "relationList",
+      "description": "「非公開実績」を付けると、サムネイルと URL を伏せてページ数を表示します",
+      "required": true,
+      "referencedApiEndpoint": "categories"
+    },
+    {
+      "fieldId": "url",
+      "name": "サイトURL",
+      "kind": "text",
+      "description": "公開実績のみ表示されます",
+      "required": false,
+      "isUnique": false
+    },
+    {
+      "fieldId": "pages",
+      "name": "ページ数",
+      "kind": "number",
+      "description": "非公開実績のみ表示されます",
+      "required": false
+    },
+    {
+      "fieldId": "area",
+      "name": "担当領域",
+      "kind": "text",
+      "required": false,
+      "isUnique": false
+    },
+    {
+      "fieldId": "period",
+      "name": "制作期間",
+      "kind": "text",
+      "required": false,
+      "isUnique": false
+    },
+    {
+      "fieldId": "price",
+      "name": "目安価格（税抜）",
+      "kind": "number",
+      "description": "数字のみ（例: 150000）。サイトでは ¥150,000 と表示されます",
+      "required": false
+    },
+    {
+      "fieldId": "comment",
+      "name": "コメント",
+      "kind": "textArea",
+      "description": "トップのスライダーと詳細ページに表示されます。改行はそのまま反映されます",
+      "required": false
+    }
+  ],
+  "customFields": []
+}
