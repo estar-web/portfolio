@@ -133,11 +133,10 @@ scripts/deploy.sh --execute
 
 1. microCMS の準備と移行を済ませ、実データで `npm run build` が通ることを確認する。
 2. Formspree を設定し、ローカルで送信テストをする。
-3. OGP 画像（`public/assets/images/ogp.png`）とファビコン（`favicon-32x32.webp` / `favicon-192x192.webp`）を置く。
-4. サーバーのドキュメントルートを一覧し、`deploy/rsync-exclude.txt` を確定する。サーバーの既存 `.htaccess`（HTTPS 転送など）と `public/.htaccess` を見比べ、必要な設定を移す。
-5. `scripts/deploy.sh` の dry-run で転送・削除の内容を確認してから反映する。
-6. 旧 URL の転送（下表）と各ページを確認し、Search Console に `/sitemap-index.xml` を送信する。
-7. WordPress 本体を削除するかどうかは、問題がないことを確認してから判断する。
+3. サーバーのドキュメントルートを一覧し、`deploy/rsync-exclude.txt` を確定する。サーバーの既存 `.htaccess`（HTTPS 転送など）と `public/.htaccess` を見比べ、必要な設定を移す。
+4. `scripts/deploy.sh` の dry-run で転送・削除の内容を確認してから反映する。
+5. 旧 URL の転送（下表）と各ページを確認し、Search Console に `/sitemap-index.xml` を送信する。
+6. WordPress 本体を削除するかどうかは、問題がないことを確認してから判断する。
 
 ### URL の変更
 
@@ -155,3 +154,4 @@ scripts/deploy.sh --execute
 - フッターの Works リンクが `/work/`（存在しないページ）になっていたのを `/works/` に直しました。
 - トップの Skills（3 項目）と、Check セクションを載せない構成は、公開中のサイトに合わせています。Check セクションへのナビのリンクも外しました。
 - All in One SEO の代わりに、タイトル・説明文・OGP・canonical・サイトマップを Astro 側で出力しています。
+- OGP 画像・ファビコン・ホーム画面用アイコンは、WordPress の「サイトアイコン」と All in One SEO に設定されていた画像（`wp-content/uploads/2025/04/`）を `public/assets/images/` に移しました。ホーム画面用アイコンはテーマのクラゲの絵ではなく、サイトアイコンの「CODE:HOSHI」ロゴです。
