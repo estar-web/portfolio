@@ -1,0 +1,110 @@
+---
+// 制作実績一覧（WordPress テーマの home.php / category.php / template/summary.php に相当）
+// 非公開実績はカードに出さず、showPrivateTable を付けたページだけ「その他の実績」の表にまとめて出す
+// （2023/11〜2024/05 の WordPress テーマ archive-works.php と同じ見せ方）
+import LowerTop from './LowerTop.astro';
+import LowerContact from './LowerContact.astro';
+import { PRIVATE_CATEGORY_ID, imageSrcset, imageUrl, isPrivateWork, type Category, type Work } from '../lib/microcms';
+
+interface Props {
+  works: Work[];
+  categories: Category[];
+  /** 選択中のカテゴリ ID（すべての場合は未指定） */
+  currentCategoryId?: string;
+  /** 非公開実績の表（その他の実績）を出すか */
+  showPrivateTable?: boolean;
+}
+
+const { works, categories, currentCategoryId, showPrivateTable = false } = Astro.props;
+
+const publicWorks = works.filter((work) => !isPrivateWork(work));
+const privateWorks = showPrivateTable ? works.filter(isPrivateWork) : [];
+// 絞り込みナビには「非公開実績」を出さない
+const navCategories = categories.filter((category) => category.id !== PRIVATE_CATEGORY_ID);
+---
+
+<LowerTop title="Works" />
+
+<div class="l-lower-works p-lower-works">
+  <div class="p-lower-works__inner l-inner">
+    <div class="p-lower-works__nav p-works-nav">
+      <ul class="p-works-nav__list">
+        <li class:list={['p-works-nav__item', { selected: !currentCategoryId }]}>
+          <a href="/works/" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
+        </li>
+        {
+          navCategories.map((category) => (
+            <li class:list={['p-works-nav__item', { selected: category.id === currentCategoryId }]}>
+              <a href={`/works/category/${category.id}/`} class="p-works-nav__link">{category.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div><!-- /.p-works-nav -->
+
+    <div class="l-lower-works-contents p-works-contents">
+      <div class="p-works-contents__inner l-inner">
+        <div class="p-works-contents__wrapper">
+          {
+            publicWorks.map((work) => (
+              <a href={`/works/${work.id}/`} class="p-works-contents__item">
+                <figure class="p-works-contents__img">
+                  {!work.thumbnail ? (
+                    <img src="/assets/images/picture-dummy.webp" width="320" height="230" alt="" loading="lazy" decoding="async" />
+                  ) : (
+                    <img
+                      src={imageUrl(work.thumbnail, 640)}
+                      srcset={imageSrcset(work.thumbnail, [320, 640, 960])}
+                      sizes="(min-width: 992px) 320px, 100vw"
+                      width={work.thumbnail.width}
+                      height={work.thumbnail.height}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                </figure>
+                <div class="p-works-contents__body">
+                  <h3 class="p-works-contents__title">{work.customer}</h3>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    {
+      privateWorks.length > 0 && (
+        <div class="p-lower-works__other p-works-other">
+          <h2 class="p-works-other__title">その他の実績</h2>
+          <p class="p-works-other__text">非公開実績の一覧となります</p>
+          <div class="p-works-other__tableWrapper">
+            <table class="p-works-other__table p-works-table">
+              <thead>
+                <tr class="p-works-table__row">
+                  <th class="p-works-table__head" scope="col">サイト概要</th>
+                  <th class="p-works-table__head" scope="col">業務内容</th>
+                  <th class="p-works-table__head" scope="col">担当ページ数</th>
+                  <th class="p-works-table__head" scope="col">期間</th>
+                </tr>
+              </thead>
+              <tbody>
+                {privateWorks.map((work) => (
+                  <tr class="p-works-table__row">
+                    <td class="p-works-table__data">{work.customer}</td>
+                    <td class="p-works-table__data">{work.area}</td>
+                    <td class="p-works-table__data">{work.pages != null && `${work.pages}ページ`}</td>
+                    <td class="p-works-table__data">{work.period}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )
+    }
+  </div><!-- /.p-lower-works__inner -->
+</div><!-- /.l-lower-works p-lower-works -->
+
+<LowerContact />

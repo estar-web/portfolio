@@ -1,0 +1,847 @@
+[
+  {
+    "id": "createe",
+    "createdAt": "2025-05-04T01:48:41.000Z",
+    "updatedAt": "2025-05-04T01:48:41.000Z",
+    "publishedAt": "2025-05-04T01:48:41.000Z",
+    "revisedAt": "2025-05-04T01:48:41.000Z",
+    "title": "CREATEE",
+    "customer": "CREATEE様コーポレートサイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/05/createe.webp",
+      "width": 2560,
+      "height": 1360
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://createe-inc.com/",
+    "area": "実装、コーディング",
+    "period": "約1ヶ月",
+    "price": 400000,
+    "comment": "人気動画クリエイターの「ぞのさんっ」が経営されている会社「CREATEE」のコーポレートサイトリニューアルに携わらせていただきました。 ディレクター/デザイナーと綿密な打ち合わせを重ねて制作したWebサイトです。『ワクワク』をコンセプトに、gsapを活用した多彩なアニメーション効果で訪問者の興味を引きつける仕上がりになっています。また、お知らせ、制作実績、お役立ち資料などの投稿機能を実装し、クライアント様自身で簡単に更新できる仕組みを構築。さらに資料詳細ページには専用フォームを設置し、ユーザーが必要な資料を個別にダウンロードできる機能も追加しました。 実績一覧ページには絞り込み機能を実装し、目的の情報にスムーズにアクセスできるようにしています。"
+  },
+  {
+    "id": "samot",
+    "createdAt": "2025-04-15T08:47:38.000Z",
+    "updatedAt": "2025-04-15T08:47:38.000Z",
+    "publishedAt": "2025-04-15T08:47:38.000Z",
+    "revisedAt": "2025-04-15T08:47:38.000Z",
+    "title": "saMOT",
+    "customer": "saMOTサービスサイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/samot.png",
+      "width": 1200,
+      "height": 630
+    },
+    "categories": [
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://samot.jp/",
+    "area": "実装、コーディング（フロント部分）",
+    "period": "5日間",
+    "price": 100000,
+    "comment": "児童発達支援・放課後等デイサービス事業所向け管理システム「saMOT（サモット）」のサービスサイトを制作しました。スピード重視のプロジェクトにおいても、クライアント様との密な連携により優先順位を適切に調整。短納期という制約の中でも丁寧な実装を徹底し、随所の装飾が崩れないレスポンシブ対応に特に注力しました。"
+  },
+  {
+    "id": "private-09",
+    "createdAt": "2025-04-15T08:44:15.000Z",
+    "updatedAt": "2025-04-15T08:44:15.000Z",
+    "publishedAt": "2025-04-15T08:44:15.000Z",
+    "revisedAt": "2025-04-15T08:44:15.000Z",
+    "title": "健康食品 / コスメ販売会社様LP",
+    "customer": "健康食品 / コスメ販売会社様LP",
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 2,
+    "period": "10日間",
+    "price": 100000,
+    "comment": "非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "private-08",
+    "createdAt": "2025-04-15T08:39:47.000Z",
+    "updatedAt": "2025-04-15T08:39:47.000Z",
+    "publishedAt": "2025-04-15T08:39:47.000Z",
+    "revisedAt": "2025-04-15T08:39:47.000Z",
+    "title": "資産運用サービス サービスサイト",
+    "customer": "資産運用サービス サービスサイト",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 17,
+    "area": "実装、コーディング",
+    "period": "10日間",
+    "price": 300000,
+    "comment": "投稿記事や頻繁に検索されるキーワードの取得といった、バックエンド側の実装にも携わりました。非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "tokuzo",
+    "createdAt": "2025-04-15T08:35:37.000Z",
+    "updatedAt": "2025-04-15T08:35:37.000Z",
+    "publishedAt": "2025-04-15T08:35:37.000Z",
+    "revisedAt": "2025-04-15T08:35:37.000Z",
+    "title": "TOKUZO",
+    "customer": "TOKUZO様コーポレートサイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-01-16-21.06.33.webp",
+      "width": 2556,
+      "height": 2434
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://tokuzo-sp.com/",
+    "area": "実装、コーディング",
+    "period": "10日間",
+    "price": 160000,
+    "comment": "児童福祉/就労支援事業を展開するtokuzo様のコーポレートサイトを制作いたしました。セクションタイトルをはじめとする様々な要素に動きのあるアニメーションを実装。特にCTAエリアでは時間経過に応じて背景色が変化する演出を取り入れています。 SEO対策として構造化マークアップを作成し、検索エンジンからの評価向上を図りました。また、共通パーツはテンプレート化することで、将来的な修正の影響範囲を最小限に抑える設計としています。あらゆるデバイスでの閲覧に対応するため、サイトの装飾が崩れないレスポンシブデザインに特に注力しました。"
+  },
+  {
+    "id": "private-07",
+    "createdAt": "2025-04-15T08:22:52.000Z",
+    "updatedAt": "2025-04-15T08:22:52.000Z",
+    "publishedAt": "2025-04-15T08:22:52.000Z",
+    "revisedAt": "2025-04-15T08:22:52.000Z",
+    "title": "薬店店舗LP",
+    "customer": "薬店店舗LP",
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 2,
+    "area": "実装、コーディング",
+    "period": "4日間",
+    "price": 80000,
+    "comment": "プライグインによる予約機能を備えたLPを制作しました。非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "private-06",
+    "createdAt": "2025-04-15T08:17:51.000Z",
+    "updatedAt": "2025-04-15T08:17:51.000Z",
+    "publishedAt": "2025-04-15T08:17:51.000Z",
+    "revisedAt": "2025-04-15T08:17:51.000Z",
+    "title": "鳶工事事業コーポレートサイト",
+    "customer": "鳶工事事業コーポレートサイト",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 10,
+    "area": "実装、コーディング",
+    "period": "3週間",
+    "price": 180000,
+    "comment": "非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "sukkiri-fuwari",
+    "createdAt": "2025-04-15T08:02:18.000Z",
+    "updatedAt": "2025-04-15T08:02:18.000Z",
+    "publishedAt": "2025-04-15T08:02:18.000Z",
+    "revisedAt": "2025-04-15T08:02:18.000Z",
+    "title": "スッキリフワリ",
+    "customer": "個人整体 スッキリフワリ様",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-04-15-17.03.07.webp",
+      "width": 2560,
+      "height": 1830
+    },
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://sukkiri-fuwari.website/",
+    "area": "実装、コーディング",
+    "period": "5日間",
+    "price": 70000,
+    "comment": "鶴ヶ島にある「スッキリフワリ」という個人整体院のランディングページを制作しましたメニュー情報はアコーディオン式で折りたたみ可能な設計にすることで、ユーザーが必要な情報に素早くアクセスできるよう工夫しています。問い合わせ機能として、Responsive Mailform使ってを実装ししました。また、ウェブサイト公開に向けた、お客様のドメイン取得のサポートも行いました。"
+  },
+  {
+    "id": "comot",
+    "createdAt": "2025-04-15T07:51:45.000Z",
+    "updatedAt": "2025-04-15T07:51:45.000Z",
+    "publishedAt": "2025-04-15T07:51:45.000Z",
+    "revisedAt": "2025-04-15T07:51:45.000Z",
+    "title": "CoMoT",
+    "customer": "CoMoT様サービスサイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-01-17-10.06.58.webp",
+      "width": 2558,
+      "height": 1924
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://comot.jp/",
+    "area": "実装、コーディング",
+    "period": "10日間",
+    "price": 120000,
+    "comment": "あらゆる端末での閲覧を想定し、レスポンシブデザインに特に注力することで、スマートフォンやタブレットなど画面サイズが変わってもデザインのあしらいが崩れないよう細部まで調整しています。教室情報の管理には投稿機能とカスタムフィールドを活用し、クライアント様自身が簡単に内容を更新できる仕組みを整えました。また、CTAボタンや下層ページのタイトルなどの共通要素はテンプレート化することで、今後の修正作業が効率的に行えるよう配慮した設計となっています。"
+  },
+  {
+    "id": "takcafe",
+    "createdAt": "2025-04-15T07:44:28.000Z",
+    "updatedAt": "2025-04-15T07:44:28.000Z",
+    "publishedAt": "2025-04-15T07:44:28.000Z",
+    "revisedAt": "2025-04-15T07:44:28.000Z",
+    "title": "TAK CAFE",
+    "customer": "TAK CAFE様",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-01-17-10.35.34.webp",
+      "width": 2556,
+      "height": 2446
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://takcafe.jp/",
+    "area": "実装、コーディング",
+    "period": "1ヶ月",
+    "price": 300000,
+    "comment": "神奈川県大和市に3店舗を展開するTAK CAFE様のホームページのコーディングを担当しました。GSAPを活用したスクロールアニメーションを沿革や画像に実装し、サイトに洗練された動きを与えています。Instagram埋め込み機能により、最新情報やアカウントへのアクセスをスムーズに行えるようにしました。 予約システムにおいては、ケーキの種類に応じたサイズ選択の自動制御や、画像ファイルの添付/削除、プレビュー機能を導入し、ユーザー体験を向上させています。また、各店舗の月替わりメニューをカスタムフィールドで簡単に更新できる仕組みを実装しました。クライアントとユーザー双方の使いやすさを考慮し、継続的な改善を行っています。"
+  },
+  {
+    "id": "private-05",
+    "createdAt": "2025-04-15T07:36:13.000Z",
+    "updatedAt": "2025-04-15T07:36:13.000Z",
+    "publishedAt": "2025-04-15T07:36:13.000Z",
+    "revisedAt": "2025-04-15T07:36:13.000Z",
+    "title": "医療福祉専門学校サイト制作",
+    "customer": "医療福祉専門学校サイト制作",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 3,
+    "area": "下層ページコーディング",
+    "period": "5日間",
+    "price": 70000,
+    "comment": "非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "private-04",
+    "createdAt": "2025-04-12T10:56:35.000Z",
+    "updatedAt": "2025-04-12T10:56:35.000Z",
+    "publishedAt": "2025-04-12T10:56:35.000Z",
+    "revisedAt": "2025-04-12T10:56:35.000Z",
+    "title": "福祉事業会社コーポレートサイト",
+    "customer": "福祉事業会社コーポレートサイト",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 4,
+    "area": "コーディング",
+    "period": "5日間",
+    "price": 150000,
+    "comment": "GSAPによるスクロールアニメーションを導入いたしました。非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "private-03",
+    "createdAt": "2025-04-12T10:50:02.000Z",
+    "updatedAt": "2025-04-12T10:50:02.000Z",
+    "publishedAt": "2025-04-12T10:50:02.000Z",
+    "revisedAt": "2025-04-12T10:50:02.000Z",
+    "title": "分譲マンション総合管理業コーポレートサイトリニューアル",
+    "customer": "分譲マンション総合管理業コーポレートサイトリニューアル",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 3,
+    "area": "実装、コーディング",
+    "period": "1ヶ月",
+    "price": 150000,
+    "comment": "サイトリニューアルにあたり、新規ページの追加、プラグインを使った会員機能の実装を行いました。非公開実績となりますので、詳細なご説明についてはお問い合わせ願います。"
+  },
+  {
+    "id": "private-02",
+    "createdAt": "2025-04-12T10:49:35.000Z",
+    "updatedAt": "2025-04-12T10:49:35.000Z",
+    "publishedAt": "2025-04-12T10:49:35.000Z",
+    "revisedAt": "2025-04-12T10:49:35.000Z",
+    "title": "セラピストオンラインスクール講座LP",
+    "customer": "セラピストオンラインスクール講座LP",
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 1,
+    "area": "コーディング",
+    "period": "4日間",
+    "price": 90000,
+    "comment": "非公開実績となります。 詳細はオンライン面談などでご説明いたします。"
+  },
+  {
+    "id": "tokujob",
+    "createdAt": "2025-04-10T07:27:13.000Z",
+    "updatedAt": "2025-04-10T07:27:13.000Z",
+    "publishedAt": "2025-04-10T07:27:13.000Z",
+    "revisedAt": "2025-04-10T07:27:13.000Z",
+    "title": "就労支援事業B型 TOKUJOB",
+    "customer": "就労支援事業B型 TOKUJOB",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-04-09-15.08.11.png",
+      "width": 2560,
+      "height": 1360
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://tokuzo-job.com/",
+    "area": "実装、コーディング",
+    "period": "2週間",
+    "price": 180000,
+    "comment": "ファーストビューには2つの画像が自動で入れ替わるスライダーを実装しています。バックエンド面では、事業一覧を投稿形式に、施設情報はカスタムフィールドを活用することで、クライアント自身による更新作業を簡素化。さらに、CTAや下層ページのタイトル、パンくずリストなどの共通要素はテンプレート化し、サイト全体の一貫性を保ちながら将来的な変更にも柔軟に対応できる設計としました。"
+  },
+  {
+    "id": "private-01",
+    "createdAt": "2025-04-09T05:53:09.000Z",
+    "updatedAt": "2025-04-09T05:53:09.000Z",
+    "publishedAt": "2025-04-09T05:53:09.000Z",
+    "revisedAt": "2025-04-09T05:53:09.000Z",
+    "title": "コンテンツ制作 / マーケティング企業採用サイト",
+    "customer": "コンテンツ制作 / マーケティング企業採用サイト",
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      },
+      {
+        "id": "private",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "非公開実績",
+        "order": 6
+      }
+    ],
+    "pages": 2,
+    "area": "実装、コーディング",
+    "period": "5日間",
+    "price": 90000,
+    "comment": "非公開実績となります。 詳細はオンライン面談などでご説明いたしますので、ご連絡願います。"
+  },
+  {
+    "id": "e-haisha",
+    "createdAt": "2025-04-09T05:31:02.000Z",
+    "updatedAt": "2025-04-09T05:31:02.000Z",
+    "publishedAt": "2025-04-09T05:31:02.000Z",
+    "revisedAt": "2025-04-09T05:31:02.000Z",
+    "title": "e廃車コーポレートサイト",
+    "customer": "e廃車コーポレートサイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/e-haisha-pc1.webp",
+      "width": 1973,
+      "height": 2048
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://e-haisha.co.jp/",
+    "area": "実装、コーディング",
+    "period": "2週間",
+    "price": 150000,
+    "comment": "知り合いのコーダーと共同でコーディングをいたしました。Git Hubを使ってコード管理をし、作業を効率よく進められるようにしました。お仕事の内容などを発信できるブログ機能を実装し、Contact Form 7による問い合わせフォームを設置しています。よくある質問セクションは、モーダルウィンドウとアコーディオンメニューを組み合わせた表示方法を採用しています。"
+  },
+  {
+    "id": "sobolon",
+    "createdAt": "2025-04-09T05:27:31.000Z",
+    "updatedAt": "2025-04-09T05:27:31.000Z",
+    "publishedAt": "2025-04-09T05:27:31.000Z",
+    "revisedAt": "2025-04-09T05:27:31.000Z",
+    "title": "Sobolon:課題用サイト",
+    "customer": "Sobolon 課題用サイト",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/スクリーンショット-2025-04-09-14.21.42.png",
+      "width": 2560,
+      "height": 1360
+    },
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "demo",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "デモサイト",
+        "order": 5
+      }
+    ],
+    "url": "https://free-star-work.com/sobolon/",
+    "area": "実装、コーディング",
+    "period": "5日間",
+    "price": 70000,
+    "comment": "デザインカンプを忠実に再現するため、ピクセルパーフェクトにこだわった制作を行いました。 優しい雰囲気を損なわないよう、フェードアニメーションはふんわりとしたもの付与しています。 Basic認証を設定していますユーザー名：sobolon パスワード：demo"
+  },
+  {
+    "id": "dogteethsmile",
+    "createdAt": "2025-04-08T17:40:08.000Z",
+    "updatedAt": "2025-04-08T17:40:08.000Z",
+    "publishedAt": "2025-04-08T17:40:08.000Z",
+    "revisedAt": "2025-04-08T17:40:08.000Z",
+    "title": "ドッグティースマイル",
+    "customer": "ドッグティースマイルLP",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/04/picture-dogteethsmile-pc.png",
+      "width": 2560,
+      "height": 16384
+    },
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "client",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "お客様案件",
+        "order": 3
+      }
+    ],
+    "url": "https://dogteethsmile.com/",
+    "area": "実装、コーディング",
+    "period": "5日間",
+    "price": 70000,
+    "comment": "わんちゃんのお口の健康を守るサロン『ドッグティースマイル』様のランディングページを制作しました。知り合いのデザイナーとの協業プロジェクトで、特に『私たちのこだわり』セクションでは、犬の画像が崩れないよう細部まで調整を重ねています。htmlはpug、問い合わせフォームはphp工房を活用して実装しました。"
+  },
+  {
+    "id": "demo-lp",
+    "createdAt": "2025-03-10T08:10:16.000Z",
+    "updatedAt": "2025-03-10T08:10:16.000Z",
+    "publishedAt": "2025-03-10T08:10:16.000Z",
+    "revisedAt": "2025-03-10T08:10:16.000Z",
+    "title": "サンプルLP",
+    "customer": "サンプルLP",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/03/picture-demo1.png",
+      "width": 2048,
+      "height": 1232
+    },
+    "categories": [
+      {
+        "id": "lp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "LP",
+        "order": 1
+      },
+      {
+        "id": "demo",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "デモサイト",
+        "order": 5
+      }
+    ],
+    "url": "https://free-star-work.com/demo-lp",
+    "area": "実装、コーディング",
+    "period": "5日間",
+    "price": 70000,
+    "comment": "デザインカンプを忠実に再現するため、ピクセルパーフェクトにこだわった制作を行いました。細部まで丁寧に作り込むことで高い再現性を実現し、レビューでは「文句なし」との高評価をいただきました。 Basic認証を設定しています ユーザー名：demo パスワード：demo"
+  },
+  {
+    "id": "portfolio",
+    "createdAt": "2025-03-08T15:42:25.000Z",
+    "updatedAt": "2025-03-08T15:42:25.000Z",
+    "publishedAt": "2025-03-08T15:42:25.000Z",
+    "revisedAt": "2025-03-08T15:42:25.000Z",
+    "title": "ポートフォリオ",
+    "customer": "ポートフォリオ（本サイト）",
+    "thumbnail": {
+      "url": "https://free-star-work.com/wp-content/uploads/2025/03/picture-portfolio.png",
+      "width": 2048,
+      "height": 8713
+    },
+    "categories": [
+      {
+        "id": "wp",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "WordPress",
+        "order": 2
+      },
+      {
+        "id": "other",
+        "createdAt": "2025-03-01T00:00:00.000Z",
+        "updatedAt": "2025-03-01T00:00:00.000Z",
+        "publishedAt": "2025-03-01T00:00:00.000Z",
+        "revisedAt": "2025-03-01T00:00:00.000Z",
+        "name": "その他",
+        "order": 4
+      }
+    ],
+    "url": "https://free-star-work.com/",
+    "area": "実装、コーディング",
+    "period": "2週間",
+    "price": 110000,
+    "comment": "知り合いのデザイナーにデザインしていただいたものです。随所にアニメーションやホバーエフェクトを取り入れ、視覚的な魅力を高めています。また、制作実績のセクションではWordPressの投稿機能やカスタムフィールドを活用することで、新しい実績の追加・更新作業を効率化しています。"
+  }
+]

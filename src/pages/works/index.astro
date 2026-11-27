@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorksArchive from '../../components/WorksArchive.astro';
+import { getCategories, getWorks } from '../../lib/microcms';
+
+const [works, categories] = await Promise.all([getWorks(), getCategories()]);
+---
+
+<BaseLayout
+  title="制作実績"
+  description="これまでに制作したサイトの一覧になります。非公開実績については、面談などの場でご説明できればと思います。お気軽にお問い合わせください。"
+>
+  <WorksArchive works={works} categories={categories} showPrivateTable />
+</BaseLayout>

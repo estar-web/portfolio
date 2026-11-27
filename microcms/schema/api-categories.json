@@ -1,0 +1,20 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "name",
+      "name": "カテゴリ名",
+      "kind": "text",
+      "description": "実績一覧の絞り込みナビに表示されます",
+      "required": true,
+      "isUnique": true
+    },
+    {
+      "fieldId": "order",
+      "name": "並び順",
+      "kind": "number",
+      "description": "絞り込みナビの並び順（小さい順）",
+      "required": false
+    }
+  ],
+  "customFields": []
+}

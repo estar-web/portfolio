@@ -1,0 +1,69 @@
+name: Build and deploy
+
+on:
+  # microCMS の Webhook（GitHub Actions 連携）から呼ばれる。
+  # microCMS 側の「トリガーイベント名」も microcms_update にすること。
+  repository_dispatch:
+    types: [microcms_update]
+  # GitHub の Actions 画面から手動で実行する
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+# デプロイが重ならないよう 1 本ずつ順番に実行する
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # 本番切り替えまでは動かさない。リポジトリの Variables で DEPLOY_ENABLED=true にすると有効になる
+    if: vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check secrets
+        env:
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+          PUBLIC_FORM_ENDPOINT: ${{ secrets.PUBLIC_FORM_ENDPOINT }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        # 仮データのまま本番へ出さないよう、未設定なら止める
+        run: |
+          for name in MICROCMS_SERVICE_DOMAIN MICROCMS_API_KEY PUBLIC_FORM_ENDPOINT DEPLOY_SSH_KEY DEPLOY_KNOWN_HOSTS; do
+            if [ -z "${!name}" ]; then echo "::error::Secret $name が未設定です"; exit 1; fi
+          done
+
+      - name: Build
+        env:
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+          PUBLIC_FORM_ENDPOINT: ${{ secrets.PUBLIC_FORM_ENDPOINT }}
+        run: npm run build
+
+      - name: Deploy with rsync
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_DOCROOT: ${{ secrets.DEPLOY_DOCROOT }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          rsync -avz --delete \
+            --exclude-from=deploy/rsync-exclude.txt \
+            -e "ssh -i ~/.ssh/id_deploy -p ${DEPLOY_PORT:-22}" \
+            dist/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DOCROOT%/}/"

@@ -1,0 +1,26 @@
+---
+interface Props {
+  isFront: boolean;
+}
+
+const { isFront } = Astro.props;
+const home = isFront ? '' : '/';
+---
+
+<footer class="l-footer p-footer">
+  <div class="p-footer__inner l-inner">
+    <h3 class="p-footer__title u-hide--pc">Code:<br />HOSHI</h3><!-- /.p-footer__title -->
+    <nav class="p-footer__nav">
+      <ul class="p-footer__navList">
+        <li class="p-footer__navItem"><a href="/" class="p-footer__navLink">Home</a></li>
+        <li class="p-footer__navItem"><a href={`${home}#profile`} class="p-footer__navLink">Profile</a></li>
+        <li class="p-footer__navItem"><a href={`${home}#skills`} class="p-footer__navLink">Skills</a></li>
+        <li class="p-footer__navItem"><a href="/works/" class="p-footer__navLink">Works</a></li>
+        <li class="p-footer__navItem"><a href="/contact/" class="p-footer__navLink">Contact</a></li>
+      </ul><!-- /.p-footer__navList -->
+    </nav><!-- /.p-footer__nav -->
+  </div><!-- /.p-footer__inner -->
+  <div class="p-footer__copyright">
+    <small>&copy; 2025 Hoshi</small>
+  </div><!-- /.p-footer__copyright -->
+</footer><!-- /.l-footer -->

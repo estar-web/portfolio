@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LowerTop from '../../components/LowerTop.astro';
+---
+
+<BaseLayout title="お問い合わせ-送信完了" noindex>
+  <LowerTop title="Contact" />
+
+  <section class="l-lower-contact p-lower-contact p-lower-contact--thanks">
+    <div class="p-lower-contact__inner l-inner">
+      <div class="p-lower-contact__textWrapper">
+        <p class="p-lower-contact__lead">送信完了！</p><!-- /.p-lower-contact__lead -->
+        <p class="p-lower-contact__text">
+          お問い合わせありがとうございます。<br />
+          24時間以内にご返信いたします。
+        </p><!-- /.p-lower-contact__text -->
+      </div><!-- /.p-lower-contact__textWrapper -->
+    </div><!-- /.p-lower-contact__inner l-inner -->
+  </section><!-- /.l-lower-contact p-lower-contact -->
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  isFront: boolean;
+}
+
+const { isFront } = Astro.props;
+// トップページではページ内リンク、それ以外ではトップページのアンカーへ移動する
+const home = isFront ? '' : '/';
+---
+
+<header id="js-header" class="l-header">
+  <button id="js-toggle" class="p-header-burger" aria-label="menu">
+    <span class="p-header-burger__line"></span>
+    <span class="p-header-burger__line"></span>
+    <span class="p-header-burger__line"></span>
+  </button><!-- /.p-header-burger -->
+  <nav class="p-header-nav">
+    <div class="p-header-nav__inner">
+      <ul class="p-header-nav__list">
+        <li class="p-header-nav__item"><a href={`${home}#profile`} class="p-header-nav__link js-navLink"><span class="p-header-nav__link--eg">Profile</span>自己紹介</a></li>
+        <li class="p-header-nav__item"><a href={`${home}#skills`} class="p-header-nav__link js-navLink"><span class="p-header-nav__link--eg">Skills</span>できること</a></li>
+        <li class="p-header-nav__item"><a href="/works/" class="p-header-nav__link js-navLink"><span class="p-header-nav__link--eg">Works</span>制作実績</a></li>
+        <li class="p-header-nav__item"><a href="/contact/" class="p-header-nav__link js-navLink"><span class="p-header-nav__link--eg">Contact</span>お問い合わせはこちら</a></li>
+      </ul><!-- /.p-header-nav__list -->
+      <figure class="p-header-nav__img u-show--l">
+        <img src="/assets/images/icon-nav.webp" alt="ドロワーメニューアイコン" width="504" height="440" />
+      </figure><!-- /.p-header-nav__img -->
+    </div><!-- /.p-header-nav__inner -->
+  </nav><!-- /.p-header-nav -->
+</header><!-- /.l-header -->
