@@ -5,12 +5,15 @@ import LowerTop from '../../components/LowerTop.astro';
 import LowerContact from '../../components/LowerContact.astro';
 import { getWorks, imageSrcset, imageUrl, isPrivateWork, type Work } from '../../lib/microcms';
 
+// 非公開実績は /works/ の表にまとめるので、詳細ページは作らない
 export const getStaticPaths = (async () => {
   const works = await getWorks();
-  return works.map((work) => ({
-    params: { workId: work.id },
-    props: { work },
-  }));
+  return works
+    .filter((work) => !isPrivateWork(work))
+    .map((work) => ({
+      params: { workId: work.id },
+      props: { work },
+    }));
 }) satisfies GetStaticPaths;
 
 interface Props {
@@ -18,12 +21,10 @@ interface Props {
 }
 
 const { work } = Astro.props;
-const isPrivate = isPrivateWork(work);
-const showThumbnail = !isPrivate && work.thumbnail;
 
 // 改行を保ったままメタ情報用に 1 行へまとめる
 const description = work.comment?.replace(/\s+/g, ' ').trim();
-const ogImage = showThumbnail && work.thumbnail ? imageUrl(work.thumbnail, 1200) : undefined;
+const ogImage = work.thumbnail ? imageUrl(work.thumbnail, 1200) : undefined;
 ---
 
 <BaseLayout title={work.customer} description={description} ogType="article" ogImage={ogImage}>
@@ -33,7 +34,7 @@ const ogImage = showThumbnail && work.thumbnail ? imageUrl(work.thumbnail, 1200)
     <div class="l-inner p-achieve-detail__inner">
       <div class="p-achieve-icatch">
         {
-          showThumbnail && work.thumbnail ? (
+          work.thumbnail ? (
             <figure class="p-achieve-icatch__img p-icatch--pc">
               <img
                 src={imageUrl(work.thumbnail, 1600)}
@@ -48,7 +49,7 @@ const ogImage = showThumbnail && work.thumbnail ? imageUrl(work.thumbnail, 1200)
             </figure>
           ) : (
             <figure class="p-achieve-icatch__img -private">
-              <img src="/assets/images/picture-dummy.webp" width="310" height="180" alt="非公開画像" loading="lazy" decoding="async" />
+              <img src="/assets/images/picture-dummy.webp" width="310" height="180" alt="" loading="lazy" decoding="async" />
             </figure>
           )
         }
@@ -61,24 +62,13 @@ const ogImage = showThumbnail && work.thumbnail ? imageUrl(work.thumbnail, 1200)
             <dd class="p-achieve-list__text">{work.customer}</dd>
           </div>
           <div class="p-achieve-list__wrapper p-achieve-list__url">
-            {
-              isPrivate ? (
-                <>
-                  <dt class="p-achieve-list__title">ページ数</dt>
-                  <dd class="p-achieve-list__text">{work.pages}ページ</dd>
-                </>
-              ) : (
-                <>
-                  <dt class="p-achieve-list__title">URL</dt>
-                  <dd class="p-achieve-list__text">
-                    <a href={work.url} class="p-achieve-list__link" target="_blank" rel="noopener">
-                      <span class="p-achieve-list__link--nonHover">{work.url}</span>
-                      <span class="p-achieve-list__link--hover">View Site</span>
-                    </a>
-                  </dd>
-                </>
-              )
-            }
+            <dt class="p-achieve-list__title">URL</dt>
+            <dd class="p-achieve-list__text">
+              <a href={work.url} class="p-achieve-list__link" target="_blank" rel="noopener">
+                <span class="p-achieve-list__link--nonHover">{work.url}</span>
+                <span class="p-achieve-list__link--hover">View Site</span>
+              </a>
+            </dd>
           </div>
           <div class="p-achieve-list__wrapper p-achieve-list__area">
             <dt class="p-achieve-list__title">担当領域</dt>

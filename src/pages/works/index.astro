@@ -10,5 +10,5 @@ const [works, categories] = await Promise.all([getWorks(), getCategories()]);
   title="制作実績"
   description="これまでに制作したサイトの一覧になります。非公開実績については、面談などの場でご説明できればと思います。お気軽にお問い合わせください。"
 >
-  <WorksArchive works={works} categories={categories} />
+  <WorksArchive works={works} categories={categories} showPrivateTable />
 </BaseLayout>

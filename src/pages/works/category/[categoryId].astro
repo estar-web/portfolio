@@ -2,12 +2,13 @@
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import WorksArchive from '../../../components/WorksArchive.astro';
-import { getCategories, getWorks, type Category } from '../../../lib/microcms';
+import { PRIVATE_CATEGORY_ID, getCategories, getWorks, type Category } from '../../../lib/microcms';
 
-// 実績が 0 件のカテゴリもページを作る（WordPress の hide_empty => false と同じ）
+// 実績が 0 件のカテゴリもページを作る（WordPress の hide_empty => false と同じ）。
+// 「非公開実績」は /works/ の表にまとめるので、カテゴリのページは作らない
 export const getStaticPaths = (async () => {
   const categories = await getCategories();
-  return categories.map((category) => ({
+  return categories.filter((category) => category.id !== PRIVATE_CATEGORY_ID).map((category) => ({
     params: { categoryId: category.id },
     props: { category },
   }));

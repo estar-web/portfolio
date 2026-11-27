@@ -1,17 +1,26 @@
 ---
 // 制作実績一覧（WordPress テーマの home.php / category.php / template/summary.php に相当）
+// 非公開実績はカードに出さず、showPrivateTable を付けたページだけ「その他の実績」の表にまとめて出す
+// （2023/11〜2024/05 の WordPress テーマ archive-works.php と同じ見せ方）
 import LowerTop from './LowerTop.astro';
 import LowerContact from './LowerContact.astro';
-import { imageSrcset, imageUrl, isPrivateWork, type Category, type Work } from '../lib/microcms';
+import { PRIVATE_CATEGORY_ID, imageSrcset, imageUrl, isPrivateWork, type Category, type Work } from '../lib/microcms';
 
 interface Props {
   works: Work[];
   categories: Category[];
   /** 選択中のカテゴリ ID（すべての場合は未指定） */
   currentCategoryId?: string;
+  /** 非公開実績の表（その他の実績）を出すか */
+  showPrivateTable?: boolean;
 }
 
-const { works, categories, currentCategoryId } = Astro.props;
+const { works, categories, currentCategoryId, showPrivateTable = false } = Astro.props;
+
+const publicWorks = works.filter((work) => !isPrivateWork(work));
+const privateWorks = showPrivateTable ? works.filter(isPrivateWork) : [];
+// 絞り込みナビには「非公開実績」を出さない
+const navCategories = categories.filter((category) => category.id !== PRIVATE_CATEGORY_ID);
 ---
 
 <LowerTop title="Works" />
@@ -24,7 +33,7 @@ const { works, categories, currentCategoryId } = Astro.props;
           <a href="/works/" class="p-works-nav__link">All</a><!-- /.p-works-nav__link -->
         </li>
         {
-          categories.map((category) => (
+          navCategories.map((category) => (
             <li class:list={['p-works-nav__item', { selected: category.id === currentCategoryId }]}>
               <a href={`/works/category/${category.id}/`} class="p-works-nav__link">{category.name}</a>
             </li>
@@ -37,11 +46,11 @@ const { works, categories, currentCategoryId } = Astro.props;
       <div class="p-works-contents__inner l-inner">
         <div class="p-works-contents__wrapper">
           {
-            works.map((work) => (
+            publicWorks.map((work) => (
               <a href={`/works/${work.id}/`} class="p-works-contents__item">
                 <figure class="p-works-contents__img">
-                  {isPrivateWork(work) || !work.thumbnail ? (
-                    <img src="/assets/images/picture-dummy.webp" width="320" height="230" alt="非公開画像" loading="lazy" decoding="async" />
+                  {!work.thumbnail ? (
+                    <img src="/assets/images/picture-dummy.webp" width="320" height="230" alt="" loading="lazy" decoding="async" />
                   ) : (
                     <img
                       src={imageUrl(work.thumbnail, 640)}
@@ -64,6 +73,37 @@ const { works, categories, currentCategoryId } = Astro.props;
         </div>
       </div>
     </div>
+
+    {
+      privateWorks.length > 0 && (
+        <div class="p-lower-works__other p-works-other">
+          <h2 class="p-works-other__title">その他の実績</h2>
+          <p class="p-works-other__text">非公開実績の一覧となります</p>
+          <div class="p-works-other__tableWrapper">
+            <table class="p-works-other__table p-works-table">
+              <thead>
+                <tr class="p-works-table__row">
+                  <th class="p-works-table__head" scope="col">サイト概要</th>
+                  <th class="p-works-table__head" scope="col">業務内容</th>
+                  <th class="p-works-table__head" scope="col">担当ページ数</th>
+                  <th class="p-works-table__head" scope="col">期間</th>
+                </tr>
+              </thead>
+              <tbody>
+                {privateWorks.map((work) => (
+                  <tr class="p-works-table__row">
+                    <td class="p-works-table__data">{work.customer}</td>
+                    <td class="p-works-table__data">{work.area}</td>
+                    <td class="p-works-table__data">{work.pages != null && `${work.pages}ページ`}</td>
+                    <td class="p-works-table__data">{work.period}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )
+    }
   </div><!-- /.p-lower-works__inner -->
 </div><!-- /.l-lower-works p-lower-works -->
 

@@ -20,7 +20,7 @@ export type Work = MicroCMSListContent & {
   thumbnail?: MicroCMSImage;
   categories: Category[];
   url?: string;
-  /** ページ数（非公開実績のみ表示） */
+  /** ページ数（非公開実績の表にのみ表示） */
   pages?: number;
   area?: string;
   period?: string;
@@ -29,7 +29,7 @@ export type Work = MicroCMSListContent & {
   comment?: string;
 };
 
-/** このカテゴリが付いた実績は、画像と URL を伏せて表示する */
+/** このカテゴリが付いた実績はカードと詳細ページを作らず、/works/ の「その他の実績」の表にだけ出す */
 export const PRIVATE_CATEGORY_ID = 'private';
 
 export const isPrivateWork = (work: Work): boolean =>
